@@ -28,17 +28,23 @@ MonoBehaviour:
       list: []
   LOCALIDINFILE_Hash3:
   - activeObject:
+      i1: 52967606
+      i2: 0
+    list:
+    - i1: 52967606
+      i2: 0
+  - activeObject:
       i1: 133122170
       i2: 0
     list:
     - i1: 133122170
       i2: 0
   - activeObject:
-      i1: -33021252
-      i2: -1
+      i1: 1229834517
+      i2: 0
     list:
-    - i1: -33021252
-      i2: -1
+    - i1: 1229834517
+      i2: 0
   - activeObject:
       i1: 397170417
       i2: 0
@@ -46,41 +52,47 @@ MonoBehaviour:
     - i1: 397170417
       i2: 0
   - activeObject:
-      i1: -33021252
-      i2: -1
-    list:
-    - i1: -33021252
-      i2: -1
-  - activeObject:
-      i1: -1
-      i2: -1
-    list:
-    - i1: -1
-      i2: -1
-  - activeObject:
-      i1: -1
-      i2: -1
-    list:
-    - i1: -1
-      i2: -1
-  - activeObject:
-      i1: -1
-      i2: -1
-    list:
-    - i1: -1
-      i2: -1
-  - activeObject:
-      i1: -1
-      i2: -1
-    list:
-    - i1: -1
-      i2: -1
-  - activeObject:
-      i1: 52967606
+      i1: 339376845
       i2: 0
     list:
-    - i1: 52967606
+    - i1: 339376845
       i2: 0
+  - activeObject:
+      i1: -1
+      i2: -1
+    list:
+    - i1: -1
+      i2: -1
+  - activeObject:
+      i1: -1
+      i2: -1
+    list:
+    - i1: -1
+      i2: -1
+  - activeObject:
+      i1: -1
+      i2: -1
+    list:
+    - i1: -1
+      i2: -1
+  - activeObject:
+      i1: -1
+      i2: -1
+    list:
+    - i1: -1
+      i2: -1
+  - activeObject:
+      i1: -1
+      i2: -1
+    list:
+    - i1: -1
+      i2: -1
+  - activeObject:
+      i1: -1
+      i2: -1
+    list:
+    - i1: -1
+      i2: -1
   - activeObject:
       i1: -1
       i2: -1
@@ -105,12 +117,6 @@ MonoBehaviour:
     list:
     - i1: -1
       i2: -1
-  - activeObject:
-      i1: 339376845
-      i2: 0
-    list:
-    - i1: 339376845
-      i2: 0
   - activeObject:
       i1: -1
       i2: -1
@@ -156,6 +162,18 @@ MonoBehaviour:
   Hash1_Fix2_0: []
   Hash2: []
   Hash3:
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 0}
+    ActiveGameObject: {fileID: 0}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
   - FavParams: 0
     FavString: []
     list:
