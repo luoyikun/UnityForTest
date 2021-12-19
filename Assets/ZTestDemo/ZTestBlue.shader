@@ -9,6 +9,7 @@ Shader "Custom/ZTestBlue"
 		Tags{ "Queue" = "Transparent-1" } //3000-1,越小，越先渲染
 
 		//ZWrite Off
+		//ZTest
 		Pass
 		{
 		Blend SrcAlpha OneMinusSrcAlpha //

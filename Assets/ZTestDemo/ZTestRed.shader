@@ -7,7 +7,8 @@ Shader "Custom/ZTestRed"
 		SubShader
 	{
 		Tags{ "Queue" = "Transparent" } //非透明的要先渲染
-		ZWrite Off
+		//ZWrite Off
+		ZTest Greater
 		Pass
 		{
 		CGPROGRAM

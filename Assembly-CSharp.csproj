@@ -64,10 +64,20 @@
     <Compile Include="Assets\MatrixTest\RotateSelf.cs" />
     <Compile Include="Assets\Models\AcquireChan\Scripts\AcquireChanController.cs" />
     <Compile Include="Assets\MatrixTest\MatrixTest.cs" />
+    <Compile Include="Assets\CubeUVDemo\CustomUVS.cs" />
+    <Compile Include="Assets\LuaTest\Scripts\ObjectTranslator.cs" />
+    <Compile Include="Assets\LuaTest\Examples\04_Registry\LearnRegistry.cs" />
+    <Compile Include="Assets\LuaTest\Scripts\LuaState.cs" />
+    <Compile Include="Assets\LuaTest\Examples\02_LoadFile\LearnLoadFile.cs" />
+    <Compile Include="Assets\LuaTest\Scripts\LuaDLL.cs" />
+    <Compile Include="Assets\LuaTest\Scripts\LuaFileUtils.cs" />
+    <Compile Include="Assets\LuaTest\Examples\01_Stack\LearnStack.cs" />
+    <Compile Include="Assets\LuaTest\Examples\03_Function\LearnFunction.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ShaderMatrixDemo\ScaleVertices\ScaleVertices.shader" />
     <None Include="Assets\Models\AcquireChan\Models\Shaders\imagine_chara_parts_body.shader" />
+    <None Include="Assets\LuaTest\Plugins\x86_x64\Lua.dll" />
     <None Include="Assets\ShaderMatrixDemo\RotationUV\RotationUV.shader" />
     <None Include="Assets\ShaderMatrixDemo\RotationVertices\RotataeVertices.shader" />
     <None Include="Assets\Models\AcquireChan\Models\Shaders\imagine_chara.shader" />
