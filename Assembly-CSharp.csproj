@@ -53,46 +53,46 @@
     <UnityVersion>2021.2.0f1c1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\MatrixTest\MatrixUtils.cs" />
-    <Compile Include="Assets\MatrixTest\SelfNotRotate.cs" />
+    <Compile Include="Assets\TransformDemo\MatrixTest\MatrixUtils.cs" />
+    <Compile Include="Assets\TransformDemo\MatrixTest\SelfNotRotate.cs" />
     <Compile Include="Assets\Models\AcquireChan\Scripts\MotionChanger.cs" />
-    <Compile Include="Assets\MatrixTest\PointMartixTest.cs" />
-    <Compile Include="Assets\MatrixTest\Matrix.cs" />
+    <Compile Include="Assets\LuaTest\Scripts\LuaFileUtils.cs" />
+    <Compile Include="Assets\UnityAPIDemo\ThreadCallUnity\ThreadCallUnityTest.cs" />
+    <Compile Include="Assets\TransformDemo\MatrixTest\PointMartixTest.cs" />
+    <Compile Include="Assets\TransformDemo\MatrixTest\Matrix.cs" />
     <Compile Include="Assets\Models\AcquireChan\Scripts\SimpleFollowCam.cs" />
     <Compile Include="Assets\PhysicsTest\PhyA.cs" />
+    <Compile Include="Assets\LuaTest\Scripts\LuaDLL.cs" />
     <Compile Include="Assets\PhysicsTest\PhysicsTest.cs" />
-    <Compile Include="Assets\MatrixTest\RotateSelf.cs" />
-    <Compile Include="Assets\Models\AcquireChan\Scripts\AcquireChanController.cs" />
-    <Compile Include="Assets\MatrixTest\MatrixTest.cs" />
     <Compile Include="Assets\LuaTest\Scripts\ObjectTranslator.cs" />
+    <Compile Include="Assets\TransformDemo\MatrixTest\RotateSelf.cs" />
+    <Compile Include="Assets\Models\AcquireChan\Scripts\AcquireChanController.cs" />
+    <Compile Include="Assets\CSharpDemo\InterfaceDemo\InterfaceTest.cs" />
+    <Compile Include="Assets\UnityAPIDemo\ThreadCallUnity\Loom.cs" />
+    <Compile Include="Assets\TransformDemo\MatrixTest\MatrixTest.cs" />
+    <Compile Include="Assets\UnityAPIDemo\Coroutine\CoroutineTest.cs" />
+    <Compile Include="Assets\LuaTest\Examples\03_Function\LearnFunction.cs" />
+    <Compile Include="Assets\LuaTest\Examples\02_LoadFile\LearnLoadFile.cs" />
+    <Compile Include="Assets\LuaTest\Examples\01_Stack\LearnStack.cs" />
+    <Compile Include="Assets\LuaTest\Scripts\LuaState.cs" />
+    <Compile Include="Assets\CSharpDemo\InterfaceDemo\InterfaceScripts.cs" />
     <Compile Include="Assets\CubeUVDemo\CustomUVS.cs" />
     <Compile Include="Assets\LuaTest\Examples\04_Registry\LearnRegistry.cs" />
-    <Compile Include="Assets\LuaTest\Scripts\LuaState.cs" />
-    <Compile Include="Assets\LuaTest\Examples\02_LoadFile\LearnLoadFile.cs" />
-    <Compile Include="Assets\LuaTest\Scripts\LuaDLL.cs" />
-    <Compile Include="Assets\LuaTest\Scripts\LuaFileUtils.cs" />
-    <Compile Include="Assets\LuaTest\Examples\01_Stack\LearnStack.cs" />
-    <Compile Include="Assets\LuaTest\Examples\03_Function\LearnFunction.cs" />
-    <Compile Include="Assets\CSharpDemo\InterfaceDemo\InterfaceScripts.cs" />
-    <Compile Include="Assets\CSharpDemo\InterfaceDemo\InterfaceTest.cs" />
-    <Compile Include="Assets\UnityAPIDemo\Coroutine\CoroutineTest.cs" />
-    <Compile Include="Assets\UnityAPIDemo\ThreadCallUnity\ThreadCallUnityTest.cs" />
-    <Compile Include="Assets\UnityAPIDemo\ThreadCallUnity\Loom.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\ShaderMatrixDemo\ScaleVertices\ScaleVertices.shader" />
+    <None Include="Assets\ShaderDemo\ShaderMatrixDemo\ScaleVertices\ScaleVertices.shader" />
     <None Include="Assets\Models\AcquireChan\Models\Shaders\imagine_chara_parts_body.shader" />
     <None Include="Assets\LuaTest\Plugins\x86_x64\Lua.dll" />
-    <None Include="Assets\ShaderMatrixDemo\RotationUV\RotationUV.shader" />
-    <None Include="Assets\ShaderMatrixDemo\RotationVertices\RotataeVertices.shader" />
+    <None Include="Assets\ShaderDemo\ShaderMatrixDemo\RotationUV\RotationUV.shader" />
+    <None Include="Assets\ShaderDemo\ShaderMatrixDemo\RotationVertices\RotataeVertices.shader" />
     <None Include="Assets\Models\AcquireChan\Models\Shaders\imagine_chara.shader" />
     <None Include="Assets\ShaderDemo\ZTestDemo\ZTestRed.shader" />
     <None Include="Assets\Models\AcquireChan\Models\Shaders\imagine_chara_parts_hair.shader" />
     <None Include="Assets\Models\AcquireChan\Models\Shaders\imagine_chara_parts_face.shader" />
-    <None Include="Assets\ShaderMatrixDemo\MoveVertices\MoveVertices.shader" />
-    <None Include="Assets\ShaderMatrixDemo\ScaleUV\ScaleUV.shader" />
+    <None Include="Assets\ShaderDemo\ShaderMatrixDemo\MoveVertices\MoveVertices.shader" />
+    <None Include="Assets\ShaderDemo\ShaderMatrixDemo\ScaleUV\ScaleUV.shader" />
     <None Include="Assets\ShaderDemo\ZTestDemo\ZTestBlue.shader" />
-    <None Include="Assets\ShaderMatrixDemo\MoveUV\Move.shader" />
+    <None Include="Assets\ShaderDemo\ShaderMatrixDemo\MoveUV\Move.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
