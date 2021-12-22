@@ -2886,3 +2886,267 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013536 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.081 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1082ms)
+		BeginReloadAssembly (138ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (842ms)
+			LoadAssemblies (86ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (185ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (408ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (61ms)
+				ProcessInitializeOnLoadAttributes (235ms)
+				ProcessInitializeOnLoadMethodAttributes (87ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2163 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 50 unused Assets / (25.6 KB). Loaded Objects now: 2730.
+Memory consumption went from 89.7 MB to 89.6 MB.
+Total: 6.795500 ms (FindLiveObjects: 0.312600 ms CreateObjectMapping: 0.170600 ms MarkObjects: 6.265300 ms  DeleteObjects: 0.046100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 7786.308224 seconds.
+  path: Assets/ShaderDemo/WaveDemo
+  artifactKey: Guid(e4c8dbb7122900d4fb84928e196cc1e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShaderDemo/WaveDemo using Guid(e4c8dbb7122900d4fb84928e196cc1e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19f8e106201f4ee96e6fc7ad8466e7c5') in 0.009953 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.893589 seconds.
+  path: Assets/ShaderDemo/WaveDemo/WaveScene.unity
+  artifactKey: Guid(53a64658da647d24f9727e1d493dfdba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShaderDemo/WaveDemo/WaveScene.unity using Guid(53a64658da647d24f9727e1d493dfdba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edfe0ad1d36a800056dc7bc68d14f0d4') in 0.013093 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 270.447400 seconds.
+  path: Assets/ShaderDemo/WaveDemo/Gouzhi.png
+  artifactKey: Guid(a4c1ee137295d634b8c84c3857f8690c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShaderDemo/WaveDemo/Gouzhi.png using Guid(a4c1ee137295d634b8c84c3857f8690c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '373fc29cf2af30b0752a4a1ae886be3a') in 0.098558 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 37.673303 seconds.
+  path: Assets/ShaderDemo/WaveDemo/CreatNodes.cs
+  artifactKey: Guid(06fc4edfdc238d14ca1cab7b0762287b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShaderDemo/WaveDemo/CreatNodes.cs using Guid(06fc4edfdc238d14ca1cab7b0762287b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2426b987eb402bfa63d1f56d94a4518f') in 0.008119 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014402 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.399 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1400ms)
+		BeginReloadAssembly (141ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (39ms)
+		EndReloadAssembly (1139ms)
+			LoadAssemblies (96ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (455ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (408ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (56ms)
+				ProcessInitializeOnLoadAttributes (237ms)
+				ProcessInitializeOnLoadMethodAttributes (90ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2165 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 50 unused Assets / (25.6 KB). Loaded Objects now: 2750.
+Memory consumption went from 91.0 MB to 91.0 MB.
+Total: 5.497600 ms (FindLiveObjects: 0.206400 ms CreateObjectMapping: 0.109300 ms MarkObjects: 5.148800 ms  DeleteObjects: 0.031800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010779 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.151 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1152ms)
+		BeginReloadAssembly (166ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (39ms)
+		EndReloadAssembly (860ms)
+			LoadAssemblies (104ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (203ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (398ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (53ms)
+				ProcessInitializeOnLoadAttributes (228ms)
+				ProcessInitializeOnLoadMethodAttributes (94ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2164 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 50 unused Assets / (25.6 KB). Loaded Objects now: 2752.
+Memory consumption went from 91.1 MB to 91.1 MB.
+Total: 5.043000 ms (FindLiveObjects: 0.237600 ms CreateObjectMapping: 0.114000 ms MarkObjects: 4.669300 ms  DeleteObjects: 0.021100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 336.959255 seconds.
+  path: Assets/ShaderDemo/WaveDemo/ShaderWave.shader
+  artifactKey: Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShaderDemo/WaveDemo/ShaderWave.shader using Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02b3c35562ef11089b8d816dfa38a265') in 0.028288 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 37.423095 seconds.
+  path: Assets/ShaderDemo/WaveDemo/ShaderWave.shader
+  artifactKey: Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShaderDemo/WaveDemo/ShaderWave.shader using Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8610b2128c20d8d3087d237a62225ac') in 0.037593 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 369.291427 seconds.
+  path: Assets/ShaderDemo/WaveDemo/ShaderWave.shader
+  artifactKey: Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShaderDemo/WaveDemo/ShaderWave.shader using Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b54747aee6c776746d93de824a0108e') in 0.003141 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.750902 seconds.
+  path: Assets/ShaderDemo/WaveDemo/ShaderWave.shader
+  artifactKey: Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShaderDemo/WaveDemo/ShaderWave.shader using Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61698124b2d178ed6fd4ab67bb66ee89') in 0.007666 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 50.074255 seconds.
+  path: Assets/ShaderDemo/WaveDemo/ShaderWave.shader
+  artifactKey: Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShaderDemo/WaveDemo/ShaderWave.shader using Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a543dfd54623a166919d2bd6812602fe') in 0.008635 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.078682 seconds.
+  path: Assets/ShaderDemo/WaveDemo/ShaderWave.shader
+  artifactKey: Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShaderDemo/WaveDemo/ShaderWave.shader using Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f1b6856bf92dfbc6a1d040d6c0b01ce') in 0.004564 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.286597 seconds.
+  path: Assets/ShaderDemo/WaveDemo/ShaderWave.shader
+  artifactKey: Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShaderDemo/WaveDemo/ShaderWave.shader using Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '007b438c7b9ab858c27a74d3ded7cef1') in 0.033055 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 71.192079 seconds.
+  path: Assets/ShaderDemo/WaveDemo/ShaderWave.shader
+  artifactKey: Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShaderDemo/WaveDemo/ShaderWave.shader using Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '242b1d3a8f98f54999ffeb2224999864') in 0.007223 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.713186 seconds.
+  path: Assets/ShaderDemo/WaveDemo/ShaderWave.shader
+  artifactKey: Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShaderDemo/WaveDemo/ShaderWave.shader using Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c453a28fc902e2b9015b514c6e4363be') in 0.018253 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 353.150623 seconds.
+  path: Assets/ShaderDemo/WaveDemo/ShaderWave.shader
+  artifactKey: Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShaderDemo/WaveDemo/ShaderWave.shader using Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8e4645ce3a7927bf0fee5f1b94549df') in 0.004454 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 33.854091 seconds.
+  path: Assets/ShaderDemo/WaveDemo/ShaderWave.shader
+  artifactKey: Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShaderDemo/WaveDemo/ShaderWave.shader using Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '423b94c17ffce1049b2289f01ca983a5') in 0.007687 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.316643 seconds.
+  path: Assets/ShaderDemo/WaveDemo/ShaderWave.shader
+  artifactKey: Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShaderDemo/WaveDemo/ShaderWave.shader using Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7759890860cc27efa2bc25dc6919411') in 0.060725 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 32.399146 seconds.
+  path: Assets/ShaderDemo/WaveDemo/ShaderWave.shader
+  artifactKey: Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShaderDemo/WaveDemo/ShaderWave.shader using Guid(ae00ab58fe129564da5143801a6b30ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '342c8ef1b6821b0fb3daf80ccc9435bc') in 0.015987 seconds 

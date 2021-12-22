@@ -82,6 +82,7 @@
     <Compile Include="Assets\TransformDemo\DotweenDemo\Tween.cs" />
     <Compile Include="Assets\TransformDemo\DotweenDemo\ExtendMethods.cs" />
     <Compile Include="Assets\TransformDemo\DotweenDemo\DOTweenMgr.cs" />
+    <Compile Include="Assets\ShaderDemo\WaveDemo\CreatNodes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ShaderDemo\ShaderMatrixDemo\ScaleVertices\ScaleVertices.shader" />
@@ -97,6 +98,7 @@
     <None Include="Assets\ShaderDemo\ShaderMatrixDemo\ScaleUV\ScaleUV.shader" />
     <None Include="Assets\ShaderDemo\ZTestDemo\ZTestBlue.shader" />
     <None Include="Assets\ShaderDemo\ShaderMatrixDemo\MoveUV\Move.shader" />
+    <None Include="Assets\ShaderDemo\WaveDemo\ShaderWave.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
