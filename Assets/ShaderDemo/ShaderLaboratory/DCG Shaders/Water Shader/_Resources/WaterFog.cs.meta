@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 560dc3cf9572a8e419b9bb3ff740a1db
+timeCreated: 1450651442
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - FogMaterial: {instanceID: 0}
+  - _NoiseVolume: {fileID: 11700000, guid: ce515a5a715cb574eb40037cfb1ab766, type: 2}
+  - Sun: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
