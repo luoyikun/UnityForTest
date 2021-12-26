@@ -12,7 +12,7 @@ namespace Tarodev_Pathfinding._Scripts.Tiles {
 
         public override void CacheNeighbors() {
             Neighbors = new List<NodeBase>();
-
+            Debug.Log("IsoNode´´½¨ÁÚ¾Ó");
             foreach (var tile in Dirs.Select(dir => GridManager.Instance.GetTileAtPosition(Coords.Pos + dir)).Where(tile => tile != null)) {
                 Neighbors.Add(tile);
             }

@@ -48,9 +48,9 @@ namespace _Scripts.Tiles {
         [SerializeField] private TextMeshPro _gCostText, _hCostText;
         public List<NodeBase> Neighbors { get; protected set; }
         public NodeBase Connection { get; private set; }
-        public float G { get; private set; }
-        public float H { get; private set; }
-        public float F => G + H;
+        public float G { get; private set; } //起点到当前：每次找邻居会更新, 取当前到这个邻居，和原本设定中的最小
+        public float H { get; private set; }//当前到达终点：乐观估计，会绕过障碍物，可能比真实到达的要小
+        public float F => G + H; //两者之和
 
         public abstract void CacheNeighbors();
 
@@ -90,6 +90,6 @@ namespace _Scripts.Tiles {
 
 
 public interface ICoords {
-    public float GetDistance(ICoords other);
-    public Vector2 Pos { get; set; }
+    float GetDistance(ICoords other);
+    Vector2 Pos { get; set; }
 }

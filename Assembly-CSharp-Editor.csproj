@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,20 +53,20 @@
     <UnityVersion>2021.2.0f1c1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\ColorCorrectionLookupEditor.cs" />
-    <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\AntialiasingEditor.cs" />
+    <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\DepthOfFieldEditor.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\NoiseAndGrainEditor.cs" />
-    <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\SunShaftsEditor.cs" />
+    <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\ColorCorrectionCurvesEditor.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\BloomEditor.cs" />
-    <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\EdgeDetectionEditor.cs" />
-    <Compile Include="Assets\ShaderDemo\ShaderLaboratory\Editor\RenderCubemapWizard.cs" />
-    <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\DepthOfFieldDeprecatedEditor.cs" />
+    <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\ColorCorrectionLookupEditor.cs" />
+    <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\VignetteAndChromaticAberrationEditor.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\TonemappingEditor.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\BloomAndFlaresEditor.cs" />
-    <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\DepthOfFieldEditor.cs" />
-    <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\ColorCorrectionCurvesEditor.cs" />
+    <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\EdgeDetectionEditor.cs" />
+    <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\AntialiasingEditor.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\CameraMotionBlurEditor.cs" />
-    <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\VignetteAndChromaticAberrationEditor.cs" />
+    <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\SunShaftsEditor.cs" />
+    <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\DepthOfFieldDeprecatedEditor.cs" />
+    <Compile Include="Assets\ShaderDemo\ShaderLaboratory\Editor\RenderCubemapWizard.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
