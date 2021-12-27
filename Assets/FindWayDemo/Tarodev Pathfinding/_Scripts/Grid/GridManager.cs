@@ -39,7 +39,21 @@ namespace Tarodev_Pathfinding._Scripts.Grid {
 
             foreach (var t in Tiles.Values) t.RevertTile();
 
-            var path = Pathfinding.FindPath(_playerNodeBase, _goalNodeBase);
+            System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
+
+            stopwatch.Start(); //  开始监视代码运行时间
+
+            
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                var path = Pathfinding.FindPathByCloseBinaryHeap(_playerNodeBase, _goalNodeBase);
+            }
+            else
+            {
+                var path = Pathfinding.FindPath(_playerNodeBase, _goalNodeBase);
+            }
+            UnityEngine.Debug.Log("寻路耗时:" + stopwatch.ElapsedMilliseconds);
+            stopwatch.Stop();
         }
 
         void SpawnUnits() {

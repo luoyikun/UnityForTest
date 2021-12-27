@@ -5,7 +5,8 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace _Scripts.Tiles {
-    public abstract class NodeBase : MonoBehaviour {
+    public abstract class NodeBase : MonoBehaviour, IComparable<NodeBase>
+    {
         [Header("References")] [SerializeField]
         private Color _obstacleColor;
 
@@ -46,8 +47,8 @@ namespace _Scripts.Tiles {
         private TextMeshPro _fCostText;
 
         [SerializeField] private TextMeshPro _gCostText, _hCostText;
-        public List<NodeBase> Neighbors { get; protected set; }
-        public NodeBase Connection { get; private set; }
+        public List<NodeBase> Neighbors { get; protected set; }//周围的邻居
+        public NodeBase Connection { get; private set; }//上一个节点
         public float G { get; private set; } //起点到当前：每次找邻居会更新, 取当前到这个邻居，和原本设定中的最小
         public float H { get; private set; }//当前到达终点：乐观估计，会绕过障碍物，可能比真实到达的要小
         public float F => G + H; //两者之和
@@ -82,6 +83,15 @@ namespace _Scripts.Tiles {
             _gCostText.text = "";
             _hCostText.text = "";
             _fCostText.text = "";
+        }
+
+        public int CompareTo(NodeBase other)
+        {
+            if (this.F < other.F || (this.F == other.F && this.H < other.H))
+            {
+                return -1;
+            }
+            return 1;
         }
 
         #endregion
