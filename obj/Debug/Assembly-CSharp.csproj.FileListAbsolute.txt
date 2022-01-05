@@ -368,3 +368,9 @@ E:\GithubProjects\UnityForTest\obj\Debug\Assembly-CSharp.csproj.CoreCompileInput
 E:\GithubProjects\UnityForTest\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 E:\GithubProjects\UnityForTest\obj\Debug\Assembly-CSharp.dll
 E:\GithubProjects\UnityForTest\obj\Debug\Assembly-CSharp.pdb
+E:\GithubProjects\UnityForTest\Temp\Bin\Debug\unityplastic.dll
+E:\GithubProjects\UnityForTest\Temp\Bin\Debug\Unity.Plastic.Newtonsoft.Json.dll
+E:\GithubProjects\UnityForTest\Temp\Bin\Debug\Unity.Plastic.Antlr3.Runtime.dll
+E:\GithubProjects\UnityForTest\Temp\Bin\Debug\Unity.RemoteFileExplorer.pdb
+E:\GithubProjects\UnityForTest\Temp\Bin\Debug\Unity.EditorCoroutines.Editor.dll
+E:\GithubProjects\UnityForTest\Temp\Bin\Debug\Unity.EditorCoroutines.Editor.pdb

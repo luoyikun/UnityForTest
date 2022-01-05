@@ -1,0 +1,25 @@
+/**********************************************************************************************************************/
+/* Visual Splitters                                                                                                   */
+/**********************************************************************************************************************/
+
+Image.iconButton{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+Image.historyButtonIcon{
+    width:16px;
+    height:14px;
+}
+
+.toolbarFlexSpacer
+{
+    flex:1;
+}
+
+.toolbarFlexSpacer0Px
+{
+    max-width:0px;
+}

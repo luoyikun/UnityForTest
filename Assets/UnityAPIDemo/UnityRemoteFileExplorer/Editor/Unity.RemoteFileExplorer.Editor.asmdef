@@ -1,0 +1,19 @@
+{
+    "name": "Unity.RemoteFileExplorer.Editor",
+    "references": [
+        "Unity.RemoteFileExplorer"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "ICSharpCode.SharpZipLib.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

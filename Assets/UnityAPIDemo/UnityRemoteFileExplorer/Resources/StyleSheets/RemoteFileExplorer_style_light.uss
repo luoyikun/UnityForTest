@@ -1,0 +1,11 @@
+/**********************************************************************************************************************/
+/* Top-level UI                                                                                                       */
+/**********************************************************************************************************************/
+
+Image#backwardsInHistoryButton.historyButtonIcon{
+    background-image: resource("Icons/Profiler.PrevFrame.png");
+}
+
+Image#forwardsInHistoryButton.historyButtonIcon{
+    background-image: resource("Icons/Profiler.NextFrame.png");
+}
