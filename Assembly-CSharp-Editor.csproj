@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -58,20 +58,20 @@
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\ColorCorrectionCurvesEditor.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\BloomEditor.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\ColorCorrectionLookupEditor.cs" />
+    <Compile Include="Assets\UnityAPIDemo\Coroutine\EditorCoroutine\Editor\EditorCorTest.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\VignetteAndChromaticAberrationEditor.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\TonemappingEditor.cs" />
+    <Compile Include="Assets\UnityAPIDemo\Coroutine\EditorCoroutine\com.unity.editorcoroutines@1.0.0\Editor\EditorWaitForSeconds.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\BloomAndFlaresEditor.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\EdgeDetectionEditor.cs" />
+    <Compile Include="Assets\UnityAPIDemo\Coroutine\EditorCoroutine\com.unity.editorcoroutines@1.0.0\Editor\EditorCoroutineUtility.cs" />
+    <Compile Include="Assets\UnityAPIDemo\Coroutine\EditorCoroutine\com.unity.editorcoroutines@1.0.0\Editor\EditorWindowCoroutineExtension.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\AntialiasingEditor.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\CameraMotionBlurEditor.cs" />
+    <Compile Include="Assets\UnityAPIDemo\Coroutine\EditorCoroutine\com.unity.editorcoroutines@1.0.0\Editor\EditorCoroutine.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\SunShaftsEditor.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Editor\ImageEffects\DepthOfFieldDeprecatedEditor.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\Editor\RenderCubemapWizard.cs" />
-    <Compile Include="Assets\UnityAPIDemo\Coroutine\EditorCoroutine\Editor\EditorCorTest.cs" />
-    <Compile Include="Assets\UnityAPIDemo\Coroutine\EditorCoroutine\com.unity.editorcoroutines@1.0.0\Editor\EditorCoroutine.cs" />
-    <Compile Include="Assets\UnityAPIDemo\Coroutine\EditorCoroutine\com.unity.editorcoroutines@1.0.0\Editor\EditorCoroutineUtility.cs" />
-    <Compile Include="Assets\UnityAPIDemo\Coroutine\EditorCoroutine\com.unity.editorcoroutines@1.0.0\Editor\EditorWaitForSeconds.cs" />
-    <Compile Include="Assets\UnityAPIDemo\Coroutine\EditorCoroutine\com.unity.editorcoroutines@1.0.0\Editor\EditorWindowCoroutineExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -776,6 +776,9 @@
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.EditorCoroutines.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Purchasing.SecurityCore">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
     </Reference>
@@ -805,9 +808,6 @@
     </Reference>
     <Reference Include="UnityEngine.Advertisements.Editor">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.EditorCoroutines.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

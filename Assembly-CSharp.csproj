@@ -201,6 +201,11 @@
     <Compile Include="Assets\TransformDemo\DotweenDemo\ExtendMethods.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\Triangles.cs" />
     <Compile Include="Assets\FindWayDemo\Tarodev Pathfinding\_Scripts\Grid\Scriptables\ScriptableGrid.cs" />
+    <Compile Include="Assets\CSharpDemo\List\ListOri.cs" />
+    <Compile Include="Assets\CSharpDemo\List\ListTest.cs" />
+    <Compile Include="Assets\CSharpDemo\Dictionary\DictionaryEx\DataKey.cs" />
+    <Compile Include="Assets\CSharpDemo\Dictionary\DictionaryEx\TableData.cs" />
+    <Compile Include="Assets\CSharpDemo\Dictionary\DictionaryEx\DictionaryExTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\Tonemapper.shader" />
@@ -1007,6 +1012,9 @@
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.EditorCoroutines.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Purchasing.SecurityCore">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
     </Reference>
@@ -1036,9 +1044,6 @@
     </Reference>
     <Reference Include="UnityEngine.Advertisements.Editor">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.EditorCoroutines.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
