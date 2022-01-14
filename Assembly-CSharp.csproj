@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -66,6 +66,7 @@
     <Compile Include="Assets\UnityAPIDemo\ThreadCallUnity\ThreadCallUnityTest.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\CSharpDemo\Dictionary\DictionaryEx\DictionaryExTest.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\ImageEffects.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\Scripts\PixelStyle.cs" />
@@ -122,6 +123,7 @@
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\BloomAndFlares.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\Model\UnityChan\Scripts\IdleChanger.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\Model\UnityChan\Scripts\ThirdPersonCamera.cs" />
+    <Compile Include="Assets\CSharpDemo\List\ListOri.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\Model\UnityChan\Scripts\AutoBlink.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\Models\AcquireChan\Scripts\AcquireChanController.cs" />
@@ -169,6 +171,7 @@
     <Compile Include="Assets\LuaTest\Scripts\LuaState.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\ImageEffect\BrightnessSaturationAndContrast.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\Water Shader\_Resources\MeshSortingOrder.cs" />
+    <Compile Include="Assets\CSharpDemo\Dictionary\DictionaryEx\TableData.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\FindWayDemo\Tarodev Pathfinding\_Scripts\Tiles\HexNode.cs" />
@@ -181,6 +184,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\VectorDemo\AoeDemo\AoeTest.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\Fisheye.cs" />
+    <Compile Include="Assets\CSharpDemo\Dictionary\DictionaryEx\DataKey.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\CSharpDemo\InterfaceDemo\InterfaceScripts.cs" />
@@ -192,6 +196,7 @@
     <Compile Include="Assets\CubeUVDemo\CustomUVS.cs" />
     <Compile Include="Assets\LuaTest\Examples\04_Registry\LearnRegistry.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\CSharpDemo\List\ListTest.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\Model\UnityChan\Scripts\SpringBone.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\Grayscale.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
@@ -201,11 +206,6 @@
     <Compile Include="Assets\TransformDemo\DotweenDemo\ExtendMethods.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\Triangles.cs" />
     <Compile Include="Assets\FindWayDemo\Tarodev Pathfinding\_Scripts\Grid\Scriptables\ScriptableGrid.cs" />
-    <Compile Include="Assets\CSharpDemo\List\ListOri.cs" />
-    <Compile Include="Assets\CSharpDemo\List\ListTest.cs" />
-    <Compile Include="Assets\CSharpDemo\Dictionary\DictionaryEx\DataKey.cs" />
-    <Compile Include="Assets\CSharpDemo\Dictionary\DictionaryEx\TableData.cs" />
-    <Compile Include="Assets\CSharpDemo\Dictionary\DictionaryEx\DictionaryExTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\Tonemapper.shader" />
@@ -265,6 +265,7 @@
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\ColorCorrection3DLut.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\ImageEffect\BrightnessSaturationAndContrast.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\SimpleClear.shader" />
+    <None Include="Assets\ShaderDemo\FlowLightDownDemo\DataFlowEffect.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\ContrastComposite.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
