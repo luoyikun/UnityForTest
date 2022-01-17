@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>7.3</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -188,6 +188,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\CSharpDemo\InterfaceDemo\InterfaceScripts.cs" />
+    <Compile Include="Assets\CSharpDemo\HashSet\HashSetTest.cs" />
     <Compile Include="Assets\FindWayDemo\Tarodev Pathfinding\_Scripts\Units\Unit.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\MotionBlur.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\CreaseShading.cs" />
@@ -206,6 +207,8 @@
     <Compile Include="Assets\TransformDemo\DotweenDemo\ExtendMethods.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\Triangles.cs" />
     <Compile Include="Assets\FindWayDemo\Tarodev Pathfinding\_Scripts\Grid\Scriptables\ScriptableGrid.cs" />
+    <Compile Include="Assets\AssetbundleDemo\wowo1gt\DownloadMgr.cs" />
+    <Compile Include="Assets\AssetbundleDemo\wowo1gt\DownloadFileMac.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\Tonemapper.shader" />
