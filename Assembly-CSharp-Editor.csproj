@@ -749,11 +749,11 @@
     <Reference Include="UnityEngine.Purchasing.SecurityStub">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
@@ -814,10 +814,6 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{BFBE3659-0741-398F-8F1B-529F22127DC2}</Project>
       <Name>Assembly-CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RemoteFileExplorer.csproj">
-      <Project>{74D0D50A-C868-5028-923D-A287091587B1}</Project>
-      <Name>Unity.RemoteFileExplorer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -31,7 +31,7 @@ public class DownloadMgr
 
     private static DownloadMgr _Instance = null;
 
-    public static DownloadMgr I
+    public static DownloadMgr Instance
     {
         get
         {
@@ -208,7 +208,7 @@ public class DownloadMgr
             }
             else
             {
-                //ThreadDebugLog.Log("Error DownloadMacState " + mac._state + " " + mac._downUnit.name);
+                ThreadDebugLog.Log("Error DownloadMacState " + mac._state + " " + mac._downUnit.name);
                 break;
             }
         }

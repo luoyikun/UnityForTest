@@ -23,6 +23,10 @@ namespace ThreadTest
             }
         }
 
+        public void StarUp()
+        {
+
+        }
         void Awake()
         {
             _current = this;
