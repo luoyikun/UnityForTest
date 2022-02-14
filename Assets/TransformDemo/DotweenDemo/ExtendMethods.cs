@@ -31,7 +31,7 @@ namespace DOTweenDemo
             return myTween;
         }
 
-        //
+        //1. 在协程中插值运算，float f = myTween.time; f >= 0.0f; f -= Time.deltaTime，每帧递减运动时间        //2. myTween.transform.rotation = Quaternion.Lerp(myTween.m_rotation, myTween.m_tarRotation, 1.0f-f/myTween.time);      tranfrom当前四元数 = 运动开始时 与 目标的差值 ，1.0f-f/myTween.time 的值在每帧越来越靠近 1，说明越来越向目标
         public static IEnumerator YieldRotate(this MonoBehaviour mono, tween myTween)
         {
             for (; myTween.currentLoop < myTween.loops; myTween.currentLoop++)
