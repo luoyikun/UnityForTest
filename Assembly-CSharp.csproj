@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -81,6 +81,7 @@
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\Water Shader\_Resources\MirrorReflection.cs" />
     <Compile Include="Assets\TransformDemo\MatrixTest\Matrix.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\SunShafts.cs" />
+    <Compile Include="Assets\AssetbundleDemo\wowo1gt\DownloadFileMac.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\Water Shader\_Resources\causticsProjector.cs" />
     <Compile Include="Assets\FindWayDemo\Tarodev Pathfinding\_Scripts\Grid\GridManager.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\PostEffectsHelper.cs" />
@@ -108,6 +109,7 @@
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\Model\UnityChan\Scripts\RandomWind.cs" />
     <Compile Include="Assets\FindWayDemo\Tarodev Pathfinding\_Scripts\Tiles\NodeBase.cs" />
     <Compile Include="Assets\TransformDemo\MatrixTest\RotateSelf.cs" />
+    <Compile Include="Assets\AssetbundleDemo\wowo1gt\DownloadMgr.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\PostEffectsBase.cs" />
     <Compile Include="Assets\FindWayDemo\Tarodev Pathfinding\_Scripts\Grid\Scriptables\ScriptableIsoGrid.cs" />
@@ -207,8 +209,7 @@
     <Compile Include="Assets\TransformDemo\DotweenDemo\ExtendMethods.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\Triangles.cs" />
     <Compile Include="Assets\FindWayDemo\Tarodev Pathfinding\_Scripts\Grid\Scriptables\ScriptableGrid.cs" />
-    <Compile Include="Assets\AssetbundleDemo\wowo1gt\DownloadMgr.cs" />
-    <Compile Include="Assets\AssetbundleDemo\wowo1gt\DownloadFileMac.cs" />
+    <Compile Include="Assets\CSharpDemo\BinaryTreeTraversalDemo\BtTraversalTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\Tonemapper.shader" />
