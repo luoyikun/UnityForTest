@@ -227,6 +227,7 @@
     <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\SpectrumController.cs" />
     <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\DelayedDestroyController.cs" />
     <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\HighlightingController.cs" />
+    <Compile Include="Assets\CSharpDemo\BinaryTreeTraversalDemo\BtTraversalTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\Tonemapper.shader" />
