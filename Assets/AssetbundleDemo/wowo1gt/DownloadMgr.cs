@@ -18,7 +18,7 @@ public class DownloadUnit
     public string downUrl; //远程地址
     public string savePath; //本地地址
     public int size; //文件长度，非必须
-    public string md5; //需要校验的md5，非必须
+    public string md5; //需要校验的md5，非必须。如果不填，下载完毕后，默认成功
     public bool isDelete; //用于清理正在下载的文件
 
     public DonwloadErrorCallBack errorFun;

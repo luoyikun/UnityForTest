@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>7.3</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -68,6 +68,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\CSharpDemo\Dictionary\DictionaryEx\DictionaryExTest.cs" />
+    <Compile Include="Assets\TransformDemo\WangXiangShuo\GuanXing.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\ImageEffects.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\Scripts\PixelStyle.cs" />
@@ -134,6 +135,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\ImageEffectBase.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\BlurOptimized.cs" />
+    <Compile Include="Assets\CSharpDemo\HappyNewYear\NYCheck.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\Model\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\Water Shader\_Resources\UnderWaterCamera.cs" />
     <Compile Include="Assets\CSharpDemo\BinaryHeapDemo\TestBH.cs" />
@@ -211,9 +213,24 @@
     <Compile Include="Assets\TransformDemo\DotweenDemo\ExtendMethods.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\Triangles.cs" />
     <Compile Include="Assets\FindWayDemo\Tarodev Pathfinding\_Scripts\Grid\Scriptables\ScriptableGrid.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\ZhuZhuangDemo.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystem\Scripts\HighlightingEffect.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystem\Scripts\HighlightableObject.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\CompoundObjectController.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\RotationController.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\StaticOccluderController.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\FlashingController.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\CameraTargeting.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\SceneLoader.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\WallMovementController.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\OccluderController.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\SpectrumController.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\DelayedDestroyController.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\HighlightingController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\Tonemapper.shader" />
+    <None Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystem\Resources\HighlightingBlur.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\Water Shader\Shaders\UnderWaterDistortion.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\GlobalFog.shader" />
@@ -221,6 +238,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\NoiseAndGrain.shader" />
     <None Include="Assets\ShaderDemo\ShaderMatrixDemo\ScaleVertices\ScaleVertices.shader" />
+    <None Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystem\Resources\HighlightingComposite.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\frag_ao.cginc" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
@@ -267,6 +285,7 @@
     <None Include="Assets\ShaderDemo\ShaderLaboratory\Shader\2_DepthOfField.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\ColorCorrection3DLut.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\ImageEffect\BrightnessSaturationAndContrast.shader" />
+    <None Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystem\Resources\HighlightingStencilTransparentZ.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\SimpleClear.shader" />
     <None Include="Assets\ShaderDemo\FlowLightDownDemo\DataFlowEffect.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\ContrastComposite.shader" />
@@ -298,6 +317,7 @@
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
     <None Include="Assets\Models\AcquireChan\Models\Shaders\imagine_chara_parts_face.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\ImageEffect\Bloom.shader" />
+    <None Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystem\Resources\HighlightingInclude.cginc" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\Shader\3_PixelStyle.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\ShowAlphaChannel.shader" />
@@ -328,11 +348,14 @@
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\Contrast Stretch\Luminance.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
+    <None Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystem\Resources\HighlightingStencilOpaque.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\Water Shader\Shaders\WaterSurfaceOpenGL.shader" />
+    <None Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystem\Resources\HighlightingStencilOpaqueZ.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\Water Shader\Shaders\WaterSurfaceDX11.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
+    <None Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystem\Resources\HighlightingStencilTransparent.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
