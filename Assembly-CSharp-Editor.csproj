@@ -815,6 +815,22 @@
       <Project>{BFBE3659-0741-398F-8F1B-529F22127DC2}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="xasset.editor.csproj">
+      <Project>{59489C30-D2D2-58E4-13A0-EC2277B44D15}</Project>
+      <Name>xasset.editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="xasset.csproj">
+      <Project>{3624FD26-02D6-84A8-68AB-79573860BD0F}</Project>
+      <Name>xasset</Name>
+    </ProjectReference>
+    <ProjectReference Include="xasset.example.csproj">
+      <Project>{8ADE590A-480E-BA52-BE7C-CE7B34DAC48B}</Project>
+      <Name>xasset.example</Name>
+    </ProjectReference>
+    <ProjectReference Include="xasset.example.editor.csproj">
+      <Project>{7A4E3AC6-A60E-6139-23D9-FED0B8286206}</Project>
+      <Name>xasset.example.editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

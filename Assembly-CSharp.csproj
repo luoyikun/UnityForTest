@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -64,6 +64,7 @@
     <Compile Include="Assets\LuaTest\Scripts\LuaFileUtils.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\Scripts\PostEffectsBase.cs" />
     <Compile Include="Assets\UnityAPIDemo\ThreadCallUnity\ThreadCallUnityTest.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\FlashingController.cs" />
     <Compile Include="Assets\AssetbundleDemo\wowo1gt\ThreadDebugLog.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
@@ -83,17 +84,22 @@
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\Water Shader\_Resources\MirrorReflection.cs" />
     <Compile Include="Assets\TransformDemo\MatrixTest\Matrix.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\SunShafts.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\SpectrumController.cs" />
     <Compile Include="Assets\AssetbundleDemo\wowo1gt\DownloadFileMac.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\Water Shader\_Resources\causticsProjector.cs" />
     <Compile Include="Assets\FindWayDemo\Tarodev Pathfinding\_Scripts\Grid\GridManager.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\PostEffectsHelper.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\HighlightingController.cs" />
     <Compile Include="Assets\Models\AcquireChan\Scripts\SimpleFollowCam.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\CompoundObjectController.cs" />
     <Compile Include="Assets\PhysicsTest\PhyA.cs" />
     <Compile Include="Assets\LuaTest\Scripts\LuaDLL.cs" />
+    <Compile Include="Assets\CSharpDemo\BinaryTreeTraversalDemo\BtTraversalTest.cs" />
     <Compile Include="Assets\FindWayDemo\Tarodev Pathfinding\_Scripts\Grid\Scriptables\ScriptableHexGrid.cs" />
     <Compile Include="Assets\TransformDemo\DotweenDemo\Tween.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\Water Shader\_Resources\FlyCamera.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\DepthOfFieldDeprecated.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\Scripts\DepthOfField.cs" />
@@ -114,6 +120,7 @@
     <Compile Include="Assets\AssetbundleDemo\wowo1gt\DownloadMgr.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\PostEffectsBase.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystem\Scripts\HighlightingEffect.cs" />
     <Compile Include="Assets\FindWayDemo\Tarodev Pathfinding\_Scripts\Grid\Scriptables\ScriptableIsoGrid.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\Model\UnityChan\Scripts\RefleshProbe.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\ImageEffect\Bloom.cs" />
@@ -150,24 +157,29 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\Water Shader\_Resources\UnderWaterPostEffect.cs" />
     <Compile Include="Assets\ShaderDemo\WaveDemo\CreatNodes.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\ZhuZhuangDemo.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\Antialiasing.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\NoiseAndScratches.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\ScreenSpaceAmbientOcclusion.cs" />
     <Compile Include="Assets\VectorDemo\AoeDemo\AwakeTest.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
-    <Compile Include="Assets\UnityAPIDemo\ThreadCallUnity\Loom.cs" />
     <Compile Include="Assets\TransformDemo\MatrixTest\MatrixTest.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\CameraTargeting.cs" />
+    <Compile Include="Assets\UnityAPIDemo\ThreadCallUnity\Loom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\FindWayDemo\Tarodev Pathfinding\_Scripts\Tiles\IsoNode.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\StaticOccluderController.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\Vortex.cs" />
     <Compile Include="Assets\UnityAPIDemo\Coroutine\CoroutineTest.cs" />
     <Compile Include="Assets\LuaTest\Examples\03_Function\LearnFunction.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\WallMovementController.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\ColorCorrectionLookup.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\Twirl.cs" />
     <Compile Include="Assets\LuaTest\Examples\02_LoadFile\LearnLoadFile.cs" />
     <Compile Include="Assets\LuaTest\Examples\01_Stack\LearnStack.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\RotationController.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\ContrastStretch.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\Model\UnityChan\Scripts\FaceUpdate.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\Quads.cs" />
@@ -192,42 +204,30 @@
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\Fisheye.cs" />
     <Compile Include="Assets\CSharpDemo\Dictionary\DictionaryEx\DataKey.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\CSharpDemo\InterfaceDemo\InterfaceScripts.cs" />
     <Compile Include="Assets\CSharpDemo\HashSet\HashSetTest.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\FindWayDemo\Tarodev Pathfinding\_Scripts\Units\Unit.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\DelayedDestroyController.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\MotionBlur.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\CreaseShading.cs" />
     <Compile Include="Assets\FindWayDemo\Tarodev Pathfinding\_Scripts\Tiles\SquareNode.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\CubeUVDemo\CustomUVS.cs" />
     <Compile Include="Assets\LuaTest\Examples\04_Registry\LearnRegistry.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystem\Scripts\HighlightableObject.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\CSharpDemo\List\ListTest.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\Model\UnityChan\Scripts\SpringBone.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\Grayscale.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\OccluderController.cs" />
     <Compile Include="Assets\FindWayDemo\Tarodev Pathfinding\_Scripts\Pathfinding.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\ColorCorrectionRamp.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\Model\UnityChan\Scripts\AnimManager.cs" />
     <Compile Include="Assets\TransformDemo\DotweenDemo\ExtendMethods.cs" />
     <Compile Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Scripts\Triangles.cs" />
     <Compile Include="Assets\FindWayDemo\Tarodev Pathfinding\_Scripts\Grid\Scriptables\ScriptableGrid.cs" />
-    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\ZhuZhuangDemo.cs" />
-    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystem\Scripts\HighlightingEffect.cs" />
-    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystem\Scripts\HighlightableObject.cs" />
-    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\CompoundObjectController.cs" />
-    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\RotationController.cs" />
-    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\StaticOccluderController.cs" />
-    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\FlashingController.cs" />
-    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\CameraTargeting.cs" />
-    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\SceneLoader.cs" />
-    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\WallMovementController.cs" />
-    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\OccluderController.cs" />
-    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\SpectrumController.cs" />
-    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\DelayedDestroyController.cs" />
-    <Compile Include="Assets\TransformDemo\ZhuZhuangDemo\HighlightingSystemDemo\Scripts\HighlightingController.cs" />
-    <Compile Include="Assets\CSharpDemo\BinaryTreeTraversalDemo\BtTraversalTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\Tonemapper.shader" />
@@ -295,6 +295,7 @@
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\_DepthOfField\Bokeh34.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\ColorCorrectionEffect.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\FisheyeShader.shader" />
+    <None Include="Assets\xasset\Example\Arts\Shaders\SimpleGrabPassBlur.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\ShaderDemo\ShaderLaboratory\DCG Shaders\_Common\Standard Assets\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
@@ -1072,6 +1073,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="xasset.editor.csproj">
+      <Project>{59489C30-D2D2-58E4-13A0-EC2277B44D15}</Project>
+      <Name>xasset.editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="xasset.csproj">
+      <Project>{3624FD26-02D6-84A8-68AB-79573860BD0F}</Project>
+      <Name>xasset</Name>
+    </ProjectReference>
+    <ProjectReference Include="xasset.example.csproj">
+      <Project>{8ADE590A-480E-BA52-BE7C-CE7B34DAC48B}</Project>
+      <Name>xasset.example</Name>
+    </ProjectReference>
+    <ProjectReference Include="xasset.example.editor.csproj">
+      <Project>{7A4E3AC6-A60E-6139-23D9-FED0B8286206}</Project>
+      <Name>xasset.example.editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

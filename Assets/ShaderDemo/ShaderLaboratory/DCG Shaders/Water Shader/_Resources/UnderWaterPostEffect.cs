@@ -32,7 +32,7 @@ public class UnderWaterPostEffect : MonoBehaviour {
 		if (!ShaderToRender) {
 			ShaderToRender = Shader.Find("Hidden/DCG/Water Shader/Underwater");
 		}
-		UnityEditor.EditorApplication.update = UpdateStringName;
+		//UnityEditor.EditorApplication.update = UpdateStringName;
 	}
 	/*
 	void OnDisable()

@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 242365754
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b1c0089872504856b6a1c594a004177d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fdf6c57a251b9f6ec27bdd2fe01b033c
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/xasset/Example/Arts/Animations/MessageBox.controller
+Dependencies:
+- E:/GithubProjects/UnityForTest/Bundles/Windows/assets_xasset_example_arts_animations_messagebox_anim
