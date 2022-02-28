@@ -1,3 +1,15 @@
 /UnityPackageManager
 /Library
 /Temp
+/obj
+/UserSettings
+/Assembly-CSharp-firstpass.csproj
+/ShaderSRT.unitypackage
+/Unity.RemoteFileExplorer.csproj
+/Unity.RemoteFileExplorer.Editor.csproj
+/UnityForTest.csproj
+/UnityForTest.Plugins.csproj
+/UnityForTest.sln
+/.vsconfig
+/Assembly-CSharp.csproj
+/Assembly-CSharp-Editor.csproj
