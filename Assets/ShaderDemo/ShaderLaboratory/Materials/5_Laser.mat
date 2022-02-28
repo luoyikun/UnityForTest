@@ -26,7 +26,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaScale: 1
-    - _RampScale: 0.4
+    - _RampScale: 0.417
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

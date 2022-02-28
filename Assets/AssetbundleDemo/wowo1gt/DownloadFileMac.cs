@@ -155,7 +155,7 @@ public class DownloadFileMac
             respone = (HttpWebResponse)request.GetResponse();
             ns = respone.GetResponseStream();
             ns.ReadTimeout = TimeOutWait;
-            long totalSize = respone.ContentLength;
+            long totalSize = respone.ContentLength; //todo：应该改为文件list去获取那个文件大小，新版本已经获取不到大小了
             long curSize = startPos;
             if (curSize == totalSize)
             {
@@ -232,7 +232,7 @@ public class DownloadFileMac
             request.ReadWriteTimeout = ReadWriteTimeOut;
             //向服务器请求，获得服务器回应数据流
             respone = request.GetResponse();
-            length = (int)respone.ContentLength;
+            length = (int)respone.ContentLength;//todo：已经获取不到长度，要修改文件列表
         }
         catch (WebException e)
         {
