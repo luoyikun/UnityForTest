@@ -3,3 +3,17 @@
 /Temp
 /Logs
 /.vs
+/obj
+/xasset.editor.csproj
+/xasset.example.csproj
+/xasset.example.editor.csproj
+/xasset.csproj
+/Assembly-CSharp-Editor.csproj
+/Assembly-CSharp-Editor.csproj~e79bb5e2abeb9ccf938b82b232beeac93a2e01c0
+/Unity.AssetBundleBrowser.Editor.csproj
+/Unity.AssetBundleBrowser.Editor.Tests.csproj
+/UnityForTest.sln
+/.vsconfig
+/Assembly-CSharp.csproj
+/Assembly-CSharp.csproj~e79bb5e2abeb9ccf938b82b232beeac93a2e01c0
+/Bundles

@@ -92,18 +92,30 @@ class ABRedundancyChecker
     public void CheckABInfo(AssetBundle ab, string abName)
     {
         EditorSettings.serializationMode = SerializationMode.ForceText;
-        string[] names = ab.GetAllAssetNames();
-        string[] dependencies = AssetDatabase.GetDependencies(names);
+        string[] names = ab.GetAllAssetNames();//这里如果是预制体-》ab的包，里面包含只有预制体一个
+        string[] dependencies = AssetDatabase.GetDependencies(names);//预制体包含的所有资源
         string[] allDepen = dependencies.Length > 0 ? dependencies : names;
-        Dictionary<string, UnityEngine.Object> assetMap = new Dictionary<string, UnityEngine.Object>();
+        //Dictionary<string, UnityEngine.Object> assetMap = new Dictionary<string, UnityEngine.Object>();
         for (int i = 0; i < allDepen.Length; ++i)
         {
-            UnityEngine.Object obj = ab.LoadAsset(allDepen[i]);
-            if (obj != null && assetTypeList.Contains(obj.GetType()))
-                TryAddAssetToMap(obj.name, allDepen[i], abName, GetObjectType(obj));
+            //实例化不出来且卡，直接采用字符串加载方式
+            //UnityEngine.Object obj = ab.LoadAsset(allDepen[i]);
+            //if (obj != null && assetTypeList.Contains(obj.GetType()))
+            //    TryAddAssetToMap(obj.name, allDepen[i], abName, GetObjectType(obj));
+
+            //直接加字符串
+            string[] typename = allDepen[i].Split('.');
+            TryAddAssetToMap(allDepen[i], allDepen[i], abName, typename[typename.Length-1]);
         }
     }
 
+    /// <summary>
+    /// 加入到字典保存标记
+    /// </summary>
+    /// <param name="assetName">资源名</param>
+    /// <param name="assetPath">散资源路径，作为key</param>
+    /// <param name="abName">ab包名</param>
+    /// <param name="type">类型</param>
     private void TryAddAssetToMap(string assetName, string assetPath, string abName, string type)
     {
         if (_AssetMap.ContainsKey(assetPath))
