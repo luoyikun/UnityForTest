@@ -11,7 +11,7 @@ namespace xasset
         {
             Debug.Log("异步加载：" + pathOrURL);
             _request = LoadAssetBundleAsync(pathOrURL);
-            status = LoadableStatus.LoadingAsync;
+            m_enA2S = EnAsync2Sync.LoadingAsync;
             
         }
 
@@ -21,7 +21,10 @@ namespace xasset
             {
                 return;
             }
-           
+            if (m_enA2S == EnAsync2Sync.LoadingAsync)
+            {
+                m_enA2S = EnAsync2Sync.LoadingAsync2Sync;
+            }
             OnLoaded(_request.assetBundle);//设置了加载状态，会停止OnUpdate
             Debug.Log("同步加载：" + pathOrURL);
             _request = null;

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>7.3</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,24 +53,24 @@
     <UnityVersion>2021.2.0f1c1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\xasset\Editor\Simulation\EditorInitializeVersions.cs" />
-    <Compile Include="Assets\xasset\Editor\Build\PlayerBuildProcessor.cs" />
-    <Compile Include="Assets\xasset\Editor\Build\Task\BuildBundles.cs" />
-    <Compile Include="Assets\xasset\Editor\Simulation\EditorAsset.cs" />
-    <Compile Include="Assets\xasset\Editor\Build\Pipeline\BuiltinAssetBundleManifest.cs" />
-    <Compile Include="Assets\xasset\Editor\EditorUtility.cs" />
-    <Compile Include="Assets\xasset\Editor\Simulation\Initializer.cs" />
-    <Compile Include="Assets\xasset\Editor\Build\BuildScript.cs" />
-    <Compile Include="Assets\xasset\Editor\Build\Task\BuildTaskJob.cs" />
     <Compile Include="Assets\xasset\Editor\Build\Pipeline\BuiltinBuildPipeline.cs" />
-    <Compile Include="Assets\xasset\Editor\Tools\MenuItems.cs" />
-    <Compile Include="Assets\xasset\Editor\Settings.cs" />
-    <Compile Include="Assets\xasset\Editor\Simulation\EditorScene.cs" />
+    <Compile Include="Assets\xasset\Editor\Simulation\EditorAsset.cs" />
     <Compile Include="Assets\xasset\Editor\Build\Pipeline\ABuildPipeline.cs" />
-    <Compile Include="Assets\xasset\Editor\Build\Task\CreateManifest.cs" />
+    <Compile Include="Assets\xasset\Editor\EditorUtility.cs" />
+    <Compile Include="Assets\xasset\Editor\Tools\MenuItems.cs" />
     <Compile Include="Assets\xasset\Editor\Build\Task\BuildTask.cs" />
+    <Compile Include="Assets\xasset\Editor\Simulation\EditorScene.cs" />
+    <Compile Include="Assets\xasset\Editor\Settings.cs" />
+    <Compile Include="Assets\xasset\Editor\Simulation\Initializer.cs" />
     <Compile Include="Assets\xasset\Editor\ScriptPlayMode.cs" />
+    <Compile Include="Assets\xasset\Editor\Build\Task\BuildBundles.cs" />
+    <Compile Include="Assets\xasset\Editor\Build\Task\BuildTaskJob.cs" />
+    <Compile Include="Assets\xasset\Editor\Simulation\EditorInitializeVersions.cs" />
+    <Compile Include="Assets\xasset\Editor\Build\Pipeline\BuiltinAssetBundleManifest.cs" />
     <Compile Include="Assets\xasset\Editor\Build\Pipeline\IAssetBundleManifest.cs" />
+    <Compile Include="Assets\xasset\Editor\Build\BuildScript.cs" />
+    <Compile Include="Assets\xasset\Editor\Build\PlayerBuildProcessor.cs" />
+    <Compile Include="Assets\xasset\Editor\Build\Task\CreateManifest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\xasset\Editor\xasset.editor.asmdef" />

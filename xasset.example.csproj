@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>7.3</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,29 +53,29 @@
     <UnityVersion>2021.2.0f1c1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\xasset\Example\Scripts\GUI\LoadingScreen.cs" />
-    <Compile Include="Assets\xasset\Example\Scripts\MenuItem.cs" />
-    <Compile Include="Assets\xasset\Example\Scripts\Example\MenuScreen.cs" />
-    <Compile Include="Assets\xasset\Example\Scripts\GUI\Dialog.cs" />
-    <Compile Include="Assets\xasset\Example\Scripts\Example\LoadSceneAdditive.cs" />
-    <Compile Include="Assets\xasset\Example\Scripts\GUI\MessageBox.cs" />
-    <Compile Include="Assets\xasset\Example\Scripts\Startup.cs" />
-    <Compile Include="Assets\xasset\Example\Scripts\ObjectHolder.cs" />
-    <Compile Include="Assets\xasset\Example\Scripts\GUI\BackgroundAdapter.cs" />
-    <Compile Include="Assets\xasset\Example\Scripts\Example\SplashScreen.cs" />
-    <Compile Include="Assets\xasset\Example\Scripts\Managers\CustomLoader.cs" />
-    <Compile Include="Assets\xasset\Example\Scripts\OpenURL.cs" />
-    <Compile Include="Assets\xasset\Example\Scripts\Example\DownloadControl.cs" />
     <Compile Include="Assets\xasset\Example\Scripts\GUI\IProgressBar.cs" />
-    <Compile Include="Assets\xasset\Example\Scripts\ExampleScene.cs" />
-    <Compile Include="Assets\xasset\Example\Scripts\Managers\AssetManager.cs" />
-    <Compile Include="Assets\xasset\Example\Scripts\Example\LoadAssetWithCycleReference.cs" />
-    <Compile Include="Assets\xasset\Example\Scripts\GUI\ScrollContent.cs" />
-    <Compile Include="Assets\xasset\Example\Scripts\Example\CheckUpdateScreen.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\Example\SplashScreen.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\Example\MenuScreen.cs" />
     <Compile Include="Assets\xasset\Example\Scripts\Example\Async2Sync.cs" />
-    <Compile Include="Assets\xasset\Example\Scripts\Managers\SceneLoader.cs" />
-    <Compile Include="Assets\xasset\Example\Scripts\Example\DownloadScreen.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\Example\LoadAssetWithCycleReference.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\GUI\LoadingScreen.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\GUI\MessageBox.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\Managers\CustomLoader.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\ExampleScene.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\MenuItem.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\Startup.cs" />
     <Compile Include="Assets\xasset\Example\Scripts\Managers\PreloadManager.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\Example\DownloadControl.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\Managers\SceneLoader.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\GUI\Dialog.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\GUI\ScrollContent.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\Example\DownloadScreen.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\OpenURL.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\ObjectHolder.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\Example\LoadSceneAdditive.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\Example\CheckUpdateScreen.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\Managers\AssetManager.cs" />
+    <Compile Include="Assets\xasset\Example\Scripts\GUI\BackgroundAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\xasset\Example\Scripts\xasset.example.asmdef" />
