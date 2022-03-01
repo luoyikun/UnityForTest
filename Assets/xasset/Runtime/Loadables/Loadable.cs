@@ -20,21 +20,15 @@ namespace xasset
         public string error { get; internal set; }
 
         public bool isDone => status == LoadableStatus.SuccessToLoad || status == LoadableStatus.Unloaded ||
-                              status == LoadableStatus.FailedToLoad || status == LoadableStatus.Async2SyncEnd;
+                              status == LoadableStatus.FailedToLoad ;
 
         public float progress { get; protected set; }
 
+        public EnAsync2Sync m_enA2S = EnAsync2Sync.None;
         protected void Finish(string errorCode = null)
         {
             error = errorCode;
-            if (status == LoadableStatus.LoadingAsync)
-            {
-                status = LoadableStatus.Async2SyncEnd;
-            }
-            else
-            {
-                status = string.IsNullOrEmpty(errorCode) ? LoadableStatus.SuccessToLoad : LoadableStatus.FailedToLoad;
-            }
+            status = string.IsNullOrEmpty(errorCode) ? LoadableStatus.SuccessToLoad : LoadableStatus.FailedToLoad;
             progress = 1;
         }
 
@@ -94,7 +88,7 @@ namespace xasset
             }
 
             //异步转同步，取消异步的回调
-            //if (status != LoadableStatus.Async2SyncEnd)
+            if (m_enA2S!= EnAsync2Sync.LoadingAsync2Sync)
             {
                 OnComplete();
             }
@@ -174,11 +168,17 @@ namespace xasset
     {
         Wait,
         Loading,
-        LoadingAsync,//当前是异步加载
+        
         DependentLoading,
         SuccessToLoad,
         FailedToLoad,
         Unloaded,
-        Async2SyncEnd//异步转了同步
+    }
+
+    public enum EnAsync2Sync
+    {
+        None,
+        LoadingAsync,//当前是异步加载
+        LoadingAsync2Sync,//当前是异步加载转同步
     }
 }

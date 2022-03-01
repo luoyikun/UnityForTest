@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>7.3</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,38 +53,38 @@
     <UnityVersion>2021.2.0f1c1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\xasset\Runtime\Network\Download.cs" />
-    <Compile Include="Assets\xasset\Runtime\Network\DownloadInfo.cs" />
-    <Compile Include="Assets\xasset\Runtime\PathManager.cs" />
-    <Compile Include="Assets\xasset\Runtime\Operations\DownloadFiles.cs" />
-    <Compile Include="Assets\xasset\Runtime\Operations\ClearFiles.cs" />
-    <Compile Include="Assets\xasset\Runtime\AsyncUpdate.cs" />
-    <Compile Include="Assets\xasset\Runtime\Operations\InitializeVersions.cs" />
-    <Compile Include="Assets\xasset\Runtime\Config\ManifestBundle.cs" />
-    <Compile Include="Assets\xasset\Runtime\Loadables\Internal\DownloadBundle.cs" />
-    <Compile Include="Assets\xasset\Runtime\Loadables\Scene.cs" />
-    <Compile Include="Assets\xasset\Runtime\Config\BuildVersions.cs" />
-    <Compile Include="Assets\xasset\Runtime\Loadables\Internal\BundledAsset.cs" />
-    <Compile Include="Assets\xasset\Runtime\Updater.cs" />
-    <Compile Include="Assets\xasset\Runtime\Loadables\Asset.cs" />
-    <Compile Include="Assets\xasset\Runtime\Operations\Operation.cs" />
-    <Compile Include="Assets\xasset\Runtime\Network\DownloadStatus.cs" />
-    <Compile Include="Assets\xasset\Runtime\Utilitys\Logger.cs" />
-    <Compile Include="Assets\xasset\Runtime\Versions.cs" />
-    <Compile Include="Assets\xasset\Runtime\Config\ManifestAsset.cs" />
-    <Compile Include="Assets\xasset\Runtime\Loadables\Internal\BundledScene.cs" />
-    <Compile Include="Assets\xasset\Runtime\Utilitys\Utility.cs" />
-    <Compile Include="Assets\xasset\Runtime\Loadables\Internal\LocalBundle.cs" />
-    <Compile Include="Assets\xasset\Runtime\Config\Manifest.cs" />
-    <Compile Include="Assets\xasset\Runtime\Loadables\Loadable.cs" />
     <Compile Include="Assets\xasset\Runtime\Reference.cs" />
+    <Compile Include="Assets\xasset\Runtime\Network\Download.cs" />
+    <Compile Include="Assets\xasset\Runtime\PathManager.cs" />
+    <Compile Include="Assets\xasset\Runtime\Network\Downloader.cs" />
+    <Compile Include="Assets\xasset\Runtime\Loadables\Internal\BundledScene.cs" />
+    <Compile Include="Assets\xasset\Runtime\Operations\InstantiateObject.cs" />
     <Compile Include="Assets\xasset\Runtime\Operations\GetDownloadSize.cs" />
+    <Compile Include="Assets\xasset\Runtime\Utilitys\Utility.cs" />
+    <Compile Include="Assets\xasset\Runtime\Network\DownloadInfo.cs" />
+    <Compile Include="Assets\xasset\Runtime\Config\BuildVersions.cs" />
+    <Compile Include="Assets\xasset\Runtime\Loadables\Internal\LocalBundle.cs" />
+    <Compile Include="Assets\xasset\Runtime\Updater.cs" />
+    <Compile Include="Assets\xasset\Runtime\Network\DownloadStatus.cs" />
     <Compile Include="Assets\xasset\Runtime\Loadables\Internal\Dependencies.cs" />
+    <Compile Include="Assets\xasset\Runtime\Operations\CheckUpdate.cs" />
+    <Compile Include="Assets\xasset\Runtime\Loadables\Internal\BundledAsset.cs" />
+    <Compile Include="Assets\xasset\Runtime\Operations\DownloadFiles.cs" />
+    <Compile Include="Assets\xasset\Runtime\Utilitys\Logger.cs" />
+    <Compile Include="Assets\xasset\Runtime\Loadables\Loadable.cs" />
+    <Compile Include="Assets\xasset\Runtime\Loadables\Asset.cs" />
+    <Compile Include="Assets\xasset\Runtime\Versions.cs" />
+    <Compile Include="Assets\xasset\Runtime\Config\Manifest.cs" />
+    <Compile Include="Assets\xasset\Runtime\Operations\ClearFiles.cs" />
+    <Compile Include="Assets\xasset\Runtime\Config\ManifestBundle.cs" />
+    <Compile Include="Assets\xasset\Runtime\AsyncUpdate.cs" />
+    <Compile Include="Assets\xasset\Runtime\Loadables\Internal\DownloadBundle.cs" />
+    <Compile Include="Assets\xasset\Runtime\Operations\InitializeVersions.cs" />
     <Compile Include="Assets\xasset\Runtime\Loadables\Internal\Bundle.cs" />
     <Compile Include="Assets\xasset\Runtime\Config\BuildVersion.cs" />
-    <Compile Include="Assets\xasset\Runtime\Network\Downloader.cs" />
-    <Compile Include="Assets\xasset\Runtime\Operations\InstantiateObject.cs" />
-    <Compile Include="Assets\xasset\Runtime\Operations\CheckUpdate.cs" />
+    <Compile Include="Assets\xasset\Runtime\Config\ManifestAsset.cs" />
+    <Compile Include="Assets\xasset\Runtime\Loadables\Scene.cs" />
+    <Compile Include="Assets\xasset\Runtime\Operations\Operation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\xasset\Runtime\xasset.asmdef" />

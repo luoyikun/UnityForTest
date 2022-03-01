@@ -218,7 +218,6 @@ E:\GithubProjects\UnityForTest\Temp\Bin\Debug\unityplastic.dll
 E:\GithubProjects\UnityForTest\Temp\Bin\Debug\UnityEngine.NVIDIAModule.dll
 E:\GithubProjects\UnityForTest\Temp\Bin\Debug\Unity.Cecil.dll
 E:\GithubProjects\UnityForTest\Temp\Bin\Debug\WinPlayerBuildProgram.Data.dll
-E:\GithubProjects\UnityForTest\Temp\Bin\Debug\Mono.Posix.dll
 E:\GithubProjects\UnityForTest\Temp\Bin\Debug\xasset.pdb
 E:\GithubProjects\UnityForTest\Temp\Bin\Debug\UnityEngine.xml
 E:\GithubProjects\UnityForTest\Temp\Bin\Debug\UnityEngine.AIModule.xml
