@@ -14,3 +14,9 @@
 /Assembly-CSharp.csproj
 /Assembly-CSharp-Editor.csproj
 /Bundles
+/.vs
+/Logs
+/xasset.csproj
+/xasset.editor.csproj
+/xasset.example.csproj
+/xasset.example.editor.csproj
