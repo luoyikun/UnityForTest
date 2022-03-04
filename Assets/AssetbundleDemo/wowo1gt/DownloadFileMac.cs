@@ -47,6 +47,7 @@ public class DownloadFileMac
         return false;
     }
 
+    //在多线程中调用，
     public void Run()
     {
         _tryCount++;
@@ -223,16 +224,31 @@ public class DownloadFileMac
     private int GetWebFileSize(string url)
     {
         HttpWebRequest request = null;
-        WebResponse respone = null;
+        HttpWebResponse respone = null;
         int length = 0;
         try
         {
-            request = WebRequest.Create(url) as HttpWebRequest;
-            request.Timeout = TimeOutWait;
-            request.ReadWriteTimeout = ReadWriteTimeOut;
-            //向服务器请求，获得服务器回应数据流
-            respone = request.GetResponse();
-            length = (int)respone.ContentLength;//todo：已经获取不到长度，要修改文件列表
+            //request = WebRequest.Create(url) as HttpWebRequest;
+            //request.Timeout = TimeOutWait;
+            //request.ReadWriteTimeout = ReadWriteTimeOut;
+            ////向服务器请求，获得服务器回应数据流
+            //respone = request.GetResponse();
+            //length = (int)respone.ContentLength;//todo：已经获取不到长度，要修改文件列表
+
+            //request = (HttpWebRequest)HttpWebRequest.Create(url);
+            //request.Method = "HEAD";
+            //respone = (HttpWebResponse)request.GetResponse();
+            //if (respone.StatusCode == HttpStatusCode.OK)
+            //{
+            //    //Console.WriteLine(respone.ContentLength);
+            //    length = (int)respone.ContentLength;
+            //}
+            string path = url.Replace(WowAbDownTest.DownUrl, "");
+            
+            if (WowAbDownTest.m_dicFileSize.ContainsKey(path))
+            {
+                length = (int)WowAbDownTest.m_dicFileSize[path];
+            }
         }
         catch (WebException e)
         {
@@ -245,6 +261,7 @@ public class DownloadFileMac
             if (respone != null) { respone.Close(); respone = null; }
             if (request != null) { request.Abort(); request = null; }
         }
+        ThreadDebugLog.Log("获取文件长度：" + length);
         return length;
     }
 

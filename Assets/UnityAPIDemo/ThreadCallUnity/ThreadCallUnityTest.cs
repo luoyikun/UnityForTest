@@ -29,6 +29,7 @@ namespace ThreadTest
                 Debug.Log("11");
             }, null);
         }
+
         private void RefreshText()
         {
             // 用Loom的方法在Unity主线程中调用Text组件
