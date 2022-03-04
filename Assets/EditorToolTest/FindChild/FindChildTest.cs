@@ -16,13 +16,56 @@ public class FindChildTest : MonoBehaviour
         Debug.Log(path);
     }
 
-    // Update is called once per frame
-    void Update()
+    //栈
+    static Transform SearchNodeByStack(Transform rootNode, string valueToFind)
     {
-        
+        var stack = new Stack<Transform>(new[] { rootNode });
+        while (stack.Count > 0)
+        {
+            var n = stack.Pop();
+            if (n.name == valueToFind)
+            {
+                //出栈，如果找到目标返回
+                return n;
+            }
+
+            //当前节点还有child，全部入栈
+            if (n.childCount > 0)
+            {
+                for (int i = 0; i < n.childCount; i++)
+                {
+                    stack.Push(n.GetChild(i));
+                }
+            } 
+        }
+
+        //栈为0还没找到
+        return null;
     }
 
-    string GetChildPath2(Transform check, string name)
+    //深度优先，递归
+    static Transform SearchNodeByRecursion(Transform tree, string valueToFind)
+    {
+        if (tree.name == valueToFind)
+        {
+            return tree;
+        }
+        else
+        {
+            if (tree.childCount > 0)
+            {
+                for (int i = 0; i < tree.childCount; i++)
+                {
+                    var temp = SearchNodeByRecursion(tree.GetChild(i), valueToFind);
+                    if (temp != null) return temp;
+                }
+
+            }
+        }
+        return null;
+    }
+
+    string GetChildPath(Transform check, string name)
     {
         List<string> listPath = new List<string>();
         string path = "";
@@ -55,63 +98,25 @@ public class FindChildTest : MonoBehaviour
     {
         Transform forreturn = null;
 
-        foreach (Transform t in check.GetComponentsInChildren<Transform>())
-        {
-            if (t.name == name)
-            {
-                Debug.Log("得到最终子物体的名字是：" + t.name);
-                forreturn = t;
-                return t;
+        //GetComponentsInChildren
+        //foreach (Transform t in check.GetComponentsInChildren<Transform>())
+        //{
+        //    if (t.name == name)
+        //    {
+        //        Debug.Log("得到最终子物体的名字是：" + t.name);
+        //        forreturn = t;
+        //        return t;
 
-            }
+        //    }
 
-        }
+        //}
+
+        //堆栈找到目标
+        //forreturn = SearchNodeByStack(check, name);
+
+        //递归
+        forreturn = SearchNodeByRecursion(check, name);
         return forreturn;
     }
 
-
-    static List<string> m_listPath = new List<string>();
-
-    public static string GetChildPath(Transform trans, string childName)
-    {
-        m_listPath.Clear();
-        FindChildGameObject(trans.gameObject, childName);
-        string path = "";
-        for (int i = 1; i < m_listPath.Count; i++)
-        {
-            path += m_listPath[i];
-            if (i != m_listPath.Count - 1)
-                path += "/";
-        }
-        return path;
-    }
-
-
-    public static GameObject FindChildGameObject(GameObject parent, string childName)
-    {
-        m_listPath.Add(parent.name);
-        if (parent.name == childName)
-        {
-
-            return parent;
-        }
-        if (parent.transform.childCount == 0)
-        {
-            m_listPath.Remove(parent.name);
-            return null;
-        }
-        GameObject obj = null;
-        for (int i = 0; i < parent.transform.childCount; i++)
-        {
-            GameObject go = parent.transform.GetChild(i).gameObject;
-            obj = FindChildGameObject(go, childName);
-            if (obj != null)
-            {
-
-                break;
-            }
-        }
-
-        return obj;
-    }
 }
