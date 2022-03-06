@@ -27,7 +27,19 @@ public class DownloadFileMac
 
     public int _curSize = 0;
     public int _allSize = 0;
-    public DownloadMacState _state = DownloadMacState.None;
+    DownloadMacState m_pState = DownloadMacState.None;
+
+    public DownloadMacState _state {
+        set
+        {
+            ThreadDebugLog.Log("设置下载状态：" + value);
+            m_pState = value;
+        }
+
+        get {
+            return m_pState;
+        }
+    }
     public int _tryCount = 0; //尝试次数
     public string _error = "";
 
@@ -59,10 +71,15 @@ public class DownloadFileMac
         if (!Download()) return;
 
         _state = DownloadMacState.Md5;
+        //bool isMd5OK = CheckMd5();
+        //if (isMd5OK)
+        //{
+
+        //}
         if (!CheckMd5()) //校验失败，重下一次
         {
             _state = DownloadMacState.Download;
-            if (!Download()) return;
+            if (!Download()) return; //这里执行一遍，把temp文件写入正式文件
 
             _state = DownloadMacState.Md5;
             if (!CheckMd5()) return; //两次都失败，文件有问题
@@ -105,17 +122,19 @@ public class DownloadFileMac
 
     public bool Download()
     {
-        //打开上次下载的文件
+        
         long startPos = 0;
         string tempFile = _downUnit.savePath + ".temp";
         FileStream fs = null;
         if (File.Exists(_downUnit.savePath))
         {
             //文件已存在，跳过
+            ThreadDebugLog.Log("Download：文件已存在，跳过");
             ThreadDebugLog.Log("File is Exists " + _downUnit.savePath);
             _curSize = _downUnit.size;
             return true;
         }
+        //如果存在临时文件
         else if (File.Exists(tempFile))
         {
             fs = File.OpenWrite(tempFile);
@@ -125,6 +144,7 @@ public class DownloadFileMac
             //文件已经下载完，没改名字，结束
             if (startPos == _downUnit.size)
             {
+                ThreadDebugLog.Log("Download：临时文件全写入正式文件");
                 fs.Flush();
                 fs.Close();
                 fs = null;
@@ -135,8 +155,9 @@ public class DownloadFileMac
                 return true;
             }
         }
-        else
+        else //第一次正常下载，下载到临时文件中
         {
+            ThreadDebugLog.Log("Download：第一次正常下载，下载到临时文件中");
             string direName = Path.GetDirectoryName(tempFile);
             if (!Directory.Exists(direName)) Directory.CreateDirectory(direName);
             fs = new FileStream(tempFile, FileMode.Create);
@@ -156,7 +177,7 @@ public class DownloadFileMac
             respone = (HttpWebResponse)request.GetResponse();
             ns = respone.GetResponseStream();
             ns.ReadTimeout = TimeOutWait;
-            long totalSize = respone.ContentLength; //todo：应该改为文件list去获取那个文件大小，新版本已经获取不到大小了
+            long totalSize = DownloadMgr.GetDownSizeByPath(_downUnit.downUrl); 
             long curSize = startPos;
             if (curSize == totalSize)
             {

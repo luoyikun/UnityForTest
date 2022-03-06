@@ -7,9 +7,12 @@ public class ThreadDebugLog
 {
     public static void Log(string content)
     {
-        Loom.QueueOnMainThread((param) =>
+        if (Loom.Current != null)
         {
-            Debug.Log(content);
-        }, null);
+            Loom.QueueOnMainThread((param) =>
+          {
+              Debug.Log(content);
+          }, null);
+        }
     }
 }

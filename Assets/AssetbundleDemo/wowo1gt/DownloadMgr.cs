@@ -29,6 +29,20 @@ public class DownloadUnit
 public class DownloadMgr
 {
 
+    //得到文件大小
+    public static long GetDownSizeByPath(string url)
+    {
+        long length = 0;
+        string path = url.Replace(WowAbDownTest.DownUrl, "");
+
+        if (WowAbDownTest.m_dicFileSize.ContainsKey(path))
+        {
+            length = (int)WowAbDownTest.m_dicFileSize[path];
+        }
+        return length;
+    }
+
+
     private static DownloadMgr _Instance = null;
 
     public static DownloadMgr Instance
