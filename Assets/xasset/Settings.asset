@@ -17,5 +17,5 @@ MonoBehaviour:
   - .giparams
   - LightingData.asset
   bundleExtension: 
-  scriptPlayMode: 0
+  scriptPlayMode: 1
   requestCopy: 0
