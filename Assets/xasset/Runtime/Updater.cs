@@ -31,7 +31,7 @@ namespace xasset
         }
 
 
-        [RuntimeInitializeOnLoadMethod]
+        //[RuntimeInitializeOnLoadMethod]
         private static void InitializeOnLoad()
         {
             var updater = FindObjectOfType<Updater>();

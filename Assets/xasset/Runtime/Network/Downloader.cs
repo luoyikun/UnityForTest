@@ -90,7 +90,7 @@ namespace xasset
             return !string.IsNullOrEmpty(url) ? url : $"{DownloadURL}{PathManager.PlatformName}/{file}";
         }
 
-        [RuntimeInitializeOnLoadMethod]
+        //[RuntimeInitializeOnLoadMethod]
         private static void InitializeOnLoad()
         {
             var updater = FindObjectOfType<Downloader>();
