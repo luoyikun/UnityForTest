@@ -7,6 +7,7 @@ namespace Sort
 {
     public class QuickSort : MonoBehaviour
     {
+
         private void Start()
         {
             int[] array = new int[8] { 2, 5, 1, 3, 5, 8, 6, 4 };
@@ -15,6 +16,10 @@ namespace Sort
             Debug.Log(s);
         }
 
+        private void Update()
+        {
+            TestGC gC = new TestGC();
+        }
         void quick_sort(int[] s, int l, int r)
         {
             if (l < r)
@@ -43,5 +48,8 @@ namespace Sort
 
     }
 
+    public class TestGC
+    {
 
+    }
 }

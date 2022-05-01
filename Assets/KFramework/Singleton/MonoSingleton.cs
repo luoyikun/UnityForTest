@@ -15,12 +15,14 @@ namespace Singleton
         {
             get
             {
-                if (m_instance == null)
+                if (m_instance == null) 
                 {
-                    GameObject gameEntryInstance = GameObject.Find("MonoSingleton");
+                    string name = typeof(T).ToString();
+                    GameObject gameEntryInstance = GameObject.Find(name); //单例的名字都唯一，防止场景里已经有了
                     if (gameEntryInstance == null)
                     {
-                        gameEntryInstance = new GameObject("MonoSingleton");
+                        gameEntryInstance = new GameObject(name);
+                        DontDestroyOnLoad(gameEntryInstance);
                     }
                     if (gameEntryInstance != null)
                     {
@@ -35,10 +37,29 @@ namespace Singleton
                 return m_instance;
             }
         }
+
+        public void StartUp()
+        {
+
+        }
         protected void OnApplicationQuit()
         {
             m_instance = null;
         }
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /// <summary>    /// C#单例模式    /// </summary>    public abstract class Singleton<T> where T : class, new()    {        private static T instance;        private static object syncRoot = new System.Object();        public static T Instance        {            get            {                if (instance == null)                {                    lock (syncRoot)                    {                        if (instance == null)                            instance = new T();                    }                }                return instance;            }        }        protected Singleton()        {            Init();        }        public virtual void Init() { }    }
 }
