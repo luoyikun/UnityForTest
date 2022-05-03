@@ -10,7 +10,7 @@ namespace Sort
 
         private void Start()
         {
-            int[] array = new int[8] { 2, 5, 1, 3, 5, 8, 6, 4 };
+            int[] array = new int[8] { 5 ,2, 2, 1, 7 ,3, 4, 4 };
             quick_sort(array, 0, array.Length-1);
             string s = JsonConvert.SerializeObject(array); ;
             Debug.Log(s);
