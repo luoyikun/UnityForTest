@@ -4,4 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/UnityAPIDemo/SceneTest/LoadScene2.unity
+    guid: 2f3cf6613f84b514cb85d791058534f8
+  m_configObjects: {}
