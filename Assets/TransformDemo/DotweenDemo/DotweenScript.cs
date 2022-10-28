@@ -1,4 +1,4 @@
-using System.Collections;
+锘縰sing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,7 +19,7 @@ namespace DOTweenDemo
 
             m_rotate.DoRotate(dir, 3);
 
-            //按照rotate.eulerAngles面向目标来自https://docs.unity3d.com/ScriptReference/Quaternion.LookRotation.html
+            //鎸夌収rotate.eulerAngles闈㈠悜鐩爣鏉ヨ嚜https://docs.unity3d.com/ScriptReference/Quaternion.LookRotation.html
             //Vector3 relativePos = m_rotateTarget.position - m_rotate.position;
             //Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
             ////m_rotate.transform.Rotate(rotation.eulerAngles/3);

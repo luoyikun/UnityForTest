@@ -1,4 +1,4 @@
-// Outputs luminance (grayscale) of the input image _MainTex
+﻿// Outputs luminance (grayscale) of the input image _MainTex
 
 Shader "Hidden/Contrast Stretch Luminance" {
 	

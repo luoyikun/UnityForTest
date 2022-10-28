@@ -1,4 +1,4 @@
-// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
 Shader "Hidden/BlendModesOverlay" {
 	Properties {
@@ -64,8 +64,8 @@ Shader "Hidden/BlendModesOverlay" {
 		//color.rgb /= 255.0; 
 		 
 		/*
-if (Target > ½) R = 1 - (1-2x(Target-½)) x (1-Blend)
-if (Target <= ½) R = (2xTarget) x Blend		
+if (Target > 陆) R = 1 - (1-2x(Target-陆)) x (1-Blend)
+if (Target <= 陆) R = (2xTarget) x Blend		
 		*/
 		
 		float3 check = step(0.5, color.rgb);

@@ -1,34 +1,34 @@
-using Singleton;
+ï»¿using Singleton;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace EffectPool
 {
-    //ÌØĞ§»º³å³Ø
+    //ç‰¹æ•ˆç¼“å†²æ± 
     public class EffectPoolMgr : MonoSingleton<EffectPoolMgr>
     {
-        float m_timeForcachTotal = 1.0f; //Ã¿¶àÉÙsÉ¨ÃèÒ»´Î³Ø
-        float m_maxTimeDeleOne = 5.0f; //×îÂıÒÆ³ıÒ»¸ö¶ÔÏóÊ±¼ä£¬×îĞ¡Îª1¸öÔªËØ
-        float m_minTimeDeleOne = 1.0f; //³¬Ê±ÒÆ³ı¶ÔÏó£¬³¬¹ım_count£¬¶¼ÊÇ1sÒ»¸ö
+        float m_timeForcachTotal = 1.0f; //æ¯å¤šå°‘sæ‰«æä¸€æ¬¡æ± 
+        float m_maxTimeDeleOne = 5.0f; //æœ€æ…¢ç§»é™¤ä¸€ä¸ªå¯¹è±¡æ—¶é—´ï¼Œæœ€å°ä¸º1ä¸ªå…ƒç´ 
+        float m_minTimeDeleOne = 1.0f; //è¶…æ—¶ç§»é™¤å¯¹è±¡ï¼Œè¶…è¿‡m_countï¼Œéƒ½æ˜¯1sä¸€ä¸ª
 
-        private float mResReleaseTime = 1f; //Ò»Ìõ³Ø×ÓÇå¿ÕÊ±¼ä
+        private float mResReleaseTime = 1f; //ä¸€æ¡æ± å­æ¸…ç©ºæ—¶é—´
 
-        //float m_outTimeDestroyOne = 60.0f;//µ¥¸öÌØĞ§Ïú»ÙÊ±¼ä,ÉÏÒ»´ÎÊ¹ÓÃÕâ¸ö³ØµÄÊ±¼ä³¬¹ı¶àÉÙ£¬Ïú»Ù³ØÀïÒ»¸öÔªËØ£¬¶øÇÒÊÇÃ¿¸ô¶àÉÙ
-        int m_count = 20; //µ¥¸ö³ØÈİÄÉ³õÊ¼ÊıÁ¿
+        //float m_outTimeDestroyOne = 60.0f;//å•ä¸ªç‰¹æ•ˆé”€æ¯æ—¶é—´,ä¸Šä¸€æ¬¡ä½¿ç”¨è¿™ä¸ªæ± çš„æ—¶é—´è¶…è¿‡å¤šå°‘ï¼Œé”€æ¯æ± é‡Œä¸€ä¸ªå…ƒç´ ï¼Œè€Œä¸”æ˜¯æ¯éš”å¤šå°‘
+        int m_count = 20; //å•ä¸ªæ± å®¹çº³åˆå§‹æ•°é‡
 
-        //Ã¿¸ö³ØµÄ»º³å¶ÔÏó
+        //æ¯ä¸ªæ± çš„ç¼“å†²å¯¹è±¡
         Dictionary<string, Queue<GameObject>> m_dicPool = new Dictionary<string, Queue<GameObject>>();
-        //Ã¿¸ö³ØµÄ»î¶¯¶ÔÏó
+        //æ¯ä¸ªæ± çš„æ´»åŠ¨å¯¹è±¡
         Dictionary<string, List<GameObject>> m_dicUse = new Dictionary<string, List<GameObject>>();
 
 
-        Dictionary<string, float> m_lastUsedTime = new Dictionary<string, float>(); //Ã¿Ò»¸ö¶ÔÏó³ØÉÏ´ÎÊ¹ÓÃÊ±¼ä
+        Dictionary<string, float> m_lastUsedTime = new Dictionary<string, float>(); //æ¯ä¸€ä¸ªå¯¹è±¡æ± ä¸Šæ¬¡ä½¿ç”¨æ—¶é—´
 
-        //ÉÏ´ÎÉ¾³ı¹ıÄ³»º³å³ØÀï¶ÔÏóµÄ»º³å³ØÃû×Ö
+        //ä¸Šæ¬¡åˆ é™¤è¿‡æŸç¼“å†²æ± é‡Œå¯¹è±¡çš„ç¼“å†²æ± åå­—
         private List<string> timeUpdateList = new List<string>();
 
-        //ÒªÍêÈ«ÊÍ·ÅµÄÒ»Ìõ³Ø×Ó£¬ÓÃÓÚ¼ÓgcÈ¨Öµ
+        //è¦å®Œå…¨é‡Šæ”¾çš„ä¸€æ¡æ± å­ï¼Œç”¨äºåŠ gcæƒå€¼
         private List<string> releaseList = new List<string>();
 
         
@@ -148,7 +148,7 @@ namespace EffectPool
         }
 
         /// <summary>
-        /// ¸ù¾İ»º³å³ØÀïÊıÁ¿£¬Ô½¶à£¬É¾³ıÔ½¿ì£»Ô½ÉÙ£¬É¾³ıÔ½Âı
+        /// æ ¹æ®ç¼“å†²æ± é‡Œæ•°é‡ï¼Œè¶Šå¤šï¼Œåˆ é™¤è¶Šå¿«ï¼›è¶Šå°‘ï¼Œåˆ é™¤è¶Šæ…¢
         /// </summary>
         /// <param name="count"></param>
         /// <returns></returns>
@@ -181,16 +181,16 @@ namespace EffectPool
                     {
                         if (m_dicPool.ContainsKey(keyName))
                         {
-                            if (m_dicPool[keyName].Count > 0)//Ä³¸ö³ØÀï»¹ÓĞ¿ÕÏĞ¶ÔÏó
+                            if (m_dicPool[keyName].Count > 0)//æŸä¸ªæ± é‡Œè¿˜æœ‰ç©ºé—²å¯¹è±¡
                             {
-                                if (Time.time - lastTime > GetDeleOneObjTimeClip(m_dicPool[keyName].Count)) // ³¬Ê±ÒÆ³ıÒ»¸ö¿ÕÏĞ¶ÔÏó
+                                if (Time.time - lastTime > GetDeleOneObjTimeClip(m_dicPool[keyName].Count)) // è¶…æ—¶ç§»é™¤ä¸€ä¸ªç©ºé—²å¯¹è±¡
                                 {
                                     GameObject idleObj = m_dicPool[keyName].Dequeue();
                                     GameObject.Destroy(idleObj);
                                     timeUpdateList.Add(keyName);
                                 }
                             }
-                            else//Ä³¸ö³ØÀïÎŞ¿ÕÏĞ¶ÔÏó
+                            else//æŸä¸ªæ± é‡Œæ— ç©ºé—²å¯¹è±¡
                             {
                                 if (Time.time - lastTime > mResReleaseTime)
                                 {
@@ -205,10 +205,10 @@ namespace EffectPool
 
                 for (int i = 0; i < timeUpdateList.Count; i++)
                 {
-                    m_lastUsedTime[timeUpdateList[i]] = Time.time; // ÉÏ´ÎÉ¾³ı»º³å³ØÀïÄ³¸öobjµÄÊ±¼ä
+                    m_lastUsedTime[timeUpdateList[i]] = Time.time; // ä¸Šæ¬¡åˆ é™¤ç¼“å†²æ± é‡ŒæŸä¸ªobjçš„æ—¶é—´
                 }
 
-                // Çå³ı´Ë×ÊÔ´µÄËùÓĞÒıÓÃ
+                // æ¸…é™¤æ­¤èµ„æºçš„æ‰€æœ‰å¼•ç”¨
                 for (int i = 0; i < releaseList.Count; i++)
                 {
                     if (m_dicUse.ContainsKey(releaseList[i]))
@@ -229,13 +229,13 @@ namespace EffectPool
             m_timeForcachClip += Time.deltaTime;
         }
 
-        #region È¨ÖµGC
-        //µ±Ç°È¨Öµ
+        #region æƒå€¼GC
+        //å½“å‰æƒå€¼
         private int m_nSumWeights = 0;
         float CHECK_INTERVAL_FRAME = 60;
-        private int m_nMaxInterval = 300;	//×î´ó5·ÖÖÓÖ´ĞĞÒ»´ÎĞ¶ÔØ£¬¸ÄÎªÓÉ±í¸ñÅäÖÃTODO
+        private int m_nMaxInterval = 300;	//æœ€å¤§5åˆ†é’Ÿæ‰§è¡Œä¸€æ¬¡å¸è½½ï¼Œæ”¹ä¸ºç”±è¡¨æ ¼é…ç½®TODO
         float m_fLastUnloadTime = 0;
-        private int m_nWeightsThreshold = 10;   //µ÷ÓÃUnloadµÄãĞÖµ£¬¸ÄÎªÓÉ±í¸ñÅäÖÃTODO
+        private int m_nWeightsThreshold = 10;   //è°ƒç”¨Unloadçš„é˜ˆå€¼ï¼Œæ”¹ä¸ºç”±è¡¨æ ¼é…ç½®TODO
         public void AddUnloadWeights(int nWeights = 1)
         {
             m_nSumWeights += nWeights;
@@ -243,7 +243,7 @@ namespace EffectPool
 
         void Update()
         {
-            //Ã¿60Ö¡Ö´ĞĞÒ»´Î¼ì²â
+            //æ¯60å¸§æ‰§è¡Œä¸€æ¬¡æ£€æµ‹
             if (Time.frameCount % CHECK_INTERVAL_FRAME == 0)
             {
                 TryUnloadUnusedAssets();

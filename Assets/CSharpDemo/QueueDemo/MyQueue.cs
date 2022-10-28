@@ -1,4 +1,4 @@
-// ==++==
+ï»¿// ==++==
 // 
 //   Copyright (c) Microsoft Corporation.  All rights reserved.
 // 
@@ -194,14 +194,14 @@ namespace System.Collections.My
         private void SetCapacity(int capacity)
         {            Object[] newarray = new Object[capacity];            if (_size > 0)
             {
-                //Èç¹ûÍ·ÔÚÇ°Ãæ
+                //å¦‚æœå¤´åœ¨å‰é¢
                 if (_head < _tail)
                 {                                        Array.Copy(_array, _head, newarray, 0, _size);                }
-                //Î²ÔÚÇ°£¬Í·ÔÚºó£¬ÖĞ¼äÊÇnull
+                //å°¾åœ¨å‰ï¼Œå¤´åœ¨åï¼Œä¸­é—´æ˜¯null
                 else
-                {                    //ÏÈ¸´ÖÆÍ·µ½Êı×ésize-1±ê                    Array.Copy(_array, _head, newarray, 0, _array.Length - _head);                    //ÔÙ¸´ÖÆÊı×é0±êµ½Î²                    Array.Copy(_array, 0, newarray, _array.Length - _head, _tail);                }            }
+                {                    //å…ˆå¤åˆ¶å¤´åˆ°æ•°ç»„size-1æ ‡                    Array.Copy(_array, _head, newarray, 0, _array.Length - _head);                    //å†å¤åˆ¶æ•°ç»„0æ ‡åˆ°å°¾                    Array.Copy(_array, 0, newarray, _array.Length - _head, _tail);                }            }
 
-            _array = newarray;            _head = 0;            _tail = (_size == capacity) ? 0 : _size; //_size ÊÇÖ¸Ô­_array²»Îª¿ÕÔªËØµÄÊıÁ¿
+            _array = newarray;            _head = 0;            _tail = (_size == capacity) ? 0 : _size; //_size æ˜¯æŒ‡åŸ_arrayä¸ä¸ºç©ºå…ƒç´ çš„æ•°é‡
             _version++;        }
 
         public virtual void TrimToSize()        {            SetCapacity(_size);        }

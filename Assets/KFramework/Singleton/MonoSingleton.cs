@@ -1,4 +1,4 @@
-using System;
+锘縰sing System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +18,7 @@ namespace Singleton
                 if (m_instance == null) 
                 {
                     string name = typeof(T).ToString();
-                    GameObject gameEntryInstance = GameObject.Find(name); //单例的名字都唯一，防止场景里已经有了
+                    GameObject gameEntryInstance = GameObject.Find(name); //鍗曚緥鐨勫悕瀛楅兘鍞竴锛岄槻姝㈠満鏅噷宸茬粡鏈変簡
                     if (gameEntryInstance == null)
                     {
                         gameEntryInstance = new GameObject(name);
@@ -61,5 +61,5 @@ namespace Singleton
 
 
 
-    /// <summary>    /// C#单例模式    /// </summary>    public abstract class Singleton<T> where T : class, new()    {        private static T instance;        private static object syncRoot = new System.Object();        public static T Instance        {            get            {                if (instance == null)                {                    lock (syncRoot)                    {                        if (instance == null)                            instance = new T();                    }                }                return instance;            }        }        protected Singleton()        {            Init();        }        public virtual void Init() { }    }
+    /// <summary>    /// C#鍗曚緥妯″紡    /// </summary>    public abstract class Singleton<T> where T : class, new()    {        private static T instance;        private static object syncRoot = new System.Object();        public static T Instance        {            get            {                if (instance == null)                {                    lock (syncRoot)                    {                        if (instance == null)                            instance = new T();                    }                }                return instance;            }        }        protected Singleton()        {            Init();        }        public virtual void Init() { }    }
 }

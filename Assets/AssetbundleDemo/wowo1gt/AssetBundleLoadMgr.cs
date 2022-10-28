@@ -1,10 +1,10 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
 /// <summary>
-/// ´Ë½Å±¾Ö»ÎªÊìÏ¤Á÷³Ì£¬²¢²»ÄÜ×÷Îª²âÊÔÓÃ
+/// æ­¤è„šæœ¬åªä¸ºç†Ÿæ‚‰æµç¨‹ï¼Œå¹¶ä¸èƒ½ä½œä¸ºæµ‹è¯•ç”¨
 /// </summary>
 public class AssetBundleLoadMgr
 {
@@ -35,16 +35,16 @@ public class AssetBundleLoadMgr
         }
     }
 
-    private const int MAX_LOADING_COUNT = 10; //Í¬Ê±¼ÓÔØµÄ×î´óÊıÁ¿
+    private const int MAX_LOADING_COUNT = 10; //åŒæ—¶åŠ è½½çš„æœ€å¤§æ•°é‡
 
-    private List<AssetBundleObject> tempLoadeds = new List<AssetBundleObject>(); //´´½¨ÁÙÊ±´æ´¢±äÁ¿£¬ÓÃÓÚÌáÉıĞÔÄÜ
+    private List<AssetBundleObject> tempLoadeds = new List<AssetBundleObject>(); //åˆ›å»ºä¸´æ—¶å­˜å‚¨å˜é‡ï¼Œç”¨äºæå‡æ€§èƒ½
 
     private Dictionary<string, string[]> _dependsDataList;
 
-    private Dictionary<string, AssetBundleObject> _readyABList; //Ô¤±¸¼ÓÔØµÄÁĞ±í
-    private Dictionary<string, AssetBundleObject> _loadingABList; //ÕıÔÚ¼ÓÔØµÄÁĞ±í
-    private Dictionary<string, AssetBundleObject> _loadedABList; //¼ÓÔØÍê³ÉµÄÁĞ±í
-    private Dictionary<string, AssetBundleObject> _unloadABList; //×¼±¸Ğ¶ÔØµÄÁĞ±í
+    private Dictionary<string, AssetBundleObject> _readyABList; //é¢„å¤‡åŠ è½½çš„åˆ—è¡¨
+    private Dictionary<string, AssetBundleObject> _loadingABList; //æ­£åœ¨åŠ è½½çš„åˆ—è¡¨
+    private Dictionary<string, AssetBundleObject> _loadedABList; //åŠ è½½å®Œæˆçš„åˆ—è¡¨
+    private Dictionary<string, AssetBundleObject> _unloadABList; //å‡†å¤‡å¸è½½çš„åˆ—è¡¨
 
     private AssetBundleLoadMgr()
     {
@@ -97,18 +97,18 @@ public class AssetBundleLoadMgr
     }
 
     private string GetHashName(string _assetName)
-    {//¶ÁÕß¿ÉÒÔ×Ô¼º¶¨Òåhash·½Ê½£¬¶ÔÄÚ´æÓĞÒªÇóµÄ»°£¬¿ÉÒÔhash³Éuint£¨»òuint64£©½ÚÊ¡ÄÚ´æ
+    {//è¯»è€…å¯ä»¥è‡ªå·±å®šä¹‰hashæ–¹å¼ï¼Œå¯¹å†…å­˜æœ‰è¦æ±‚çš„è¯ï¼Œå¯ä»¥hashæˆuintï¼ˆæˆ–uint64ï¼‰èŠ‚çœå†…å­˜
         return _assetName.ToLower();
     }
 
     private string GetFileName(string _hashName)
-    {//¶ÁÕß¿ÉÒÔ×Ô¼ºÊµÏÖ×Ô¼ºµÄ¶ÔÓ¦¹ØÏµ
+    {//è¯»è€…å¯ä»¥è‡ªå·±å®ç°è‡ªå·±çš„å¯¹åº”å…³ç³»
         return _hashName + ".ab";
     }
 
-    // »ñÈ¡Ò»¸ö×ÊÔ´µÄÂ·¾¶
+    // è·å–ä¸€ä¸ªèµ„æºçš„è·¯å¾„
     private string GetAssetBundlePath(string _hashName)
-    {//¶ÁÕß¿ÉÒÔ×Ô¼ºÊµÏÖµÄ¶ÔÓ¦¹ØÏµ£¬±ÊÕßÕâÀïÓĞ¶àÓïÑÔºÍÎÄ¼ş°æ±¾µÄ´¦Àí
+    {//è¯»è€…å¯ä»¥è‡ªå·±å®ç°çš„å¯¹åº”å…³ç³»ï¼Œç¬”è€…è¿™é‡Œæœ‰å¤šè¯­è¨€å’Œæ–‡ä»¶ç‰ˆæœ¬çš„å¤„ç†
         //string lngHashName = GetHashName(LocalizationMgr.I.GetAssetPrefix() + _hashName);
         //if (_dependsDataList.ContainsKey(lngHashName))
         //    _hashName = lngHashName;
@@ -123,7 +123,7 @@ public class AssetBundleLoadMgr
         return _dependsDataList.ContainsKey(hashName);
     }
 
-    //Í¬²½¼ÓÔØ
+    //åŒæ­¥åŠ è½½
     public AssetBundle LoadSync(string _assetName)
     {
         string hashName = GetHashName(_assetName);
@@ -131,13 +131,13 @@ public class AssetBundleLoadMgr
         return abObj._ab;
     }
 
-    //Òì²½¼ÓÔØ£¨ÒÑ¾­¼ÓÔØÖ±½Ó»Øµ÷£©£¬Ã¿´Î¼ÓÔØÒıÓÃ¼ÆÊı+1
+    //å¼‚æ­¥åŠ è½½ï¼ˆå·²ç»åŠ è½½ç›´æ¥å›è°ƒï¼‰ï¼Œæ¯æ¬¡åŠ è½½å¼•ç”¨è®¡æ•°+1
     public void LoadAsync(string _assetName, AssetBundleLoadCallBack callFun)
     {
         string hashName = GetHashName(_assetName);
         LoadAssetBundleAsync(hashName, callFun);
     }
-    //Ğ¶ÔØ£¨Òì²½£©£¬Ã¿´ÎĞ¶ÔØÒıÓÃ¼ÆÊı-1
+    //å¸è½½ï¼ˆå¼‚æ­¥ï¼‰ï¼Œæ¯æ¬¡å¸è½½å¼•ç”¨è®¡æ•°-1
     public void Unload(string _assetName)
     {
         string hashName = GetHashName(_assetName);
@@ -147,40 +147,40 @@ public class AssetBundleLoadMgr
     private AssetBundleObject LoadAssetBundleSync(string _hashName)
     {
         AssetBundleObject abObj = null;
-        if (_loadedABList.ContainsKey(_hashName)) //ÒÑ¾­¼ÓÔØ
+        if (_loadedABList.ContainsKey(_hashName)) //å·²ç»åŠ è½½
         {
             abObj = _loadedABList[_hashName];
             abObj._refCount++;
 
             foreach (var dpObj in abObj._depends)
             {
-                LoadAssetBundleSync(dpObj._hashName); //µİ¹éÒÀÀµÏî£¬¸½¼ÓÒıÓÃ¼ÆÊı
+                LoadAssetBundleSync(dpObj._hashName); //é€’å½’ä¾èµ–é¡¹ï¼Œé™„åŠ å¼•ç”¨è®¡æ•°
             }
 
             return abObj;
         }
-        else if (_loadingABList.ContainsKey(_hashName)) //ÔÚ¼ÓÔØÖĞ,Òì²½¸ÄÍ¬²½
+        else if (_loadingABList.ContainsKey(_hashName)) //åœ¨åŠ è½½ä¸­,å¼‚æ­¥æ”¹åŒæ­¥
         {
             abObj = _loadingABList[_hashName];
             abObj._refCount++;
 
             foreach (var dpObj in abObj._depends)
             {
-                LoadAssetBundleSync(dpObj._hashName); //µİ¹éÒÀÀµÏî£¬¼ÓÔØÍê
+                LoadAssetBundleSync(dpObj._hashName); //é€’å½’ä¾èµ–é¡¹ï¼ŒåŠ è½½å®Œ
             }
 
-            DoLoadedCallFun(abObj, false); //Ç¿ÖÆÍê³É£¬»Øµ÷
+            DoLoadedCallFun(abObj, false); //å¼ºåˆ¶å®Œæˆï¼Œå›è°ƒ
 
             return abObj;
         }
-        else if (_readyABList.ContainsKey(_hashName)) //ÔÚ×¼±¸¼ÓÔØÖĞ
+        else if (_readyABList.ContainsKey(_hashName)) //åœ¨å‡†å¤‡åŠ è½½ä¸­
         {
             abObj = _readyABList[_hashName];
             abObj._refCount++;
 
             foreach (var dpObj in abObj._depends)
             {
-                LoadAssetBundleSync(dpObj._hashName); //µİ¹éÒÀÀµÏî£¬¼ÓÔØÍê
+                LoadAssetBundleSync(dpObj._hashName); //é€’å½’ä¾èµ–é¡¹ï¼ŒåŠ è½½å®Œ
             }
 
             string path1 = GetAssetBundlePath(_hashName);
@@ -189,12 +189,12 @@ public class AssetBundleLoadMgr
             _readyABList.Remove(abObj._hashName);
             _loadedABList.Add(abObj._hashName, abObj);
 
-            DoLoadedCallFun(abObj, false); //Ç¿ÖÆÍê³É£¬»Øµ÷
+            DoLoadedCallFun(abObj, false); //å¼ºåˆ¶å®Œæˆï¼Œå›è°ƒ
 
             return abObj;
         }
 
-        //´´½¨Ò»¸ö¼ÓÔØ
+        //åˆ›å»ºä¸€ä¸ªåŠ è½½
         abObj = new AssetBundleObject();
         abObj._hashName = _hashName;
 
@@ -207,10 +207,10 @@ public class AssetBundleLoadMgr
         {
             try
             {
-                //Í¬²½ÏÂÔØ½â¾ö
+                //åŒæ­¥ä¸‹è½½è§£å†³
                 //byte[] bytes = AssetsDownloadMgr.I.DownloadSync(GetFileName(abObj._hashName));
                 //if (bytes != null && bytes.Length != 0)
-                //    abObj._ab = AssetBundle.LoadFromMemory(bytes);//ĞÔÄÜÎÊÌâ
+                //    abObj._ab = AssetBundle.LoadFromMemory(bytes);//æ€§èƒ½é—®é¢˜
             }
             catch (Exception ex)
             {
@@ -218,7 +218,7 @@ public class AssetBundleLoadMgr
             }
         }
 
-        //¼ÓÔØÒÀÀµÏî
+        //åŠ è½½ä¾èµ–é¡¹
         string[] dependsData = null;
         if (_dependsDataList.ContainsKey(_hashName))
         {
@@ -284,21 +284,21 @@ public class AssetBundleLoadMgr
     private AssetBundleObject LoadAssetBundleAsync(string _hashName, AssetBundleLoadCallBack _callFun)
     {
         AssetBundleObject abObj = null;
-        if (_loadedABList.ContainsKey(_hashName)) //ÒÑ¾­¼ÓÔØ
+        if (_loadedABList.ContainsKey(_hashName)) //å·²ç»åŠ è½½
         {
             abObj = _loadedABList[_hashName];
             DoDependsRef(abObj);
             _callFun(abObj._ab);
             return abObj;
         }
-        else if (_loadingABList.ContainsKey(_hashName)) //ÔÚ¼ÓÔØÖĞ
+        else if (_loadingABList.ContainsKey(_hashName)) //åœ¨åŠ è½½ä¸­
         {
             abObj = _loadingABList[_hashName];
             DoDependsRef(abObj);
             abObj._callFunList.Add(_callFun);
             return abObj;
         }
-        else if (_readyABList.ContainsKey(_hashName)) //ÔÚ×¼±¸¼ÓÔØÖĞ
+        else if (_readyABList.ContainsKey(_hashName)) //åœ¨å‡†å¤‡åŠ è½½ä¸­
         {
             abObj = _readyABList[_hashName];
             DoDependsRef(abObj);
@@ -306,14 +306,14 @@ public class AssetBundleLoadMgr
             return abObj;
         }
 
-        //´´½¨Ò»¸ö¼ÓÔØ
+        //åˆ›å»ºä¸€ä¸ªåŠ è½½
         abObj = new AssetBundleObject();
         abObj._hashName = _hashName;
 
         abObj._refCount = 1;
         abObj._callFunList.Add(_callFun);
 
-        //¼ÓÔØÒÀÀµÏî
+        //åŠ è½½ä¾èµ–é¡¹
         string[] dependsData = null;
         if (_dependsDataList.ContainsKey(_hashName))
         {
@@ -338,7 +338,7 @@ public class AssetBundleLoadMgr
 
                         abObj._dependLoadingCount--;
 
-                        //ÒÀÀµ¼ÓÔØÍê
+                        //ä¾èµ–åŠ è½½å®Œ
                         if (abObj._dependLoadingCount == 0 && abObj._request != null && abObj._request.isDone)
                         {
                             DoLoadedCallFun(abObj);
@@ -351,7 +351,7 @@ public class AssetBundleLoadMgr
 
         }
 
-        if (_loadingABList.Count < MAX_LOADING_COUNT) //ÕıÔÚ¼ÓÔØµÄÊıÁ¿²»ÄÜ³¬¹ıÉÏÏŞ
+        if (_loadingABList.Count < MAX_LOADING_COUNT) //æ­£åœ¨åŠ è½½çš„æ•°é‡ä¸èƒ½è¶…è¿‡ä¸Šé™
         {
             DoLoad(abObj);
 
@@ -369,14 +369,14 @@ public class AssetBundleLoadMgr
         if (abObj._depends.Count == 0) return;
         foreach (var dpObj in abObj._depends)
         {
-            DoDependsRef(dpObj); //µİ¹éÒÀÀµÏî£¬¼ÓÔØÍê
+            DoDependsRef(dpObj); //é€’å½’ä¾èµ–é¡¹ï¼ŒåŠ è½½å®Œ
         }
     }
 
     private void DoLoad(AssetBundleObject abObj)
     {
         //if (AssetsDownloadMgr.I.IsNeedDownload(GetFileName(abObj._hashName)))
-        //{//ÕâÀïÊÇ¹ØÁªÏÂÔØÂß¼­£¬¿ÉÒÔÊµÏÖÒì²½ÏÂÔØÔÙÒì²½¼ÓÔØ
+        //{//è¿™é‡Œæ˜¯å…³è”ä¸‹è½½é€»è¾‘ï¼Œå¯ä»¥å®ç°å¼‚æ­¥ä¸‹è½½å†å¼‚æ­¥åŠ è½½
         //    AssetsDownloadMgr.I.DownloadAsync(GetFileName(abObj._hashName),
         //        () =>
         //        {
@@ -407,10 +407,10 @@ public class AssetBundleLoadMgr
 
     private void DoLoadedCallFun(AssetBundleObject abObj, bool isAsync = true)
     {
-        //ÌáÈ¡ab
+        //æå–ab
         if (abObj._request != null)
         {
-            abObj._ab = abObj._request.assetBundle; //Èç¹ûÃ»¼ÓÔØÍê£¬»áÒì²½×ªÍ¬²½
+            abObj._ab = abObj._request.assetBundle; //å¦‚æœæ²¡åŠ è½½å®Œï¼Œä¼šå¼‚æ­¥è½¬åŒæ­¥
             abObj._request = null;
             _loadingABList.Remove(abObj._hashName);
             _loadedABList.Add(abObj._hashName, abObj);
@@ -423,7 +423,7 @@ public class AssetBundleLoadMgr
             errormsg += "\n File " + File.Exists(path) + " Exists " + path;
 
             try
-            {//³¢ÊÔ¶ÁÈ¡¶ş½øÖÆ½â¾ö
+            {//å°è¯•è¯»å–äºŒè¿›åˆ¶è§£å†³
                 if (File.Exists(path))
                 {
                     byte[] bytes = File.ReadAllBytes(path);
@@ -438,27 +438,27 @@ public class AssetBundleLoadMgr
 
             //if (abObj._ab == null)
             //{
-            //    //Í¬²½ÏÂÔØ½â¾ö
+            //    //åŒæ­¥ä¸‹è½½è§£å†³
             //    byte[] bytes = AssetsDownloadMgr.I.DownloadSync(GetFileName(abObj._hashName));
             //    if (bytes != null && bytes.Length != 0)
             //        abObj._ab = AssetBundle.LoadFromMemory(bytes);
 
             //    if (abObj._ab == null)
-            //    {//Í¬²½ÏÂÔØ»¹²»ÄÜ½â¾ö£¬ÒÆ³ı
+            //    {//åŒæ­¥ä¸‹è½½è¿˜ä¸èƒ½è§£å†³ï¼Œç§»é™¤
             //        if (_loadedABList.ContainsKey(abObj._hashName)) _loadedABList.Remove(abObj._hashName);
             //        else if (_loadingABList.ContainsKey(abObj._hashName)) _loadingABList.Remove(abObj._hashName);
 
             //        Debug.LogError(errormsg);
 
             //        if (isAsync)
-            //        {//Òì²½ÏÂÔØ½â¾ö
+            //        {//å¼‚æ­¥ä¸‹è½½è§£å†³
             //            AssetsDownloadMgr.I.AddDownloadSetFlag(GetFileName(abObj._hashName));
             //        }
             //    }
             //}
         }
 
-        //ÔËĞĞ»Øµ÷
+        //è¿è¡Œå›è°ƒ
         foreach (var callback in abObj._callFunList)
         {
             callback(abObj._ab);
@@ -469,7 +469,7 @@ public class AssetBundleLoadMgr
     private void UpdateLoad()
     {
         if (_loadingABList.Count == 0) return;
-        //¼ì²â¼ÓÔØÍêµÄ
+        //æ£€æµ‹åŠ è½½å®Œçš„
         tempLoadeds.Clear();
         foreach (var abObj in _loadingABList.Values)
         {
@@ -478,10 +478,10 @@ public class AssetBundleLoadMgr
                 tempLoadeds.Add(abObj);
             }
         }
-        //»Øµ÷ÖĞÓĞ¿ÉÄÜ¶Ô_loadingABList½øĞĞ²Ù×÷£¬ÌáÈ¡ºó»Øµ÷
+        //å›è°ƒä¸­æœ‰å¯èƒ½å¯¹_loadingABListè¿›è¡Œæ“ä½œï¼Œæå–åå›è°ƒ
         foreach (var abObj in tempLoadeds)
         {
-            //¼ÓÔØÍê½øĞĞ»Øµ÷
+            //åŠ è½½å®Œè¿›è¡Œå›è°ƒ
             DoLoadedCallFun(abObj);
         }
 
@@ -489,7 +489,7 @@ public class AssetBundleLoadMgr
 
     private void DoUnload(AssetBundleObject abObj)
     {
-        //ÕâÀïÓÃtrue£¬Ğ¶ÔØAssetÄÚ´æ£¬ÊµÏÖÖ¸¶¨Ğ¶ÔØ
+        //è¿™é‡Œç”¨trueï¼Œå¸è½½Assetå†…å­˜ï¼Œå®ç°æŒ‡å®šå¸è½½
         if (abObj._ab == null)
         {
             string errormsg = string.Format("LoadAssetbundle DoUnload error ! assetName:{0}", abObj._hashName);
@@ -509,7 +509,7 @@ public class AssetBundleLoadMgr
         foreach (var abObj in _unloadABList.Values)
         {
             if (abObj._refCount == 0 && abObj._ab != null)
-            {//ÒıÓÃ¼ÆÊıÎª0²¢ÇÒÒÑ¾­¼ÓÔØÍê£¬Ã»¼ÓÔØÍêµÈ¼ÓÔØÍêÏú»Ù
+            {//å¼•ç”¨è®¡æ•°ä¸º0å¹¶ä¸”å·²ç»åŠ è½½å®Œï¼Œæ²¡åŠ è½½å®Œç­‰åŠ è½½å®Œé”€æ¯
                 DoUnload(abObj);
                 _loadedABList.Remove(abObj._hashName);
 
@@ -517,7 +517,7 @@ public class AssetBundleLoadMgr
             }
 
             if (abObj._refCount > 0)
-            {//ÒıÓÃ¼ÆÊı¼Ó»ØÀ´£¨Ïú»ÙÓÖË²¼äÖØĞÂ¼ÓÔØ£¬²»Ïú»Ù£¬´ÓÏú»ÙÁĞ±íÒÆ³ı£©
+            {//å¼•ç”¨è®¡æ•°åŠ å›æ¥ï¼ˆé”€æ¯åˆç¬é—´é‡æ–°åŠ è½½ï¼Œä¸é”€æ¯ï¼Œä»é”€æ¯åˆ—è¡¨ç§»é™¤ï¼‰
                 tempLoadeds.Add(abObj);
             }
         }

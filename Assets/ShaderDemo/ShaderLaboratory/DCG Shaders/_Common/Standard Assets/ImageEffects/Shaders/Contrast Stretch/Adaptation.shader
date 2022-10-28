@@ -1,4 +1,4 @@
-// Calculates adaptation to minimum/maximum luminance values,
+﻿// Calculates adaptation to minimum/maximum luminance values,
 // based on "currently adapted" and "new values to adapt to"
 // textures (both 1x1).
 

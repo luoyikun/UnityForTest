@@ -1,4 +1,4 @@
-using UnityEditor;
+ï»¿using UnityEditor;
 using UnityEditor.IMGUI.Controls;
 using System.Collections.Generic;
 using System.IO;
@@ -329,7 +329,7 @@ namespace UnityEngine.AssetBundles
             if(m_CopyToStreaming.state)
                 DirectoryCopy(m_OutputPath, m_streamingPath);
 
-            ///----------------------´´½¨ÎÄ¼şÁĞ±í-----------------------
+            ///----------------------åˆ›å»ºæ–‡ä»¶åˆ—è¡¨-----------------------
             string newFilePath = m_OutputPath + "/files.txt";
             if (File.Exists(newFilePath))
             {
@@ -376,7 +376,7 @@ namespace UnityEngine.AssetBundles
         }
 
         /// <summary>
-        /// ±éÀúÄ¿Â¼¼°Æä×ÓÄ¿Â¼
+        /// éå†ç›®å½•åŠå…¶å­ç›®å½•
         /// </summary>
          void Recursive(string path)
         {

@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -31,7 +31,7 @@ namespace DOTweenDemo
             return myTween;
         }
 
-        //1. ÔÚĞ­³ÌÖĞ²åÖµÔËËã£¬float f = myTween.time; f >= 0.0f; f -= Time.deltaTime£¬Ã¿Ö¡µİ¼õÔË¶¯Ê±¼ä        //2. myTween.transform.rotation = Quaternion.Lerp(myTween.m_rotation, myTween.m_tarRotation, 1.0f-f/myTween.time);      tranfromµ±Ç°ËÄÔªÊı = ÔË¶¯¿ªÊ¼Ê± Óë Ä¿±êµÄ²îÖµ £¬1.0f-f/myTween.time µÄÖµÔÚÃ¿Ö¡Ô½À´Ô½¿¿½ü 1£¬ËµÃ÷Ô½À´Ô½ÏòÄ¿±ê
+        //1. åœ¨åç¨‹ä¸­æ’å€¼è¿ç®—ï¼Œfloat f = myTween.time; f >= 0.0f; f -= Time.deltaTimeï¼Œæ¯å¸§é€’å‡è¿åŠ¨æ—¶é—´        //2. myTween.transform.rotation = Quaternion.Lerp(myTween.m_rotation, myTween.m_tarRotation, 1.0f-f/myTween.time);      tranfromå½“å‰å››å…ƒæ•° = è¿åŠ¨å¼€å§‹æ—¶ ä¸ ç›®æ ‡çš„å·®å€¼ ï¼Œ1.0f-f/myTween.time çš„å€¼åœ¨æ¯å¸§è¶Šæ¥è¶Šé è¿‘ 1ï¼Œè¯´æ˜è¶Šæ¥è¶Šå‘ç›®æ ‡
         public static IEnumerator YieldRotate(this MonoBehaviour mono, tween myTween)
         {
             for (; myTween.currentLoop < myTween.loops; myTween.currentLoop++)
@@ -54,7 +54,7 @@ namespace DOTweenDemo
         }
 
 
-        //×Ü³¤¶È/Ê±¼ä = Ã¿ÃëÒªÒÆ¶¯µÄ³¤¶È  £¬È»ºóÃ¿Ö¡ÒÆ¶¯³¤¶È = Ã¿ÃëÒªÒÆ¶¯µÄ³¤¶È *Time.deltaTime
+        //æ€»é•¿åº¦/æ—¶é—´ = æ¯ç§’è¦ç§»åŠ¨çš„é•¿åº¦  ï¼Œç„¶åæ¯å¸§ç§»åŠ¨é•¿åº¦ = æ¯ç§’è¦ç§»åŠ¨çš„é•¿åº¦ *Time.deltaTime
         public static IEnumerator UniversalVector3Iter(this MonoBehaviour mono, tween myTween)
         {
             for (; myTween.currentLoop < myTween.loops; myTween.currentLoop++)

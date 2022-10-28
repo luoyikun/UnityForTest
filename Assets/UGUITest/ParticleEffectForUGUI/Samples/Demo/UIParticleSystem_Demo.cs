@@ -1,4 +1,4 @@
-/// Credit glennpow, Zarlang
+﻿/// Credit glennpow, Zarlang
 /// Sourced from - http://forum.unity3d.com/threads/free-script-particle-systems-in-ui-screen-space-overlay.406862/
 /// Updated by Zarlang with a more robust implementation, including TextureSheet annimation support
 using UnityEngine;

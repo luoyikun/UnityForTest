@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -34,20 +34,20 @@ namespace DataStructure
 
         
         /// <summary>
-        /// ²åÈëÎ²²¿£¬ÔÙ¸ú¸¸½ÚµãÃ°ÅİÅÅĞò
+        /// æ’å…¥å°¾éƒ¨ï¼Œå†è·Ÿçˆ¶èŠ‚ç‚¹å†’æ³¡æ’åº
         /// </summary>
         /// <param name="item"></param>
         public void Push(T item)
         {
-            items.Add(item); //ÏÈ²åÈëlistµÄÄ©Î²
+            items.Add(item); //å…ˆæ’å…¥listçš„æœ«å°¾
 
             int i = items.Count - 1;
 
             bool flag = HType == HeapType.MinHeap;
 
-            while (i > 0)  //Ò»Ö±Ã°Åİµ½Í·½Úµã£¬µ±Ç°½ÚµãµÄ¸¸½ÚµãidxÎª(i - 1) / 2
+            while (i > 0)  //ä¸€ç›´å†’æ³¡åˆ°å¤´èŠ‚ç‚¹ï¼Œå½“å‰èŠ‚ç‚¹çš„çˆ¶èŠ‚ç‚¹idxä¸º(i - 1) / 2
             {
-                if ((items[i].CompareTo(items[(i - 1) / 2]) > 0) ^ flag) //Òì»ò£¬ÏàÍ¬È¡0£¬ÏàÒìÈ¡1£»Èç¹ûÊÇ×Ó>¸¸ Òì»ò ×îĞ¡¶Ñ£¨true£© == 0£¬²»·¢Éú½»»»
+                if ((items[i].CompareTo(items[(i - 1) / 2]) > 0) ^ flag) //å¼‚æˆ–ï¼Œç›¸åŒå–0ï¼Œç›¸å¼‚å–1ï¼›å¦‚æœæ˜¯å­>çˆ¶ å¼‚æˆ– æœ€å°å †ï¼ˆtrueï¼‰ == 0ï¼Œä¸å‘ç”Ÿäº¤æ¢
                 {
                     T temp = items[i];
                     items[i] = items[(i - 1) / 2];
@@ -60,14 +60,14 @@ namespace DataStructure
         }
 
         /// <summary>
-        /// É¾³ıÍ·½Úµã
+        /// åˆ é™¤å¤´èŠ‚ç‚¹
         /// </summary>
         private void DeleteRoot()
         {
             int i = items.Count - 1;
 
-            items[0] = items[i]; //ÏÈ°Ñ¶ÓÎ²²¿·ÅÈëÍ·½Úµã
-            items.RemoveAt(i);  //ÒÆ³ı¶ÓÎ²
+            items[0] = items[i]; //å…ˆæŠŠé˜Ÿå°¾éƒ¨æ”¾å…¥å¤´èŠ‚ç‚¹
+            items.RemoveAt(i);  //ç§»é™¤é˜Ÿå°¾
 
             i = 0;
 
@@ -75,13 +75,13 @@ namespace DataStructure
 
             while (true)
             {
-                int leftInd = 2 * i + 1; //×ó½Úµã
-                int rightInd = 2 * i + 2;//ÓÒ½Úµã
+                int leftInd = 2 * i + 1; //å·¦èŠ‚ç‚¹
+                int rightInd = 2 * i + 2;//å³èŠ‚ç‚¹
                 int largest = i;
 
                 if (leftInd < items.Count)
                 {
-                    if ((items[leftInd].CompareTo(items[largest]) > 0) ^ flag) //£¨×ó > ¸¸£© Òì»ò£¨ÊÇ·ñ×îĞ¡¶Ñ£©
+                    if ((items[leftInd].CompareTo(items[largest]) > 0) ^ flag) //ï¼ˆå·¦ > çˆ¶ï¼‰ å¼‚æˆ–ï¼ˆæ˜¯å¦æœ€å°å †ï¼‰
                         largest = leftInd;
                 }
 
@@ -91,19 +91,19 @@ namespace DataStructure
                         largest = rightInd;
                 }
 
-                if (largest != i) //·¢Éú½»»»£¬¸¸Óë×ó»òÕßÓÒµÄÒ»¸ö
+                if (largest != i) //å‘ç”Ÿäº¤æ¢ï¼Œçˆ¶ä¸å·¦æˆ–è€…å³çš„ä¸€ä¸ª
                 {
                     T temp = items[largest];
                     items[largest] = items[i];
                     items[i] = temp;
                     i = largest;
                 }
-                else //Î´·¢Éú½»»»£¬ËµÃ÷ÅÅĞòOK
+                else //æœªå‘ç”Ÿäº¤æ¢ï¼Œè¯´æ˜æ’åºOK
                     break;
             }
         }
 
-        //µ¯³öÍ·½Úµã
+        //å¼¹å‡ºå¤´èŠ‚ç‚¹
         public T PopRoot()
         {
             T result = items[0];

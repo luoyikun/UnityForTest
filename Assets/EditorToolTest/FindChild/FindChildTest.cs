@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +16,7 @@ public class FindChildTest : MonoBehaviour
         Debug.Log(path);
     }
 
-    //Õ»
+    //æ ˆ
     static Transform SearchNodeByStack(Transform rootNode, string valueToFind)
     {
         var stack = new Stack<Transform>(new[] { rootNode });
@@ -25,11 +25,11 @@ public class FindChildTest : MonoBehaviour
             var n = stack.Pop();
             if (n.name == valueToFind)
             {
-                //³öÕ»£¬Èç¹ûÕÒµ½Ä¿±ê·µ»Ø
+                //å‡ºæ ˆï¼Œå¦‚æžœæ‰¾åˆ°ç›®æ ‡è¿”å›ž
                 return n;
             }
 
-            //µ±Ç°½Úµã»¹ÓÐchild£¬È«²¿ÈëÕ»
+            //å½“å‰èŠ‚ç‚¹è¿˜æœ‰childï¼Œå…¨éƒ¨å…¥æ ˆ
             if (n.childCount > 0)
             {
                 for (int i = 0; i < n.childCount; i++)
@@ -39,11 +39,11 @@ public class FindChildTest : MonoBehaviour
             } 
         }
 
-        //Õ»Îª0»¹Ã»ÕÒµ½
+        //æ ˆä¸º0è¿˜æ²¡æ‰¾åˆ°
         return null;
     }
 
-    //Éî¶ÈÓÅÏÈ£¬µÝ¹é
+    //æ·±åº¦ä¼˜å…ˆï¼Œé€’å½’
     static Transform SearchNodeByRecursion(Transform tree, string valueToFind)
     {
         if (tree.name == valueToFind)
@@ -103,7 +103,7 @@ public class FindChildTest : MonoBehaviour
         //{
         //    if (t.name == name)
         //    {
-        //        Debug.Log("µÃµ½×îÖÕ×ÓÎïÌåµÄÃû×ÖÊÇ£º" + t.name);
+        //        Debug.Log("å¾—åˆ°æœ€ç»ˆå­ç‰©ä½“çš„åå­—æ˜¯ï¼š" + t.name);
         //        forreturn = t;
         //        return t;
 
@@ -111,10 +111,10 @@ public class FindChildTest : MonoBehaviour
 
         //}
 
-        //¶ÑÕ»ÕÒµ½Ä¿±ê
+        //å †æ ˆæ‰¾åˆ°ç›®æ ‡
         //forreturn = SearchNodeByStack(check, name);
 
-        //µÝ¹é
+        //é€’å½’
         forreturn = SearchNodeByRecursion(check, name);
         return forreturn;
     }

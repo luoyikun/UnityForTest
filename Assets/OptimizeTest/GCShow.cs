@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,9 +24,9 @@ public class GCShow : MonoBehaviour
     {
         GUI.depth = 0;
         GUI.BeginGroup(new Rect(Screen.width - uiWidth, 0, uiWidth, Screen.height));
-        GUILayout.Label("µ±Ç°Ö¡ÂÊ:" + Mathf.Round(_fps));
-        GUILayout.Label("µ±Ç°¶ÑÄÚ´æ:" + _usedHeapSize + "KB");
-        GUILayout.Label("×ÜÄÚ´æ(GC):" + _gcMemory + "KB");
+        GUILayout.Label("å½“å‰å¸§ç‡:" + Mathf.Round(_fps));
+        GUILayout.Label("å½“å‰å †å†…å­˜:" + _usedHeapSize + "KB");
+        GUILayout.Label("æ€»å†…å­˜(GC):" + _gcMemory + "KB");
 
         //GUILayout.Label("Delay:" + NetWork.instance.Delay * 2);
     }

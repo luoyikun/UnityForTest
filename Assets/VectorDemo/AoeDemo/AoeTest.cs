@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,12 +20,12 @@ namespace AOE
 
         private void Update()
         {
-            //µãÔÚÉÈĞÎÄÚÅĞ¶Ï
+            //ç‚¹åœ¨æ‰‡å½¢å†…åˆ¤æ–­
             //Vector2 a = Vector2.zero;
             //AoeUtil.DrawWireSemicircle(a, new Vector2(1, 0), 10, 20,Color.red);
             //Debug.Log(AoeUtil.IsPointSectorIntersect(m_tar.position, a, new Vector2(1, 0), 20, 10));
 
-            //µãµ½Ãæ¾àÀë£¬Á½¸öÏòÁ¿±ØĞë²»¹²Ïß£¬²ÅÄÜµÃµ½Ò»¸öÆ½Ãæ
+            //ç‚¹åˆ°é¢è·ç¦»ï¼Œä¸¤ä¸ªå‘é‡å¿…é¡»ä¸å…±çº¿ï¼Œæ‰èƒ½å¾—åˆ°ä¸€ä¸ªå¹³é¢
             Vector3 a = new Vector3(0, 0, 0);
             Vector3 b = new Vector3(0, 0, 1);
             Vector3 c = new Vector3(2, 0, 0);

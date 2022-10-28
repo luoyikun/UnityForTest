@@ -1,4 +1,4 @@
-Shader "Hidden/Highlighted/StencilTransparent"
+﻿Shader "Hidden/Highlighted/StencilTransparent"
 {
 	Properties
 	{

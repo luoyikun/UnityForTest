@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -56,7 +56,7 @@ namespace DOTweenDemo
             }
             if (tweenType == "DoRotate")
             {
-                transform.eulerAngles = origin; //todo£º¸ÄÎª½Ç¶È
+                transform.eulerAngles = origin; //todoï¼šæ”¹ä¸ºè§’åº¦
             }
             if (tweenType == "DoScale")
             {

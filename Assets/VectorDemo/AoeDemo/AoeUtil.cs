@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,8 +6,8 @@ namespace AOE
 {
     public static class AoeUtil 
     {
-        //Íâ»ı¡£Á½¸öÏòÁ¿v1(x1, y1)ºÍv2(x2, y2)µÄÍâ»ıv1¡Áv2=x1y2-y1x2¡£
-        //>0,aÔÚbË³Ê±Õë·½Ïò    <0,aÔÚbÄæÊ±Õë
+        //å¤–ç§¯ã€‚ä¸¤ä¸ªå‘é‡v1(x1, y1)å’Œv2(x2, y2)çš„å¤–ç§¯v1Ã—v2=x1y2-y1x2ã€‚
+        //>0,aåœ¨bé¡ºæ—¶é’ˆæ–¹å‘    <0,aåœ¨bé€†æ—¶é’ˆ
         public static float Cross(this Vector2 a, Vector2 b)
         {
             return a.x * b.y - b.x * a.y;
@@ -18,7 +18,7 @@ namespace AOE
             return IsPointInRectangle(P, rectCorners[0], rectCorners[1], rectCorners[2], rectCorners[3]);
         }
 
-        //¾ØĞÎ4¸öµã£¬´ÓµÚÒ»¸öµã¿ªÊ¼ÄæÊ±Õë»òÕßË³Ê±ÕëÅÅĞò
+        //çŸ©å½¢4ä¸ªç‚¹ï¼Œä»ç¬¬ä¸€ä¸ªç‚¹å¼€å§‹é€†æ—¶é’ˆæˆ–è€…é¡ºæ—¶é’ˆæ’åº
         public static bool IsPointInRectangle(Vector2 P, Vector2 A, Vector2 B, Vector2 C, Vector2 D)
         {
             Vector2 AB = A - B;
@@ -37,10 +37,10 @@ namespace AOE
         }
 
         /// <summary>
-        /// ¼ÆËãÏß¶ÎÓëµãµÄÆ½·½¾àÀë£¬µãÔÚÏß¶ÎÖ®¼äÊÇ´¹Ö±¾àÀë£¬·ñÔòÊÇÓë×î½ü¶Ëµã¾àÀë
+        /// è®¡ç®—çº¿æ®µä¸ç‚¹çš„å¹³æ–¹è·ç¦»ï¼Œç‚¹åœ¨çº¿æ®µä¹‹é—´æ˜¯å‚ç›´è·ç¦»ï¼Œå¦åˆ™æ˜¯ä¸æœ€è¿‘ç«¯ç‚¹è·ç¦»
         /// </summary>
         /// <param name="x0"></param>
-        /// <param name="u">Ïß¶Î·½ÏòÖÁÄ©¶Ëµã,ÎªÁ½µãÏà¼õ</param>
+        /// <param name="u">çº¿æ®µæ–¹å‘è‡³æœ«ç«¯ç‚¹,ä¸ºä¸¤ç‚¹ç›¸å‡</param>
         /// <param name="x"></param>
         /// <returns></returns>
         public static float SegmentPointSqrDistance(Vector2 x0, Vector2 u, Vector2 x)
@@ -50,10 +50,10 @@ namespace AOE
         }
 
         /// <summary>
-        /// Èı½Çº¯Êı·¨Çóxµ½Ö±Ïßx0ÎªÆğµã£¬uÎªµ¥Î»ÏòÁ¿µÄ´¹Ö±×î¶Ì¾àÀëÆ½·½
+        /// ä¸‰è§’å‡½æ•°æ³•æ±‚xåˆ°ç›´çº¿x0ä¸ºèµ·ç‚¹ï¼Œuä¸ºå•ä½å‘é‡çš„å‚ç›´æœ€çŸ­è·ç¦»å¹³æ–¹
         /// </summary>
-        /// <param name="x0">Æğµã</param>
-        /// <param name="u">ÉäÏßµÄµ¥Î»ÏòÁ¿</param>
+        /// <param name="x0">èµ·ç‚¹</param>
+        /// <param name="u">å°„çº¿çš„å•ä½å‘é‡</param>
         /// <param name="x"></param>
         /// <returns></returns>
         public static float StraightPointSqrMinDistanceByDir(Vector2 x0, Vector2 u, Vector2 x)
@@ -63,10 +63,10 @@ namespace AOE
         }
 
         /// <summary>
-        /// Ô²Óë¾ØĞÎÊÇ·ñÏà½»
+        /// åœ†ä¸çŸ©å½¢æ˜¯å¦ç›¸äº¤
         /// </summary>
-        /// <param name="cc">Ô²ĞÄ</param>
-        /// <param name="r">Ô²°ë¾¶</param>
+        /// <param name="cc">åœ†å¿ƒ</param>
+        /// <param name="r">åœ†åŠå¾„</param>
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <param name="c"></param>
@@ -74,11 +74,11 @@ namespace AOE
         /// <returns></returns>
         public static bool IsCicleRectIntersect(Vector2 cc, float r, Vector2 rectA, Vector2 rectB, Vector2 rectC, Vector2 rectD)
         {
-            if (IsPointInRectangle(cc, rectA, rectB, rectC, rectD))//Ô²ĞÄÔÚ¾ØĞÎÄÚ²¿
+            if (IsPointInRectangle(cc, rectA, rectB, rectC, rectD))//åœ†å¿ƒåœ¨çŸ©å½¢å†…éƒ¨
             {
                 return true;
             }
-            else//Ô²ĞÄÔÚ¾ØĞÎÍâ²¿£¬ÓëÈÎÒâÒ»Ìõ±ßÏà½»£¬¼´Ïà½»
+            else//åœ†å¿ƒåœ¨çŸ©å½¢å¤–éƒ¨ï¼Œä¸ä»»æ„ä¸€æ¡è¾¹ç›¸äº¤ï¼Œå³ç›¸äº¤
             {
                 float sqR = r * r;
                 float disA = SegmentPointSqrDistance(rectA, rectB - rectA, cc);
@@ -108,45 +108,45 @@ namespace AOE
             return false;
         }
 
-        // ÉÈĞÎÓëÔ²ÅÌÏà½»²âÊÔ
-        // a ÉÈĞÎÔ²ĞÄ
-        // u ÉÈĞÎ·½Ïò£¨µ¥Î»Ê¸Á¿£©
-        // theta ÉÈĞÎÉ¨ÂÓ°ë½Ç 
-        // l ÉÈĞÎ±ß³¤
-        // c Ô²ÅÌÔ²ĞÄ
-        // r Ô²ÅÌ°ë¾¶
+        // æ‰‡å½¢ä¸åœ†ç›˜ç›¸äº¤æµ‹è¯•
+        // a æ‰‡å½¢åœ†å¿ƒ
+        // u æ‰‡å½¢æ–¹å‘ï¼ˆå•ä½çŸ¢é‡ï¼‰
+        // theta æ‰‡å½¢æ‰«æ åŠè§’ 
+        // l æ‰‡å½¢è¾¹é•¿
+        // c åœ†ç›˜åœ†å¿ƒ
+        // r åœ†ç›˜åŠå¾„
         public static bool IsCicleSectorIntersect(
             Vector2 a, Vector2 u, float theta, float l,
             Vector2 c, float r)
         {
-            // 1. Èç¹ûÉÈĞÎÔ²ĞÄºÍÔ²ÅÌÔ²ĞÄµÄ·½ÏòÄÜ·ÖÀë£¬Á½ĞÎ×´²»Ïà½»
+            // 1. å¦‚æœæ‰‡å½¢åœ†å¿ƒå’Œåœ†ç›˜åœ†å¿ƒçš„æ–¹å‘èƒ½åˆ†ç¦»ï¼Œä¸¤å½¢çŠ¶ä¸ç›¸äº¤
             Vector2 d = c - a;
             float rsum = l + r;
             if (d.sqrMagnitude > rsum * rsum)
                 return false;
 
-            // 2. ¼ÆËã³öÉÈĞÎ¾Ö²¿¿Õ¼äµÄ p
+            // 2. è®¡ç®—å‡ºæ‰‡å½¢å±€éƒ¨ç©ºé—´çš„ p
             float px = Vector2.Dot(d, u);
-            float py = Mathf.Abs(Vector2.Dot(d, new Vector2(-u.y, u.x)));//ÉÈĞÎµ¥Î»·½ÏòÏòÁ¿ÄæÊ±Õë×ª90¶È
+            float py = Mathf.Abs(Vector2.Dot(d, new Vector2(-u.y, u.x)));//æ‰‡å½¢å•ä½æ–¹å‘å‘é‡é€†æ—¶é’ˆè½¬90åº¦
 
-            // 3. Èç¹û p_x > ||p|| cos theta£¬Á½ĞÎ×´Ïà½»
+            // 3. å¦‚æœ p_x > ||p|| cos thetaï¼Œä¸¤å½¢çŠ¶ç›¸äº¤
             if (px > d.magnitude * Mathf.Cos(theta * Mathf.Deg2Rad))
                 return true;
 
-            // 4. Çó×ó±ßÏß¶ÎÓëÔ²ÅÌÊÇ·ñÏà½»
+            // 4. æ±‚å·¦è¾¹çº¿æ®µä¸åœ†ç›˜æ˜¯å¦ç›¸äº¤
             Vector2 q = l * new Vector2(Mathf.Cos(theta * Mathf.Deg2Rad), Mathf.Sin(theta * Mathf.Deg2Rad));
             Vector2 p = new Vector2(px, py);
             return SegmentPointSqrDistance(Vector2.zero, q, p) <= r * r;
         }
 
         /// <summary>
-        /// µãÓëÉÈĞÎÏà½»
+        /// ç‚¹ä¸æ‰‡å½¢ç›¸äº¤
         /// </summary>
         /// <param name="point"></param>
-        /// <param name="sectorCenter">ÉÈĞÎÔ²ĞÄ</param>
-        /// <param name="sectorDir">ÉÈĞÎµ¥Î»ÏòÁ¿</param>
-        /// <param name="sectorAngle">ÉÈĞÎ½Ç¶È</param>
-        /// <param name="sectorRadius">ÉÈĞÎ°ë¾¶</param>
+        /// <param name="sectorCenter">æ‰‡å½¢åœ†å¿ƒ</param>
+        /// <param name="sectorDir">æ‰‡å½¢å•ä½å‘é‡</param>
+        /// <param name="sectorAngle">æ‰‡å½¢è§’åº¦</param>
+        /// <param name="sectorRadius">æ‰‡å½¢åŠå¾„</param>
         /// <returns></returns>
         public static bool IsPointSectorIntersect(Vector2 point, Vector2 sectorCenter, Vector2 sectorDir, float sectorAngle, float sectorRadius)
         {
@@ -166,8 +166,8 @@ namespace AOE
         }
 
         /// <summary>
-        /// µãµ½Æ½Ãæ¾àÀë£¬4¸öµã±ØĞë×é³É²»¹²ÏßµÄÁ½¸öÏòÁ¿
-        /// Ô­Àí£º1£¬Æ½ÃæµÄ·¨ÏòÁ¿   2.oaÔÚ·¨ÏòÁ¿ÉÏÍ¶Ó°
+        /// ç‚¹åˆ°å¹³é¢è·ç¦»ï¼Œ4ä¸ªç‚¹å¿…é¡»ç»„æˆä¸å…±çº¿çš„ä¸¤ä¸ªå‘é‡
+        /// åŸç†ï¼š1ï¼Œå¹³é¢çš„æ³•å‘é‡   2.oaåœ¨æ³•å‘é‡ä¸ŠæŠ•å½±
         /// </summary>
         /// <param name="point"></param>
         /// <param name="a"></param>
@@ -186,7 +186,7 @@ namespace AOE
             return dis;
         }
 
-        //»æÖÆÔ²ĞÎ
+        //ç»˜åˆ¶åœ†å½¢
         public static void DrawCircle(Vector3 origin, float radius, Color color, float time = 5)
         {
 #if UNITY_EDITOR
@@ -210,11 +210,11 @@ namespace AOE
         }
 
         /// <summary>
-        /// Á½¸öÏòÁ¿Ö®¼ä¼Ğ½Ç
+        /// ä¸¤ä¸ªå‘é‡ä¹‹é—´å¤¹è§’
         /// </summary>
         /// <param name="from"></param>
         /// <param name="to"></param>
-        /// <param name="ori">Ô²µã</param>
+        /// <param name="ori">åœ†ç‚¹</param>
         /// <returns>-180---180</returns>
         public static float GetAngleByVector(Vector2 from, Vector2 to, Vector2 ori)
         {
@@ -229,7 +229,7 @@ namespace AOE
             return angle;
         }
 
-        //»æÖÆÎŞ³¯Ïò¾ØĞÎ
+        //ç»˜åˆ¶æ— æœå‘çŸ©å½¢
         public static void DrawRectNoDir(float x, float y, float width, float high)
         {
 #if UNITY_EDITOR
@@ -242,7 +242,7 @@ namespace AOE
 #endif
         }
         /// <summary>
-        /// »æÖÆÉÈĞÎ
+        /// ç»˜åˆ¶æ‰‡å½¢
         /// </summary>
         public static void DrawWireSemicircle(Vector3 origin, Vector3 direction, float radius, int angle, Color color, float time = 5)
         {
@@ -268,7 +268,7 @@ namespace AOE
                 currentP = origin + dir * radius;
                 Debug.DrawLine(oldP, currentP, color, time);
             }
-            //½Ç¶ÈÃ»·Ö¸î¾ùÔÈ£¬²¹×îºóÒ»¶ÎÉÈĞÎ»¡ÃæµÄÖ±Ïß
+            //è§’åº¦æ²¡åˆ†å‰²å‡åŒ€ï¼Œè¡¥æœ€åä¸€æ®µæ‰‡å½¢å¼§é¢çš„ç›´çº¿
             oldP = currentP;
             currentP = origin + rightdir * radius;
             Debug.DrawLine(oldP, currentP, color, time);

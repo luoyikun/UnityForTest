@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using Unity.EditorCoroutines.EditorEx;
 using UnityEditor;
@@ -26,11 +26,11 @@ public class EditorCorTest : EditorWindow
 
     IEnumerator CountEditorUpdates()
     {
-        yield return new EditorWaitForSeconds(10); //µÚ1¸öcurrent
-        ++m_Updates;       //´úÂë¿éa Âú×ãµÚ1¸öcureentÌõ¼ş£¬cureentÖ´ĞĞMoveNextºóÖ´ĞĞ
+        yield return new EditorWaitForSeconds(10); //ç¬¬1ä¸ªcurrent
+        ++m_Updates;       //ä»£ç å—a æ»¡è¶³ç¬¬1ä¸ªcureentæ¡ä»¶ï¼Œcureentæ‰§è¡ŒMoveNextåæ‰§è¡Œ
         Debug.Log(m_Updates);
-        yield return new EditorWaitForSeconds(8);//µÚ2¸ö curent
-        ++m_Updates;//´úÂë¿éb  Âú×ãµÚ2¸öcureentÌõ¼ş£¬cureentÖ´ĞĞMoveNextºóÖ´ĞĞ
+        yield return new EditorWaitForSeconds(8);//ç¬¬2ä¸ª curent
+        ++m_Updates;//ä»£ç å—b  æ»¡è¶³ç¬¬2ä¸ªcureentæ¡ä»¶ï¼Œcureentæ‰§è¡ŒMoveNextåæ‰§è¡Œ
         Debug.Log(m_Updates);
     }
 }

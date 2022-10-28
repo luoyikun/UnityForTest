@@ -1,4 +1,4 @@
-Shader "TextMeshPro/Sprite"
+﻿Shader "TextMeshPro/Sprite"
 {
 	Properties
 	{

@@ -1,12 +1,12 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 
 /// <summary>
-/// Êı×é1£º1,3,5
-/// Êı×é2: 2,4,6
-/// ºÏ²¢ºó£º1,2,3£¬4,5,6
+/// æ•°ç»„1ï¼š1,3,5
+/// æ•°ç»„2: 2,4,6
+/// åˆå¹¶åï¼š1,2,3ï¼Œ4,5,6
 /// </summary>
 public class MergeSortArray :MonoBehaviour
 {

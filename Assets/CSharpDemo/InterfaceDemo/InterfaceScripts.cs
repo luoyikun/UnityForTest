@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -27,11 +27,11 @@ namespace InterfaceDemo
 
     interface IMyInterface
     {
-        // ½Ó¿Ú³ÉÔ±
+        // æ¥å£æˆå‘˜
         void MethodToImplement();
     }
 
-    public abstract class AbBase  //³éÏóÀà
+    public abstract class AbBase  //æŠ½è±¡ç±»
     {
         public int NumberA = 100;
         public int NumberB = 200;
@@ -40,10 +40,10 @@ namespace InterfaceDemo
         {
             Debug.Log("TestA");
         }
-        public abstract void Swap();    //³éÏó·½·¨
+        public abstract void Swap();    //æŠ½è±¡æ–¹æ³•
 
-        public abstract int getNumberA { get; } //³éÏó·½·¨
-        public abstract int getNumberB { get; } //³éÏó·½·¨
+        public abstract int getNumberA { get; } //æŠ½è±¡æ–¹æ³•
+        public abstract int getNumberB { get; } //æŠ½è±¡æ–¹æ³•
 
     }
 

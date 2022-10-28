@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -22,8 +22,8 @@ public class PublicFunc
 
     }
 
-    static public void SaveJsonString(string JsonString, string path)    //±£´æJson¸ñÊ½×Ö·û´®
-    {//Ğ´ÈëJsonÊı¾İ
+    static public void SaveJsonString(string JsonString, string path)    //ä¿å­˜Jsonæ ¼å¼å­—ç¬¦ä¸²
+    {//å†™å…¥Jsonæ•°æ®
         if (File.Exists(path) == true)
         {
             File.Delete(path);
@@ -42,8 +42,8 @@ public class PublicFunc
         writer.Dispose();
     }
 
-    static public string GetJsonString(string path)     //´ÓÎÄ¼şÀïÃæ¶ÁÈ¡jsonÊı¾İ
-    {//¶ÁÈ¡JsonÊı¾İ
+    static public string GetJsonString(string path)     //ä»æ–‡ä»¶é‡Œé¢è¯»å–jsonæ•°æ®
+    {//è¯»å–Jsonæ•°æ®
         StreamReader reader = new StreamReader(path);
         string jsonData = reader.ReadToEnd();
         reader.Close();

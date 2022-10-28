@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 // Delegate for the highlighting event
 public delegate void HighlightingEventHandler(bool state, bool zWrite);

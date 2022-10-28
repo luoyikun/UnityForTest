@@ -1,4 +1,4 @@
-Shader "Custom/ZTestRed"
+ï»¿Shader "Custom/ZTestRed"
 {
 	Properties
 	{
@@ -6,7 +6,7 @@ Shader "Custom/ZTestRed"
 	}
 		SubShader
 	{
-		Tags{ "Queue" = "Transparent" } //·ÇÍ¸Ã÷µÄÒªÏÈäÖÈ¾
+		Tags{ "Queue" = "Transparent" } //éé€æ˜çš„è¦å…ˆæ¸²æŸ“
 		//ZWrite Off
 		ZTest Greater
 		Pass

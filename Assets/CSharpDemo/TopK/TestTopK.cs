@@ -1,4 +1,4 @@
-using System.Collections;
+锘縰sing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -26,7 +26,7 @@ public class TestTopK : MonoBehaviour
         {
             int topNum = minHeap.GetRoot().value;
 
-            if (m_listOri[i] > topNum) //这里不能>=，因为是最小堆，只有大于头节点才插入，除头节点外，子节点都是比头节点大
+            if (m_listOri[i] > topNum) //杩欓噷涓嶈兘>=锛屽洜涓烘槸鏈�灏忓爢锛屽彧鏈夊ぇ浜庡ご鑺傜偣鎵嶆彃鍏ワ紝闄ゅご鑺傜偣澶栵紝瀛愯妭鐐归兘鏄瘮澶磋妭鐐瑰ぇ
             {
                 minHeap.PopRoot();
                 minHeap.Push(new Node(m_listOri[i]));

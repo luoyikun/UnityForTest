@@ -1,4 +1,4 @@
-1.新建D:\KServer，放入123.rar
-2.FileSizeList.exe放入D:\KServer，双击运行，生成文件大小列表
-3.运行HttpServer.exe，作为http服务器，别关闭
-4.运行AbDownScene场景测试
+﻿1.鏂板缓D:\KServer锛屾斁鍏?23.rar
+2.FileSizeList.exe鏀惧叆D:\KServer锛屽弻鍑昏繍琛岋紝鐢熸垚鏂囦欢澶у皬鍒楄〃
+3.杩愯HttpServer.exe锛屼綔涓篽ttp鏈嶅姟鍣紝鍒叧闂?
+4.杩愯AbDownScene鍦烘櫙娴嬭瘯

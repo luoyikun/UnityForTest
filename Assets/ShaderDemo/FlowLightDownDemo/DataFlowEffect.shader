@@ -1,6 +1,6 @@
-//功能需求：模拟数据传送效果，高亮色块从模型上方移动到下方
-//功能分析：这里采用UV动画的方式来实现，利用Alpha贴图获取流动的形状
-//			利用Alpha遮罩贴图，提出不需要显示流动的地方
+﻿//鍔熻兘闇€姹傦細妯℃嫙鏁版嵁浼犻€佹晥鏋滐紝楂樹寒鑹插潡浠庢ā鍨嬩笂鏂圭Щ鍔ㄥ埌涓嬫柟
+//鍔熻兘鍒嗘瀽锛氳繖閲岄噰鐢║V鍔ㄧ敾鐨勬柟寮忔潵瀹炵幇锛屽埄鐢ˋlpha璐村浘鑾峰彇娴佸姩鐨勫舰鐘?
+//			鍒╃敤Alpha閬僵璐村浘锛屾彁鍑轰笉闇€瑕佹樉绀烘祦鍔ㄧ殑鍦版柟
 
 Shader "Custom/DataFlowEffect"
 {
@@ -36,19 +36,19 @@ Shader "Custom/DataFlowEffect"
 			#include "UnityCG.cginc"
 			#include "Lighting.cginc"
 
-			sampler2D _MainTex;		//颜色贴图
-			half4 _MainTex_ST;		//颜色UV 缩放和偏移
-			fixed3 _MainColor;		//漫反射颜色
-			fixed3 _Specular;		//高光颜色
-			fixed _Gloss;			//高光度
-			sampler2D _FlowTex;		//数据流图片
-			fixed4 _FlowColor;		//数据流颜色叠加
-			half4 _FlowTex_ST;		//数据流贴图UV的缩放和偏移
-			fixed _FlowIdleTime;	//流动动画间歇时间
-			fixed _FlowDuring;		//流动动画播放时间
-			sampler2D _FlowMaskTex;	//流动遮罩
-			fixed _FlowDirection;	//流动方向
-			float _FlowBeginTime;	//流动效果开始的时间
+			sampler2D _MainTex;		//棰滆壊璐村浘
+			half4 _MainTex_ST;		//棰滆壊UV 缂╂斁鍜屽亸绉?
+			fixed3 _MainColor;		//婕弽灏勯鑹?
+			fixed3 _Specular;		//楂樺厜棰滆壊
+			fixed _Gloss;			//楂樺厜搴?
+			sampler2D _FlowTex;		//鏁版嵁娴佸浘鐗?
+			fixed4 _FlowColor;		//鏁版嵁娴侀鑹插彔鍔?
+			half4 _FlowTex_ST;		//鏁版嵁娴佽创鍥綰V鐨勭缉鏀惧拰鍋忕Щ
+			fixed _FlowIdleTime;	//娴佸姩鍔ㄧ敾闂存瓏鏃堕棿
+			fixed _FlowDuring;		//娴佸姩鍔ㄧ敾鎾斁鏃堕棿
+			sampler2D _FlowMaskTex;	//娴佸姩閬僵
+			fixed _FlowDirection;	//娴佸姩鏂瑰悜
+			float _FlowBeginTime;	//娴佸姩鏁堟灉寮€濮嬬殑鏃堕棿
 
 			struct a2v
 			{
@@ -77,40 +77,40 @@ Shader "Custom/DataFlowEffect"
 				return v;
 			}
 
-			//uv - vert的uv坐标
-			//scale - 贴图缩放
-			//idleTime - 每次循环开始后多长时间，开始流动
-			//loopTime - 单次流动时间
+			//uv - vert鐨剈v鍧愭爣
+			//scale - 璐村浘缂╂斁
+			//idleTime - 姣忔寰幆寮€濮嬪悗澶氶暱鏃堕棿锛屽紑濮嬫祦鍔?
+			//loopTime - 鍗曟娴佸姩鏃堕棿
 			fixed4 getFlowColor(half2 uv,int scale,fixed idleTime,fixed loopTime)
 			{
-				//当前运行时间
+				//褰撳墠杩愯鏃堕棿
 				half flowTime_ = _Time.y - _FlowBeginTime;
 
-				//上一次循环开始，到本次循环开始的时间间隔
+				//涓婁竴娆″惊鐜紑濮嬶紝鍒版湰娆″惊鐜紑濮嬬殑鏃堕棿闂撮殧
 				half internal = idleTime + loopTime;
 				
-				//当前循环执行时间
+				//褰撳墠寰幆鎵ц鏃堕棿
 				half curLoopTime = fmod(flowTime_,internal);
 
-				//每次开始流动之前，有个停止间隔，检测是否可以流动了
+				//姣忔寮€濮嬫祦鍔ㄤ箣鍓嶏紝鏈変釜鍋滄闂撮殧锛屾娴嬫槸鍚﹀彲浠ユ祦鍔ㄤ簡
 				if(curLoopTime > idleTime)
 				{
-					//已经流动时间
+					//宸茬粡娴佸姩鏃堕棿
 					half actionTime = curLoopTime - idleTime;
 
-					//流动进度百分比
+					//娴佸姩杩涘害鐧惧垎姣?
 					half actionPercentage = actionTime / loopTime;
 
 					half length = 1.0 / scale;
 
-					//从下往上流动
-					//计算方式：设：y = ax + b，其中y为下边界值，x为流动进度
-					//根据我们要求可以，x=0时y=-length；x=1时y=1；带入解方程
+					//浠庝笅寰€涓婃祦鍔?
+					//璁＄畻鏂瑰紡锛氳锛歽 = ax + b锛屽叾涓瓂涓轰笅杈圭晫鍊硷紝x涓烘祦鍔ㄨ繘搴?
+					//鏍规嵁鎴戜滑瑕佹眰鍙互锛寈=0鏃秠=-length锛泋=1鏃秠=1锛涘甫鍏ヨВ鏂圭▼
 					half bottomBorder = actionPercentage * (1+length) - length;
 					half topBorder = bottomBorder + length;
 
-					//从上往下流动
-					//求解方法与上面类似
+					//浠庝笂寰€涓嬫祦鍔?
+					//姹傝В鏂规硶涓庝笂闈㈢被浼?
 					if(_FlowDirection < 0)
 					{
 						topBorder = (-1-length) * actionPercentage + 1 + length;
@@ -129,30 +129,30 @@ Shader "Custom/DataFlowEffect"
 
 			fixed4 frag(v2f v):SV_Target
 			{
-				//计算漫反射系数
+				//璁＄畻婕弽灏勭郴鏁?
 				fixed3 albedo = tex2D(_MainTex,v.uv) * _MainColor;
 				
-				//计算环境光
+				//璁＄畻鐜鍏?
 				fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz * albedo;
 				
 
-				fixed3 worldNormal = normalize(v.worldNormal);								//世界坐标的法线方向
-				fixed3 worldLightDir = normalize(UnityWorldSpaceLightDir(v.worldPos));		//世界坐标的光照方向
-				fixed3 worldViewDir = normalize(UnityWorldSpaceViewDir(v.worldPos));		//世界坐标的视角方向
+				fixed3 worldNormal = normalize(v.worldNormal);								//涓栫晫鍧愭爣鐨勬硶绾挎柟鍚?
+				fixed3 worldLightDir = normalize(UnityWorldSpaceLightDir(v.worldPos));		//涓栫晫鍧愭爣鐨勫厜鐓ф柟鍚?
+				fixed3 worldViewDir = normalize(UnityWorldSpaceViewDir(v.worldPos));		//涓栫晫鍧愭爣鐨勮瑙掓柟鍚?
 
-				//计算漫反射颜色,采用Half-Lambert模型
+				//璁＄畻婕弽灏勯鑹?閲囩敤Half-Lambert妯″瀷
 				fixed3 lightColor = _LightColor0.rgb;
 				fixed3 diffuse = lightColor * albedo * max(0,0.5*dot(worldNormal,worldLightDir)+0.5);
 
-				//计算高光,采用Blinn-Phone高光模型
+				//璁＄畻楂樺厜,閲囩敤Blinn-Phone楂樺厜妯″瀷
 				fixed3 halfDir = normalize(worldViewDir + worldLightDir);
 				fixed3 specColor = _Specular * lightColor * pow(max(0,dot(worldNormal,halfDir)),_Gloss);
 
-				//叠加流动贴图				
+				//鍙犲姞娴佸姩璐村浘				
 				fixed4 flowColor = getFlowColor(v.uv,_FlowTex_ST.y,_FlowIdleTime,_FlowDuring);	
 				fixed4 flowMaskColor = tex2D(_FlowMaskTex,v.uv);
 
-				//与遮罩贴图进行混合，只显示遮罩贴图不透明的部分
+				//涓庨伄缃╄创鍥捐繘琛屾贩鍚堬紝鍙樉绀洪伄缃╄创鍥句笉閫忔槑鐨勯儴鍒?
 				flowColor.a = flowMaskColor.a * flowColor.a * _FlowColor.a;
 
 				fixed3 finalDiffuse = lerp(diffuse,_FlowColor,flowColor.a);

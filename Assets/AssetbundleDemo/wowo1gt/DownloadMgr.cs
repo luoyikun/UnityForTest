@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -14,12 +14,12 @@ public delegate void DonwloadCompleteCallBack(DownloadUnit downUnit);
 
 public class DownloadUnit
 {
-    public string name; //ÏÂÔØµÄÎÄ¼ş£¬×÷Îª±êÊ¶£¬
-    public string downUrl; //Ô¶³ÌµØÖ·
-    public string savePath; //±¾µØµØÖ·
-    public int size; //ÎÄ¼ş³¤¶È£¬·Ç±ØĞë
-    public string md5; //ĞèÒªĞ£ÑéµÄmd5£¬·Ç±ØĞë¡£Èç¹û²»Ìî£¬ÏÂÔØÍê±Ïºó£¬Ä¬ÈÏ³É¹¦
-    public bool isDelete; //ÓÃÓÚÇåÀíÕıÔÚÏÂÔØµÄÎÄ¼ş
+    public string name; //ä¸‹è½½çš„æ–‡ä»¶ï¼Œä½œä¸ºæ ‡è¯†ï¼Œ
+    public string downUrl; //è¿œç¨‹åœ°å€
+    public string savePath; //æœ¬åœ°åœ°å€
+    public int size; //æ–‡ä»¶é•¿åº¦ï¼Œéå¿…é¡»
+    public string md5; //éœ€è¦æ ¡éªŒçš„md5ï¼Œéå¿…é¡»ã€‚å¦‚æœä¸å¡«ï¼Œä¸‹è½½å®Œæ¯•åï¼Œé»˜è®¤æˆåŠŸ
+    public bool isDelete; //ç”¨äºæ¸…ç†æ­£åœ¨ä¸‹è½½çš„æ–‡ä»¶
 
     public DonwloadErrorCallBack errorFun;
     public DonwloadProgressCallBack progressFun;
@@ -29,7 +29,7 @@ public class DownloadUnit
 public class DownloadMgr
 {
 
-    //µÃµ½ÎÄ¼ş´óĞ¡
+    //å¾—åˆ°æ–‡ä»¶å¤§å°
     public static long GetDownSizeByPath(string url)
     {
         long length = 0;
@@ -57,10 +57,10 @@ public class DownloadMgr
     private static object _lock = new object();
     private const int MAX_THREAD_COUNT = 20;
 
-    private Queue<DownloadFileMac> _readyList; //×¼±¸ºÃµÄÊı¾İ£¬½øÈë¶ÓÁĞ£¬ÏÈ½øÏÈ³ö
-    private Dictionary<Thread, DownloadFileMac> _runningList; //ÕıÔÚÔËĞĞÏß³Ì£¬ÏÂÔØ£¬<20,¿ªÆôĞÂµÄ
-    private List<DownloadUnit> _completeList;  //ÒÑ¾­Íê³ÉµÄÏß³Ì
-    private List<DownloadFileMac> _errorList;  //³öÏÖÏÂÔØÒì³£µÄÏß³Ì
+    private Queue<DownloadFileMac> _readyList; //å‡†å¤‡å¥½çš„æ•°æ®ï¼Œè¿›å…¥é˜Ÿåˆ—ï¼Œå…ˆè¿›å…ˆå‡º
+    private Dictionary<Thread, DownloadFileMac> _runningList; //æ­£åœ¨è¿è¡Œçº¿ç¨‹ï¼Œä¸‹è½½ï¼Œ<20,å¼€å¯æ–°çš„
+    private List<DownloadUnit> _completeList;  //å·²ç»å®Œæˆçš„çº¿ç¨‹
+    private List<DownloadFileMac> _errorList;  //å‡ºç°ä¸‹è½½å¼‚å¸¸çš„çº¿ç¨‹
 
     private DownloadMgr()
     {
@@ -69,7 +69,7 @@ public class DownloadMgr
         _completeList = new List<DownloadUnit>();
         _errorList = new List<DownloadFileMac>();
 
-        //https½âÎöµÄÉèÖÃ
+        //httpsè§£æçš„è®¾ç½®
         System.Net.ServicePointManager.DefaultConnectionLimit = 100;
         ServicePointManager.ServerCertificateValidationCallback = RemoteCertificateValidationCallback;
     }
@@ -123,14 +123,14 @@ public class DownloadMgr
 
     }
 
-    //Í¬²½²»»áµ÷ÓÃ»Øµ÷º¯Êı
+    //åŒæ­¥ä¸ä¼šè°ƒç”¨å›è°ƒå‡½æ•°
     public bool DownloadSync(DownloadUnit info)
     {
         if (info == null) return false;
 
         var mac = new DownloadFileMac(info);
         try
-        {//Í¬²½ÏÂÔØ³¢ÊÔÈı´Î
+        {//åŒæ­¥ä¸‹è½½å°è¯•ä¸‰æ¬¡
             mac.Run();
             if (mac._state == DownloadMacState.Complete) return true;
             mac.Run();
@@ -154,7 +154,7 @@ public class DownloadMgr
         }
     }
 
-    //ÇåÀíËùÓĞÏÂÔØ
+    //æ¸…ç†æ‰€æœ‰ä¸‹è½½
     public void ClearAllDownloads()
     {
         lock (_lock)
@@ -189,14 +189,14 @@ public class DownloadMgr
                     _runningList[Thread.CurrentThread] = mac;
 
                     if (mac != null && mac._downUnit.isDelete)
-                    {//ÒÑ¾­Ïú»Ù£¬²»ÌáÈ¡ÔËĞĞ£¬Ö±½ÓÉ¾³ı
+                    {//å·²ç»é”€æ¯ï¼Œä¸æå–è¿è¡Œï¼Œç›´æ¥åˆ é™¤
                         _runningList[Thread.CurrentThread] = null;
                         continue;
                     }
                 }
             }
 
-            //ÒÑ¾­Ã»ÓĞĞèÒªÏÂÔØµÄÁË
+            //å·²ç»æ²¡æœ‰éœ€è¦ä¸‹è½½çš„äº†
             if (mac == null) break;
 
             mac.Run();
@@ -214,7 +214,7 @@ public class DownloadMgr
                 lock (_lock)
                 {
                     _readyList.Enqueue(mac);
-                    //·ÀÖ¹Ê§°ÜÆµ·±»Øµ÷£¬Ö»ÔÚÌØ¶¨´ÎÊı»Øµ÷
+                    //é˜²æ­¢å¤±è´¥é¢‘ç¹å›è°ƒï¼Œåªåœ¨ç‰¹å®šæ¬¡æ•°å›è°ƒ
                     if (mac.IsNeedErrorCall())
                         _errorList.Add(mac);
                 }
@@ -232,7 +232,7 @@ public class DownloadMgr
 
 
     private void UpdateComplete()
-    {//»Øµ÷Íê³É
+    {//å›è°ƒå®Œæˆ
         if (_completeList.Count == 0) return;
 
         DownloadUnit[] completeArr = null;
@@ -244,7 +244,7 @@ public class DownloadMgr
 
         foreach (var info in completeArr)
         {
-            if (info.isDelete) continue; //ÒÑ¾­Ïú»Ù£¬²»½øĞĞ»Øµ÷
+            if (info.isDelete) continue; //å·²ç»é”€æ¯ï¼Œä¸è¿›è¡Œå›è°ƒ
             info.isDelete = true;
 
             if (info.progressFun != null)
@@ -268,7 +268,7 @@ public class DownloadMgr
     }
 
     private void UpdateError()
-    {//»Øµ÷error
+    {//å›è°ƒerror
         if (_errorList.Count == 0) return;
 
         DownloadFileMac[] errorArr = null;
@@ -281,7 +281,7 @@ public class DownloadMgr
         foreach (var mac in errorArr)
         {
             var info = mac._downUnit;
-            if (info.isDelete) continue; //ÒÑ¾­Ïú»Ù£¬²»½øĞĞ»Øµ÷
+            if (info.isDelete) continue; //å·²ç»é”€æ¯ï¼Œä¸è¿›è¡Œå›è°ƒ
 
             if (info.errorFun != null)
             {
@@ -293,7 +293,7 @@ public class DownloadMgr
 
     private void UpdateProgress()
     {
-        //»Øµ÷½ø¶È
+        //å›è°ƒè¿›åº¦
         if (_runningList.Count == 0) return;
 
         List<DownloadFileMac> runArr = new List<DownloadFileMac>();
@@ -308,7 +308,7 @@ public class DownloadMgr
         foreach (var mac in runArr)
         {
             var info = mac._downUnit;
-            if (info.isDelete) continue; //ÒÑ¾­Ïú»Ù£¬²»½øĞĞ»Øµ÷
+            if (info.isDelete) continue; //å·²ç»é”€æ¯ï¼Œä¸è¿›è¡Œå›è°ƒ
 
             if (info.progressFun != null)
             {
@@ -322,7 +322,7 @@ public class DownloadMgr
         if (_readyList.Count == 0 && _runningList.Count == 0) return;
 
         lock (_lock)
-        {//¹Ø±Õ¿¨ËÀµÄÏß³Ì
+        {//å…³é—­å¡æ­»çš„çº¿ç¨‹
             List<Thread> threadArr = new List<Thread>();
             foreach (var item in _runningList)
             {
@@ -340,7 +340,7 @@ public class DownloadMgr
             }
         }
 
-        //Èç¹ûÃ»ÓĞÍøÂç£¬²»¿ªÆôĞÂÏß³Ì£¬¾ÉÏß³Ì»áÖğ¸ö¹Ø±Õ
+        //å¦‚æœæ²¡æœ‰ç½‘ç»œï¼Œä¸å¼€å¯æ–°çº¿ç¨‹ï¼Œæ—§çº¿ç¨‹ä¼šé€ä¸ªå…³é—­
         if (!CheckNetworkActive()) return;
 
         if (_runningList.Count >= MAX_THREAD_COUNT) return;
@@ -359,17 +359,17 @@ public class DownloadMgr
     public bool CheckNetworkActive()
     {
         if (Application.internetReachability == NetworkReachability.NotReachable)
-        {//Ã»ÓĞÍøÂç
+        {//æ²¡æœ‰ç½‘ç»œ
 
             return false;
         }
         else if (Application.internetReachability == NetworkReachability.ReachableViaCarrierDataNetwork)
-        {//234GÍøÂç
+        {//234Gç½‘ç»œ
 
             return true;
         }
         else if (Application.internetReachability == NetworkReachability.ReachableViaLocalAreaNetwork)
-        {//wifiÍøÂç
+        {//wifiç½‘ç»œ
             return true;
         }
 

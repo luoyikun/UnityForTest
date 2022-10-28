@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
@@ -12,7 +12,7 @@ namespace ThreadTest
         void Start()
         {
 
-            // ÓÃLoomµÄ·½·¨µ÷ÓÃÒ»¸öÏß³Ì
+            // ç”¨Loomçš„æ–¹æ³•è°ƒç”¨ä¸€ä¸ªçº¿ç¨‹
             //Loom.RunAsync(
             //    () =>
             //    {
@@ -32,7 +32,7 @@ namespace ThreadTest
 
         private void RefreshText()
         {
-            // ÓÃLoomµÄ·½·¨ÔÚUnityÖ÷Ïß³ÌÖÐµ÷ÓÃText×é¼þ
+            // ç”¨Loomçš„æ–¹æ³•åœ¨Unityä¸»çº¿ç¨‹ä¸­è°ƒç”¨Textç»„ä»¶
             Loom.QueueOnMainThread((param) =>
             {
                 mText.text = "Hello Loom!";

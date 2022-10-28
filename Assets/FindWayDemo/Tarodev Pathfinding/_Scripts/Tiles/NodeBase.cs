@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -47,11 +47,11 @@ namespace _Scripts.Tiles {
         private TextMeshPro _fCostText;
 
         [SerializeField] private TextMeshPro _gCostText, _hCostText;
-        public List<NodeBase> Neighbors { get; protected set; }//ÖÜÎ§µÄÁÚ¾Ó
-        public NodeBase Connection { get; private set; }//ÉÏÒ»¸ö½Úµã
-        public float G { get; private set; } //Æðµãµ½µ±Ç°£ºÃ¿´ÎÕÒÁÚ¾Ó»á¸üÐÂ, È¡µ±Ç°µ½Õâ¸öÁÚ¾Ó£¬ºÍÔ­±¾Éè¶¨ÖÐµÄ×îÐ¡
-        public float H { get; private set; }//µ±Ç°µ½´ïÖÕµã£ºÀÖ¹Û¹À¼Æ£¬»áÈÆ¹ýÕÏ°­Îï£¬¿ÉÄÜ±ÈÕæÊµµ½´ïµÄÒªÐ¡
-        public float F => G + H; //Á½ÕßÖ®ºÍ
+        public List<NodeBase> Neighbors { get; protected set; }//å‘¨å›´çš„é‚»å±…
+        public NodeBase Connection { get; private set; }//ä¸Šä¸€ä¸ªèŠ‚ç‚¹
+        public float G { get; private set; } //èµ·ç‚¹åˆ°å½“å‰ï¼šæ¯æ¬¡æ‰¾é‚»å±…ä¼šæ›´æ–°, å–å½“å‰åˆ°è¿™ä¸ªé‚»å±…ï¼Œå’ŒåŽŸæœ¬è®¾å®šä¸­çš„æœ€å°
+        public float H { get; private set; }//å½“å‰åˆ°è¾¾ç»ˆç‚¹ï¼šä¹è§‚ä¼°è®¡ï¼Œä¼šç»•è¿‡éšœç¢ç‰©ï¼Œå¯èƒ½æ¯”çœŸå®žåˆ°è¾¾çš„è¦å°
+        public float F => G + H; //ä¸¤è€…ä¹‹å’Œ
 
         public abstract void CacheNeighbors();
 

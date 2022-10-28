@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading;
@@ -10,8 +10,8 @@ namespace CoroutineTest
 
         void Start()
         {
-            StartCoroutine(tt());//¿ªÆôĞ­³Ì
-            for (int i = 0; i < 200; i++)   //Ñ­»·A
+            StartCoroutine(tt());//å¼€å¯åç¨‹
+            for (int i = 0; i < 200; i++)   //å¾ªç¯A
             {
                 Debug.Log("*************************" + i);
                 Thread.Sleep(10);
@@ -21,27 +21,27 @@ namespace CoroutineTest
 
         IEnumerator tt()
         {
-            for (int i = 0; i < 100; i++) //Ñ­»·B
+            for (int i = 0; i < 100; i++) //å¾ªç¯B
             {
                 Debug.Log("-------------------" + i);
             }
 
-            yield return new WaitForSeconds(1); //Ğ­³Ì1
+            yield return new WaitForSeconds(1); //åç¨‹1
 
-            for (int i = 0; i < 100; i++) //Ñ­»·C
+            for (int i = 0; i < 100; i++) //å¾ªç¯C
             {
                 Debug.Log(">>>>>>>>>>>>>>>>>>>>" + i);
-                yield return null; //Ğ­³Ì1
+                yield return null; //åç¨‹1
             }
         }
 
-        // ¸üĞÂÊı¾İ
+        // æ›´æ–°æ•°æ®
         void Update()
         {
             Debug.Log("Update");
         }
 
-        //ÍíÓÚ¸üĞÂ
+        //æ™šäºæ›´æ–°
         void LateUpdate()
         {
             Debug.Log("------LateUpdate");

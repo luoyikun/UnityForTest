@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ListOri;
@@ -7,7 +7,7 @@ public class ListTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ListOri.List<int> list = new ListOri.List<int>(64);//ÕâÀïlist.Count = 0£¬Ö»ÊÇ°ÑÄÚ²¿Êı×éÔ¤ÏÈ·ÖÅäÁË¿Õ¼ä
+        ListOri.List<int> list = new ListOri.List<int>(64);//è¿™é‡Œlist.Count = 0ï¼Œåªæ˜¯æŠŠå†…éƒ¨æ•°ç»„é¢„å…ˆåˆ†é…äº†ç©ºé—´
 
         for (int i = 0; i < 64; i++)
         {

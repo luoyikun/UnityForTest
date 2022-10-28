@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class GameObjectBrush : MonoBehaviour
 {
@@ -17,7 +17,7 @@ public class GameObjectBrush : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            //ÏßÌõäÖÈ¾
+            //çº¿æ¡æ¸²æŸ“
             currentLR = new GameObject("LineRenderer").AddComponent<LineRenderer>();
             currentLR.material = new Material(Shader.Find("Sprites/Default")) { color = color };
             currentLR.widthMultiplier = width;
@@ -25,7 +25,7 @@ public class GameObjectBrush : MonoBehaviour
             currentLR.positionCount = 1;
             currentLR.SetPosition(0, (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition));
 
-            //¸üĞÂÊı¾İ
+            //æ›´æ–°æ•°æ®
             previousPoint = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
 
@@ -33,11 +33,11 @@ public class GameObjectBrush : MonoBehaviour
         {
             if (previousPoint != (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition))
             {
-                //ÏßÌõäÖÈ¾
+                //çº¿æ¡æ¸²æŸ“
                 currentLR.positionCount++;
                 currentLR.SetPosition(currentLR.positionCount - 1, (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition));
 
-                //Åö×²Æ÷
+                //ç¢°æ’å™¨
                 BoxCollider2D collider = new GameObject("BoxCollider2D").AddComponent<BoxCollider2D>();
                 collider.transform.parent = currentLR.transform;
                 Vector2 latestPoint = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -46,7 +46,7 @@ public class GameObjectBrush : MonoBehaviour
                 collider.transform.eulerAngles = new Vector3(0, 0, angle);
                 collider.size = new Vector2(Vector2.Distance(latestPoint, previousPoint), width);
 
-                //¸üĞÂÊı¾İ
+                //æ›´æ–°æ•°æ®
                 previousPoint = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
         }

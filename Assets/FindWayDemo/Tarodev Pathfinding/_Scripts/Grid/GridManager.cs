@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+ï»¿using System.Collections.Generic;
 using System.Linq;
 using _Scripts.Tiles;
 using Tarodev_Pathfinding._Scripts.Grid.Scriptables;
@@ -41,7 +41,7 @@ namespace Tarodev_Pathfinding._Scripts.Grid {
 
             System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
 
-            stopwatch.Start(); //  ¿ªÊ¼¼àÊÓ´úÂëÔËĞĞÊ±¼ä
+            stopwatch.Start(); //  å¼€å§‹ç›‘è§†ä»£ç è¿è¡Œæ—¶é—´
 
             
             if (Input.GetKey(KeyCode.LeftShift))
@@ -52,7 +52,7 @@ namespace Tarodev_Pathfinding._Scripts.Grid {
             {
                 var path = Pathfinding.FindPath(_playerNodeBase, _goalNodeBase);
             }
-            UnityEngine.Debug.Log("Ñ°Â·ºÄÊ±:" + stopwatch.ElapsedMilliseconds);
+            UnityEngine.Debug.Log("å¯»è·¯è€—æ—¶:" + stopwatch.ElapsedMilliseconds);
             stopwatch.Stop();
         }
 

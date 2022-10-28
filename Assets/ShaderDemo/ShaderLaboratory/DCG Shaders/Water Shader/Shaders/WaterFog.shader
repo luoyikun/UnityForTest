@@ -1,4 +1,4 @@
-Shader "Hidden/DCG/Water Shader/Water Fog"
+﻿Shader "Hidden/DCG/Water Shader/Water Fog"
 {
     CGINCLUDE  
     #include "UnityCG.cginc" 

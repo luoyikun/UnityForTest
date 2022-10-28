@@ -1,4 +1,4 @@
-#if !UNITY_2019_1_OR_NEWER
+﻿#if !UNITY_2019_1_OR_NEWER
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;

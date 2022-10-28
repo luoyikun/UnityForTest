@@ -1,4 +1,4 @@
-///https://blog.csdn.net/wowo1gt/article/details/100137480
+ï»¿///https://blog.csdn.net/wowo1gt/article/details/100137480
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -18,10 +18,10 @@ public enum DownloadMacState
 
 public class DownloadFileMac
 {
-    const int oneReadLen = 16 * 1024;       // Ò»´Î¶ÁÈ¡³¤¶È 16384 = 16*kb
-    const int Md5ReadLen = 16 * 1024;       // Ò»´Î¶ÁÈ¡³¤¶È 16384 = 16*kb
-    const int ReadWriteTimeOut = 2 * 1000;  // ³¬Ê±µÈ´ıÊ±¼ä
-    const int TimeOutWait = 5 * 1000;       // ³¬Ê±µÈ´ıÊ±¼ä
+    const int oneReadLen = 16 * 1024;       // ä¸€æ¬¡è¯»å–é•¿åº¦ 16384 = 16*kb
+    const int Md5ReadLen = 16 * 1024;       // ä¸€æ¬¡è¯»å–é•¿åº¦ 16384 = 16*kb
+    const int ReadWriteTimeOut = 2 * 1000;  // è¶…æ—¶ç­‰å¾…æ—¶é—´
+    const int TimeOutWait = 5 * 1000;       // è¶…æ—¶ç­‰å¾…æ—¶é—´
 
     public DownloadUnit _downUnit;
 
@@ -32,7 +32,7 @@ public class DownloadFileMac
     public DownloadMacState _state {
         set
         {
-            ThreadDebugLog.Log("ÉèÖÃÏÂÔØ×´Ì¬£º" + value);
+            ThreadDebugLog.Log("è®¾ç½®ä¸‹è½½çŠ¶æ€ï¼š" + value);
             m_pState = value;
         }
 
@@ -40,7 +40,7 @@ public class DownloadFileMac
             return m_pState;
         }
     }
-    public int _tryCount = 0; //³¢ÊÔ´ÎÊı
+    public int _tryCount = 0; //å°è¯•æ¬¡æ•°
     public string _error = "";
 
     public DownloadFileMac(DownloadUnit downUnit)
@@ -48,7 +48,7 @@ public class DownloadFileMac
         _downUnit = downUnit;
     }
 
-    //·ÀÖ¹Ê§°ÜÆµ·±»Øµ÷£¬Ö»ÔÚÌØ¶¨´ÎÊı»Øµ÷
+    //é˜²æ­¢å¤±è´¥é¢‘ç¹å›è°ƒï¼Œåªåœ¨ç‰¹å®šæ¬¡æ•°å›è°ƒ
     public bool IsNeedErrorCall()
     {
         if (_tryCount == 3
@@ -59,7 +59,7 @@ public class DownloadFileMac
         return false;
     }
 
-    //ÔÚ¶àÏß³ÌÖĞµ÷ÓÃ£¬
+    //åœ¨å¤šçº¿ç¨‹ä¸­è°ƒç”¨ï¼Œ
     public void Run()
     {
         _tryCount++;
@@ -76,13 +76,13 @@ public class DownloadFileMac
         //{
 
         //}
-        if (!CheckMd5()) //Ğ£ÑéÊ§°Ü£¬ÖØÏÂÒ»´Î
+        if (!CheckMd5()) //æ ¡éªŒå¤±è´¥ï¼Œé‡ä¸‹ä¸€æ¬¡
         {
             _state = DownloadMacState.Download;
-            if (!Download()) return; //ÕâÀïÖ´ĞĞÒ»±é£¬°ÑtempÎÄ¼şĞ´ÈëÕıÊ½ÎÄ¼ş
+            if (!Download()) return; //è¿™é‡Œæ‰§è¡Œä¸€éï¼ŒæŠŠtempæ–‡ä»¶å†™å…¥æ­£å¼æ–‡ä»¶
 
             _state = DownloadMacState.Md5;
-            if (!CheckMd5()) return; //Á½´Î¶¼Ê§°Ü£¬ÎÄ¼şÓĞÎÊÌâ
+            if (!CheckMd5()) return; //ä¸¤æ¬¡éƒ½å¤±è´¥ï¼Œæ–‡ä»¶æœ‰é—®é¢˜
         }
 
         _state = DownloadMacState.Complete;
@@ -104,14 +104,14 @@ public class DownloadFileMac
 
     private bool CheckMd5()
     {
-        if (string.IsNullOrEmpty(_downUnit.md5)) return true; //²»×öĞ£Ñé£¬Ä¬ÈÏ³É¹¦
+        if (string.IsNullOrEmpty(_downUnit.md5)) return true; //ä¸åšæ ¡éªŒï¼Œé»˜è®¤æˆåŠŸ
 
         string md5 = GetMD5HashFromFile(_downUnit.savePath);
 
         if (md5 != _downUnit.md5)
         {
             File.Delete(_downUnit.savePath);
-            ThreadDebugLog.Log("ÎÄ¼şMD5Ğ£Ñé³ö´í£º" + _downUnit.name);
+            ThreadDebugLog.Log("æ–‡ä»¶MD5æ ¡éªŒå‡ºé”™ï¼š" + _downUnit.name);
             _state = DownloadMacState.Error;
             _error = "Check MD5 Error ";
             return false;
@@ -128,23 +128,23 @@ public class DownloadFileMac
         FileStream fs = null;
         if (File.Exists(_downUnit.savePath))
         {
-            //ÎÄ¼şÒÑ´æÔÚ£¬Ìø¹ı
-            ThreadDebugLog.Log("Download£ºÎÄ¼şÒÑ´æÔÚ£¬Ìø¹ı");
+            //æ–‡ä»¶å·²å­˜åœ¨ï¼Œè·³è¿‡
+            ThreadDebugLog.Log("Downloadï¼šæ–‡ä»¶å·²å­˜åœ¨ï¼Œè·³è¿‡");
             ThreadDebugLog.Log("File is Exists " + _downUnit.savePath);
             _curSize = _downUnit.size;
             return true;
         }
-        //Èç¹û´æÔÚÁÙÊ±ÎÄ¼ş
+        //å¦‚æœå­˜åœ¨ä¸´æ—¶æ–‡ä»¶
         else if (File.Exists(tempFile))
         {
             fs = File.OpenWrite(tempFile);
             startPos = fs.Length;
-            fs.Seek(startPos, SeekOrigin.Current); //ÒÆ¶¯ÎÄ¼şÁ÷ÖĞµÄµ±Ç°Ö¸Õë
+            fs.Seek(startPos, SeekOrigin.Current); //ç§»åŠ¨æ–‡ä»¶æµä¸­çš„å½“å‰æŒ‡é’ˆ
 
-            //ÎÄ¼şÒÑ¾­ÏÂÔØÍê£¬Ã»¸ÄÃû×Ö£¬½áÊø
+            //æ–‡ä»¶å·²ç»ä¸‹è½½å®Œï¼Œæ²¡æ”¹åå­—ï¼Œç»“æŸ
             if (startPos == _downUnit.size)
             {
-                ThreadDebugLog.Log("Download£ºÁÙÊ±ÎÄ¼şÈ«Ğ´ÈëÕıÊ½ÎÄ¼ş");
+                ThreadDebugLog.Log("Downloadï¼šä¸´æ—¶æ–‡ä»¶å…¨å†™å…¥æ­£å¼æ–‡ä»¶");
                 fs.Flush();
                 fs.Close();
                 fs = null;
@@ -155,15 +155,15 @@ public class DownloadFileMac
                 return true;
             }
         }
-        else //µÚÒ»´ÎÕı³£ÏÂÔØ£¬ÏÂÔØµ½ÁÙÊ±ÎÄ¼şÖĞ
+        else //ç¬¬ä¸€æ¬¡æ­£å¸¸ä¸‹è½½ï¼Œä¸‹è½½åˆ°ä¸´æ—¶æ–‡ä»¶ä¸­
         {
-            ThreadDebugLog.Log("Download£ºµÚÒ»´ÎÕı³£ÏÂÔØ£¬ÏÂÔØµ½ÁÙÊ±ÎÄ¼şÖĞ");
+            ThreadDebugLog.Log("Downloadï¼šç¬¬ä¸€æ¬¡æ­£å¸¸ä¸‹è½½ï¼Œä¸‹è½½åˆ°ä¸´æ—¶æ–‡ä»¶ä¸­");
             string direName = Path.GetDirectoryName(tempFile);
             if (!Directory.Exists(direName)) Directory.CreateDirectory(direName);
             fs = new FileStream(tempFile, FileMode.Create);
         }
 
-        // ÏÂÔØÂß¼­
+        // ä¸‹è½½é€»è¾‘
         HttpWebRequest request = null;
         HttpWebResponse respone = null;
         Stream ns = null;
@@ -172,8 +172,8 @@ public class DownloadFileMac
             request = WebRequest.Create(_downUnit.downUrl) as HttpWebRequest;
             request.ReadWriteTimeout = ReadWriteTimeOut;
             request.Timeout = TimeOutWait;
-            if (startPos > 0) request.AddRange((int)startPos);  //ÉèÖÃRangeÖµ£¬¶ÏµãĞø´«
-                                                                //Ïò·şÎñÆ÷ÇëÇó£¬»ñµÃ·şÎñÆ÷»ØÓ¦Êı¾İÁ÷
+            if (startPos > 0) request.AddRange((int)startPos);  //è®¾ç½®Rangeå€¼ï¼Œæ–­ç‚¹ç»­ä¼ 
+                                                                //å‘æœåŠ¡å™¨è¯·æ±‚ï¼Œè·å¾—æœåŠ¡å™¨å›åº”æ•°æ®æµ
             respone = (HttpWebResponse)request.GetResponse();
             ns = respone.GetResponseStream();
             ns.ReadTimeout = TimeOutWait;
@@ -192,14 +192,14 @@ public class DownloadFileMac
             else
             {
                 byte[] bytes = new byte[oneReadLen];
-                int readSize = ns.Read(bytes, 0, oneReadLen); // ¶ÁÈ¡µÚÒ»·İÊı¾İ
+                int readSize = ns.Read(bytes, 0, oneReadLen); // è¯»å–ç¬¬ä¸€ä»½æ•°æ®
                 while (readSize > 0)
                 {
-                    fs.Write(bytes, 0, readSize);       // ½«ÏÂÔØµ½µÄÊı¾İĞ´ÈëÁÙÊ±ÎÄ¼ş
+                    fs.Write(bytes, 0, readSize);       // å°†ä¸‹è½½åˆ°çš„æ•°æ®å†™å…¥ä¸´æ—¶æ–‡ä»¶
                     curSize += readSize;
 
-                    // ÅĞ¶ÏÊÇ·ñÏÂÔØÍê³É
-                    // ÏÂÔØÍê³É½«tempÎÄ¼ş£¬¸Ä³ÉÕıÊ½ÎÄ¼ş
+                    // åˆ¤æ–­æ˜¯å¦ä¸‹è½½å®Œæˆ
+                    // ä¸‹è½½å®Œæˆå°†tempæ–‡ä»¶ï¼Œæ”¹æˆæ­£å¼æ–‡ä»¶
                     if (curSize == totalSize)
                     {
                         fs.Flush();
@@ -209,16 +209,16 @@ public class DownloadFileMac
                         File.Move(tempFile, _downUnit.savePath);
                     }
 
-                    // »Øµ÷Ò»ÏÂ
+                    // å›è°ƒä¸€ä¸‹
                     _curSize = (int)curSize;
-                    // ÍùÏÂ¼ÌĞø¶ÁÈ¡
+                    // å¾€ä¸‹ç»§ç»­è¯»å–
                     readSize = ns.Read(bytes, 0, oneReadLen);
                 }
             }
         }
         catch (Exception ex)
         {
-            //ÏÂÔØÊ§°Ü£¬É¾³ıÁÙÊ±ÎÄ¼ş
+            //ä¸‹è½½å¤±è´¥ï¼Œåˆ é™¤ä¸´æ—¶æ–‡ä»¶
             if (fs != null) { fs.Flush(); fs.Close(); fs = null; }
 
             if (File.Exists(tempFile))
@@ -226,7 +226,7 @@ public class DownloadFileMac
             if (File.Exists(_downUnit.savePath))
                 File.Delete(_downUnit.savePath);
 
-            ThreadDebugLog.Log("ÏÂÔØ³ö´í£º" + ex.Message);
+            ThreadDebugLog.Log("ä¸‹è½½å‡ºé”™ï¼š" + ex.Message);
             _state = DownloadMacState.Error;
             _error = "Download Error " + ex.Message;
         }
@@ -252,9 +252,9 @@ public class DownloadFileMac
             //request = WebRequest.Create(url) as HttpWebRequest;
             //request.Timeout = TimeOutWait;
             //request.ReadWriteTimeout = ReadWriteTimeOut;
-            ////Ïò·şÎñÆ÷ÇëÇó£¬»ñµÃ·şÎñÆ÷»ØÓ¦Êı¾İÁ÷
+            ////å‘æœåŠ¡å™¨è¯·æ±‚ï¼Œè·å¾—æœåŠ¡å™¨å›åº”æ•°æ®æµ
             //respone = request.GetResponse();
-            //length = (int)respone.ContentLength;//todo£ºÒÑ¾­»ñÈ¡²»µ½³¤¶È£¬ÒªĞŞ¸ÄÎÄ¼şÁĞ±í
+            //length = (int)respone.ContentLength;//todoï¼šå·²ç»è·å–ä¸åˆ°é•¿åº¦ï¼Œè¦ä¿®æ”¹æ–‡ä»¶åˆ—è¡¨
 
             //request = (HttpWebRequest)HttpWebRequest.Create(url);
             //request.Method = "HEAD";
@@ -273,7 +273,7 @@ public class DownloadFileMac
         }
         catch (WebException e)
         {
-            ThreadDebugLog.Log("»ñÈ¡ÎÄ¼ş³¤¶È³ö´í£º" + e.Message);
+            ThreadDebugLog.Log("è·å–æ–‡ä»¶é•¿åº¦å‡ºé”™ï¼š" + e.Message);
             _state = DownloadMacState.Error;
             _error = "Request File Length Error " + e.Message;
         }
@@ -282,7 +282,7 @@ public class DownloadFileMac
             if (respone != null) { respone.Close(); respone = null; }
             if (request != null) { request.Abort(); request = null; }
         }
-        ThreadDebugLog.Log("»ñÈ¡ÎÄ¼ş³¤¶È£º" + length);
+        ThreadDebugLog.Log("è·å–æ–‡ä»¶é•¿åº¦ï¼š" + length);
         return length;
     }
 
@@ -290,7 +290,7 @@ public class DownloadFileMac
     private string GetMD5HashFromFile(string fileName)
     {
         byte[] buffer = new byte[Md5ReadLen];
-        int readLength = 0;//Ã¿´Î¶ÁÈ¡³¤¶È  
+        int readLength = 0;//æ¯æ¬¡è¯»å–é•¿åº¦  
         var output = new byte[Md5ReadLen];
 
         using (Stream inputStream = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
@@ -299,10 +299,10 @@ public class DownloadFileMac
             {
                 while ((readLength = inputStream.Read(buffer, 0, buffer.Length)) > 0)
                 {
-                    //¼ÆËãMD5  
+                    //è®¡ç®—MD5  
                     hashAlgorithm.TransformBlock(buffer, 0, readLength, output, 0);
                 }
-                //Íê³É×îºó¼ÆËã£¬±ØĞëµ÷ÓÃ(ÓÉÓÚÉÏÒ»²¿Ñ­»·ÒÑ¾­Íê³ÉËùÓĞÔËËã£¬ËùÒÔµ÷ÓÃ´Ë·½·¨Ê±ºóÃæµÄÁ½¸ö²ÎÊı¶¼Îª0)  
+                //å®Œæˆæœ€åè®¡ç®—ï¼Œå¿…é¡»è°ƒç”¨(ç”±äºä¸Šä¸€éƒ¨å¾ªç¯å·²ç»å®Œæˆæ‰€æœ‰è¿ç®—ï¼Œæ‰€ä»¥è°ƒç”¨æ­¤æ–¹æ³•æ—¶åé¢çš„ä¸¤ä¸ªå‚æ•°éƒ½ä¸º0)  
                 hashAlgorithm.TransformFinalBlock(buffer, 0, 0);
                 byte[] retVal = hashAlgorithm.Hash;
 

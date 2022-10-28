@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,10 +11,10 @@ public class SpriteAtlasAbTest : MonoBehaviour
     {
         string assetPath = "AssetbundleDemo/SpriteAtlasTestAb/ShanTu/ShanTu";
         var assetType = typeof(GameObject);
-        xasset.Asset.LoadAsync(assetPath, assetType, (asset) => {
-            m_img1.sprite = asset.Get<Sprite>();
+        //xasset.Asset.LoadAsync(assetPath, assetType, (asset) => {
+        //    m_img1.sprite = asset.Get<Sprite>();
 
-        });
+        //});
 
         
     }

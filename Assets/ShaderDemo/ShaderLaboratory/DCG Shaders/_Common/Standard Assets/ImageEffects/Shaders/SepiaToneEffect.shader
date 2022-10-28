@@ -1,4 +1,4 @@
-Shader "Hidden/Sepiatone Effect" {
+﻿Shader "Hidden/Sepiatone Effect" {
 Properties {
 	_MainTex ("Base (RGB)", 2D) = "white" {}
 }

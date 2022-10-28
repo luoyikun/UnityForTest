@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+ï»¿using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,23 +24,23 @@ namespace Sort
         {
             if (l < r)
             {
-                //Swap(s[l], s[(l + r) / 2]); //½«ÖĞ¼äµÄÕâ¸öÊıºÍµÚÒ»¸öÊı½»»» ²Î¼û×¢1
+                //Swap(s[l], s[(l + r) / 2]); //å°†ä¸­é—´çš„è¿™ä¸ªæ•°å’Œç¬¬ä¸€ä¸ªæ•°äº¤æ¢ å‚è§æ³¨1
 
                 int i = l, j = r, x = s[l];
                 while (i < j)
                 {
-                    while (i < j && s[j] >= x) // ´ÓÓÒÏò×óÕÒµÚÒ»¸öĞ¡ÓÚxµÄÊı
+                    while (i < j && s[j] >= x) // ä»å³å‘å·¦æ‰¾ç¬¬ä¸€ä¸ªå°äºxçš„æ•°
                         --j;
                     if (i < j)
                         s[i++] = s[j];
-                    while (i < j && s[i] < x) // ´Ó×óÏòÓÒÕÒµÚÒ»¸ö´óÓÚµÈÓÚxµÄÊı
+                    while (i < j && s[i] < x) // ä»å·¦å‘å³æ‰¾ç¬¬ä¸€ä¸ªå¤§äºç­‰äºxçš„æ•°
                         ++i;
                     if (i < j)
                         s[j--] = s[i];
                 }
 
                 s[i] = x;
-                quick_sort(s, l, i - 1); // µİ¹éµ÷ÓÃ
+                quick_sort(s, l, i - 1); // é€’å½’è°ƒç”¨
                 quick_sort(s, i + 1, r);
 
             }

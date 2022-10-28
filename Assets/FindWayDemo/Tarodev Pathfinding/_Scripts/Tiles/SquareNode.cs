@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+ï»¿using System.Collections.Generic;
 using System.Linq;
 using Tarodev_Pathfinding._Scripts.Grid;
 using UnityEngine;
@@ -13,7 +13,7 @@ namespace _Scripts.Tiles {
 
         public override void CacheNeighbors() {
             Neighbors = new List<NodeBase>();
-            Debug.Log("SquareNode´´½¨ÁÚ¾Ó");
+            Debug.Log("SquareNodeåˆ›å»ºé‚»å±…");
             foreach (var tile in Dirs.Select(dir => GridManager.Instance.GetTileAtPosition(Coords.Pos + dir)).Where(tile => tile != null)) {
                 Neighbors.Add(tile);
             }

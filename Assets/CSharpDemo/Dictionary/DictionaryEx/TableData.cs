@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,7 +20,7 @@ namespace DictionaryEx
         public TableData(string tableName, string strChineseTableName)
         {
             mTableName = tableName;
-            mChineseTableName = strChineseTableName;//ÉÏÏßºóÆÁ±Î
+            mChineseTableName = strChineseTableName;//ä¸Šçº¿åå±è”½
         }
 
         public TableData()
@@ -81,7 +81,7 @@ namespace DictionaryEx
             T ret;
 
             if (mTableData.TryGetValue(key, out ret)) return ret;
-            return default(T); //´Ë¹Ø¼ü×Ö¶ÔÓÚÒıÓÃÀàĞÍ»á·µ»Ø¿Õ£¬¶ÔÓÚÊıÖµÀàĞÍ»á·µ»ØÁã¡£¶ÔÓÚ½á¹¹£¬´Ë¹Ø¼ü×Ö½«·µ»Ø³õÊ¼»¯ÎªÁã»ò¿ÕµÄÃ¿¸ö½á¹¹³ÉÔ±
+            return default(T); //æ­¤å…³é”®å­—å¯¹äºå¼•ç”¨ç±»å‹ä¼šè¿”å›ç©ºï¼Œå¯¹äºæ•°å€¼ç±»å‹ä¼šè¿”å›é›¶ã€‚å¯¹äºç»“æ„ï¼Œæ­¤å…³é”®å­—å°†è¿”å›åˆå§‹åŒ–ä¸ºé›¶æˆ–ç©ºçš„æ¯ä¸ªç»“æ„æˆå‘˜
         }
 
         public void Add(K key,T data)

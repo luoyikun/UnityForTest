@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ThreadTest;
@@ -46,7 +46,7 @@ public class WowAbDownTest : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.LogError("µÃ²»µ½ÎÄ¼ş:" + www.error.ToString());
+            Debug.LogError("å¾—ä¸åˆ°æ–‡ä»¶:" + www.error.ToString());
 
             yield break;
         }
@@ -64,6 +64,6 @@ public class WowAbDownTest : MonoBehaviour
             m_dicFileSize[keyValue[0]] = long.Parse(keyValue[1]);
         }
 
-        Debug.Log("ÎÄ¼şÁĞ±ícount£º" + m_dicFileSize.Count);
+        Debug.Log("æ–‡ä»¶åˆ—è¡¨countï¼š" + m_dicFileSize.Count);
     }
 }

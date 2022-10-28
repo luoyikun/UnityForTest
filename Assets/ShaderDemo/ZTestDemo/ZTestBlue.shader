@@ -1,4 +1,4 @@
-Shader "Custom/ZTestBlue"
+﻿Shader "Custom/ZTestBlue"
 {
 	Properties
 	{
@@ -6,7 +6,7 @@ Shader "Custom/ZTestBlue"
 	}
 		SubShader
 	{
-		Tags{ "Queue" = "Transparent-1" } //3000-1,ԽС��Խ����Ⱦ
+		Tags{ "Queue" = "Transparent-1" } //3000-1,越小，越先渲染
 
 		//ZWrite Off
 		//ZTest

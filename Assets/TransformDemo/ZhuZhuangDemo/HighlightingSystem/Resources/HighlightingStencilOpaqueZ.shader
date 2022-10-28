@@ -1,4 +1,4 @@
-Shader "Hidden/Highlighted/StencilOpaqueZ"
+﻿Shader "Hidden/Highlighted/StencilOpaqueZ"
 {
 	CGINCLUDE
 	#include "HighlightingInclude.cginc"

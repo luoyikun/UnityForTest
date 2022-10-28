@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using System.Linq;
 using _Scripts.Tiles;
@@ -15,32 +15,32 @@ namespace Tarodev_Pathfinding._Scripts {
     /// </summary>
     public static class Pathfinding {
         private static readonly Color PathColor = new Color(0.65f, 0.35f, 0.35f);
-        private static readonly Color OpenColor = new Color(.4f, .6f, .4f); //ÂÌÉ«
-        private static readonly Color ClosedColor = new Color(0.35f, 0.4f, 0.5f); //×ÏÉ«
+        private static readonly Color OpenColor = new Color(.4f, .6f, .4f); //ç»¿è‰²
+        private static readonly Color ClosedColor = new Color(0.35f, 0.4f, 0.5f); //ç´«è‰²
         
         public static List<NodeBase> FindPath(NodeBase startNode, NodeBase targetNode) {
-            var listOpen = new List<NodeBase>() { startNode }; //¿ª·Å¼¯ºÏ,¿ÉÒÔ½øĞĞ¼ÆËã(µ«Ã»ÓĞ±»Ñ¡ÖĞ)µÄ½Úµã ,½«³õÊ¼½Úµã¼ÓÈëµ½OpenSetµ±ÖĞ¡£ËùÓĞ¿ÉÄÜ£¬Ã¿×ßÒ»²½¶¼Òª·ÅÈë
-            var listClose = new List<NodeBase>();//·â±Õ¼¯ºÏ,ËùÓĞÒÑ¾­¼ÆËã¹ı¶øÇÒÒ²±»ËãÖĞµÄ½Úµã ¡£±íÊ¾¸ÄµãÒÑ¾­×ß¹ı£¬ÇÒÊÇ´ú¼Û×îĞ¡µÄµã
+            var listOpen = new List<NodeBase>() { startNode }; //å¼€æ”¾é›†åˆ,å¯ä»¥è¿›è¡Œè®¡ç®—(ä½†æ²¡æœ‰è¢«é€‰ä¸­)çš„èŠ‚ç‚¹ ,å°†åˆå§‹èŠ‚ç‚¹åŠ å…¥åˆ°OpenSetå½“ä¸­ã€‚æ‰€æœ‰å¯èƒ½ï¼Œæ¯èµ°ä¸€æ­¥éƒ½è¦æ”¾å…¥
+            var listClose = new List<NodeBase>();//å°é—­é›†åˆ,æ‰€æœ‰å·²ç»è®¡ç®—è¿‡è€Œä¸”ä¹Ÿè¢«ç®—ä¸­çš„èŠ‚ç‚¹ ã€‚è¡¨ç¤ºæ”¹ç‚¹å·²ç»èµ°è¿‡ï¼Œä¸”æ˜¯ä»£ä»·æœ€å°çš„ç‚¹
 
             while (listOpen.Any()) {
 
-                //ÕÒµ½×îĞ¡F todo£ºÓÅ»¯£¬Ã¿´Î½Úµã¶à
+                //æ‰¾åˆ°æœ€å°F todoï¼šä¼˜åŒ–ï¼Œæ¯æ¬¡èŠ‚ç‚¹å¤š
                 var current = listOpen[0];
 
-                //ÕÒ³öOpenSetµ±ÖĞfCost×îĞ¡µÄµã,Õâ¸öµã¾ÍÊÇ±»Ñ¡ÖĞµÄ½«ÒªĞĞ×ßµÄÏÂÒ»¸öµã£¬Èç¹ûF×ÜºÍÏàÍ¬£¬ÕÒH×îĞ¡£¬¼´µ½´ïÖÕµã×î¿ì£¨HÊÇÀÖ¹Û¹À¼Æ£¬²»ËãÕÏ°­Îï¹À¼Æ£©
+                //æ‰¾å‡ºOpenSetå½“ä¸­fCostæœ€å°çš„ç‚¹,è¿™ä¸ªç‚¹å°±æ˜¯è¢«é€‰ä¸­çš„å°†è¦è¡Œèµ°çš„ä¸‹ä¸€ä¸ªç‚¹ï¼Œå¦‚æœFæ€»å’Œç›¸åŒï¼Œæ‰¾Hæœ€å°ï¼Œå³åˆ°è¾¾ç»ˆç‚¹æœ€å¿«ï¼ˆHæ˜¯ä¹è§‚ä¼°è®¡ï¼Œä¸ç®—éšœç¢ç‰©ä¼°è®¡ï¼‰
                 foreach (var t in listOpen) 
                     if (t.F < current.F || ( t.F == current.F && t.H < current.H)) current = t;
 
-                //½«Õâ¸öµã´ÓOpenSetµ±ÖĞÒÆ³ı
+                //å°†è¿™ä¸ªç‚¹ä»OpenSetå½“ä¸­ç§»é™¤
                 listOpen.Remove(current);
 
-                //½«Õâ¸öµã¼ÓÈëµ½ClostSetµ±ÖĞ
+                //å°†è¿™ä¸ªç‚¹åŠ å…¥åˆ°ClostSetå½“ä¸­
                 listClose.Add(current);
                 
                 
                 current.SetColor(ClosedColor);
 
-                //Â·¾¶ÒÑ¾­µ½ÁË
+                //è·¯å¾„å·²ç»åˆ°äº†
                 if (current == targetNode)
                 {
                     var currentPathTile = targetNode;
@@ -48,7 +48,7 @@ namespace Tarodev_Pathfinding._Scripts {
                     //var count = 100;
                     while (currentPathTile != startNode) {
                         path.Add(currentPathTile);
-                        currentPathTile = currentPathTile.Connection; //curµÄÉÏÒ»¸öÁ¬½Óµã
+                        currentPathTile = currentPathTile.Connection; //curçš„ä¸Šä¸€ä¸ªè¿æ¥ç‚¹
                         //count--;
                         //if (count < 0) throw new Exception();
                         //Debug.Log("sdfsdf");
@@ -60,19 +60,19 @@ namespace Tarodev_Pathfinding._Scripts {
                     return path;
                 }
 
-                //ÕÒcurNodeµÄÁÚ¾Ó£¬¿Éµ½´ïºÍÎ´ÔÚclose±í£¨¼´ÒÑ¾­Ëã¹ıµÄ²»»áÔÙ½øĞĞ¼ÆËã£©
+                //æ‰¾curNodeçš„é‚»å±…ï¼Œå¯åˆ°è¾¾å’Œæœªåœ¨closeè¡¨ï¼ˆå³å·²ç»ç®—è¿‡çš„ä¸ä¼šå†è¿›è¡Œè®¡ç®—ï¼‰
                 foreach (var neighbor in current.Neighbors.Where(t => t.Walkable && !listClose.Contains(t))) {
-                    //ÊÇ·ñÎ´¼ÆËã¹ıÕâ¸öÁÚ¾Ó
+                    //æ˜¯å¦æœªè®¡ç®—è¿‡è¿™ä¸ªé‚»å±…
                     var inSearch = listOpen.Contains(neighbor);
-                    //´Ócurµ½ÁÚ¾ÓµÄG = curG+curµ½ÁÚ¾ÓµÄG´ú¼Û
+                    //ä»curåˆ°é‚»å±…çš„G = curG+curåˆ°é‚»å±…çš„Gä»£ä»·
                     var costToNeighbor = current.G + current.GetDistance(neighbor);
 
-                    //Â·¾¶·¢Éú¸Ä±ä£¬g»á±ä»¯£¬ÀıÈçÕÒµ½Ò»Ìõ¸üºÃµÄÂ·
+                    //è·¯å¾„å‘ç”Ÿæ”¹å˜ï¼Œgä¼šå˜åŒ–ï¼Œä¾‹å¦‚æ‰¾åˆ°ä¸€æ¡æ›´å¥½çš„è·¯
                     if (!inSearch || costToNeighbor < neighbor.G) {
                         neighbor.SetG(costToNeighbor);
                         neighbor.SetConnection(current);
                         
-                        //hÊÇÀÖ¹Û¹À¼Æ£¬Ö»ĞèÒªËãÒ»±é
+                        //hæ˜¯ä¹è§‚ä¼°è®¡ï¼Œåªéœ€è¦ç®—ä¸€é
                         if (!inSearch) {
                             neighbor.SetH(neighbor.GetDistance(targetNode));
                             listOpen.Add(neighbor);
@@ -85,7 +85,7 @@ namespace Tarodev_Pathfinding._Scripts {
         }
 
         /// <summary>
-        /// Ê¹ÓÃÑ°Â·closeÎª¶ş²æ¶Ñ
+        /// ä½¿ç”¨å¯»è·¯closeä¸ºäºŒå‰å †
         /// </summary>
         /// <param name="startNode"></param>
         /// <param name="targetNode"></param>
@@ -94,24 +94,24 @@ namespace Tarodev_Pathfinding._Scripts {
         {
             BinaryHeap<NodeBase> listOpen = new BinaryHeap<NodeBase>(HeapType.MinHeap);
             listOpen.Push(startNode);
-            //var listOpen = new List<NodeBase>() { startNode }; //¿ª·Å¼¯ºÏ,¿ÉÒÔ½øĞĞ¼ÆËã(µ«Ã»ÓĞ±»Ñ¡ÖĞ)µÄ½Úµã ,½«³õÊ¼½Úµã¼ÓÈëµ½OpenSetµ±ÖĞ¡£ËùÓĞ¿ÉÄÜ£¬Ã¿×ßÒ»²½¶¼Òª·ÅÈë
-            var listClose = new List<NodeBase>();//·â±Õ¼¯ºÏ,ËùÓĞÒÑ¾­¼ÆËã¹ı¶øÇÒÒ²±»ËãÖĞµÄ½Úµã ¡£±íÊ¾¸ÄµãÒÑ¾­×ß¹ı£¬ÇÒÊÇ´ú¼Û×îĞ¡µÄµã
+            //var listOpen = new List<NodeBase>() { startNode }; //å¼€æ”¾é›†åˆ,å¯ä»¥è¿›è¡Œè®¡ç®—(ä½†æ²¡æœ‰è¢«é€‰ä¸­)çš„èŠ‚ç‚¹ ,å°†åˆå§‹èŠ‚ç‚¹åŠ å…¥åˆ°OpenSetå½“ä¸­ã€‚æ‰€æœ‰å¯èƒ½ï¼Œæ¯èµ°ä¸€æ­¥éƒ½è¦æ”¾å…¥
+            var listClose = new List<NodeBase>();//å°é—­é›†åˆ,æ‰€æœ‰å·²ç»è®¡ç®—è¿‡è€Œä¸”ä¹Ÿè¢«ç®—ä¸­çš„èŠ‚ç‚¹ ã€‚è¡¨ç¤ºæ”¹ç‚¹å·²ç»èµ°è¿‡ï¼Œä¸”æ˜¯ä»£ä»·æœ€å°çš„ç‚¹
 
             while (listOpen.items.Count > 0)
             {
 
-                //ÕÒµ½×îĞ¡F todo£ºÓÅ»¯£¬Ã¿´Î½Úµã¶à
+                //æ‰¾åˆ°æœ€å°F todoï¼šä¼˜åŒ–ï¼Œæ¯æ¬¡èŠ‚ç‚¹å¤š
                 var current = listOpen.Root;
 
                 
                 
-                //½«Õâ¸öµã¼ÓÈëµ½ClostSetµ±ÖĞ
+                //å°†è¿™ä¸ªç‚¹åŠ å…¥åˆ°ClostSetå½“ä¸­
                 listClose.Add(current);
                 listOpen.PopRoot();
 
                 current.SetColor(ClosedColor);
 
-                //Â·¾¶ÒÑ¾­µ½ÁË
+                //è·¯å¾„å·²ç»åˆ°äº†
                 if (current == targetNode)
                 {
                     var currentPathTile = targetNode;
@@ -120,7 +120,7 @@ namespace Tarodev_Pathfinding._Scripts {
                     while (currentPathTile != startNode)
                     {
                         path.Add(currentPathTile);
-                        currentPathTile = currentPathTile.Connection; //curµÄÉÏÒ»¸öÁ¬½Óµã
+                        currentPathTile = currentPathTile.Connection; //curçš„ä¸Šä¸€ä¸ªè¿æ¥ç‚¹
                         //count--;
                         //if (count < 0) throw new Exception();
                         //Debug.Log("sdfsdf");
@@ -132,21 +132,21 @@ namespace Tarodev_Pathfinding._Scripts {
                     return path;
                 }
 
-                //ÕÒcurNodeµÄÁÚ¾Ó£¬¿Éµ½´ïºÍÎ´ÔÚclose±í£¨¼´ÒÑ¾­Ëã¹ıµÄ²»»áÔÙ½øĞĞ¼ÆËã£©
+                //æ‰¾curNodeçš„é‚»å±…ï¼Œå¯åˆ°è¾¾å’Œæœªåœ¨closeè¡¨ï¼ˆå³å·²ç»ç®—è¿‡çš„ä¸ä¼šå†è¿›è¡Œè®¡ç®—ï¼‰
                 foreach (var neighbor in current.Neighbors.Where(t => t.Walkable && !listClose.Contains(t)))
                 {
-                    //ÊÇ·ñÎ´¼ÆËã¹ıÕâ¸öÁÚ¾Ó
+                    //æ˜¯å¦æœªè®¡ç®—è¿‡è¿™ä¸ªé‚»å±…
                     var inSearch = listOpen.Contains(neighbor);
-                    //´Ócurµ½ÁÚ¾ÓµÄG = curG+curµ½ÁÚ¾ÓµÄG´ú¼Û
+                    //ä»curåˆ°é‚»å±…çš„G = curG+curåˆ°é‚»å±…çš„Gä»£ä»·
                     var costToNeighbor = current.G + current.GetDistance(neighbor);
 
-                    //Â·¾¶·¢Éú¸Ä±ä£¬g»á±ä»¯£¬ÀıÈçÕÒµ½Ò»Ìõ¸üºÃµÄÂ·
+                    //è·¯å¾„å‘ç”Ÿæ”¹å˜ï¼Œgä¼šå˜åŒ–ï¼Œä¾‹å¦‚æ‰¾åˆ°ä¸€æ¡æ›´å¥½çš„è·¯
                     if (!inSearch || costToNeighbor < neighbor.G)
                     {
                         neighbor.SetG(costToNeighbor);
                         neighbor.SetConnection(current);
 
-                        //hÊÇÀÖ¹Û¹À¼Æ£¬Ö»ĞèÒªËãÒ»±é
+                        //hæ˜¯ä¹è§‚ä¼°è®¡ï¼Œåªéœ€è¦ç®—ä¸€é
                         if (!inSearch)
                         {
                             neighbor.SetH(neighbor.GetDistance(targetNode));

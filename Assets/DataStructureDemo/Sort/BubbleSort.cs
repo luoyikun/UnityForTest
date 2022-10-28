@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
@@ -12,7 +12,7 @@ public class BubbleSort : MonoBehaviour
         BubbleSort1(array);
         string s = JsonConvert.SerializeObject(array); ;
         Debug.Log(s);
-        Debug.Log("Ñ­»·´ÎÊı:" + m_time);
+        Debug.Log("å¾ªç¯æ¬¡æ•°:" + m_time);
     }
 
     int m_time = 0;
@@ -42,7 +42,7 @@ public class BubbleSort : MonoBehaviour
 
     void Exchange(ref int a, ref int b)
     {
-        int temp = b; //ÈçºÎ²»Ê¹ÓÃÖĞ¼ä±äÁ¿Ê¹Á½¸öÊı½»»»
+        int temp = b; //å¦‚ä½•ä¸ä½¿ç”¨ä¸­é—´å˜é‡ä½¿ä¸¤ä¸ªæ•°äº¤æ¢
         b = a;
         a = temp;
     }

@@ -1,4 +1,4 @@
-// ==++==
+﻿// ==++==
 // 
 //   Copyright (c) Microsoft Corporation.  All rights reserved.
 // 
@@ -468,7 +468,7 @@ namespace ListOri
                 int newCapacity = _items.Length == 0 ? _defaultCapacity : _items.Length * 2;
                 // Allow the list to grow to maximum possible capacity (~2G elements) before encountering overflow.
                 // Note that this check works even when _items.Length overflowed thanks to the (uint) cast
-                //todo��Array.MaxArrayLength ֵָʲô
+                //todo：Array.MaxArrayLength 值指什么
                 if ((uint)newCapacity > int.MaxValue) newCapacity = int.MaxValue;
                 if (newCapacity < min) newCapacity = min;
                 Capacity = newCapacity;
