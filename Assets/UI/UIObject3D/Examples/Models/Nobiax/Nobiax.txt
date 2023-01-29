@@ -1,0 +1,6 @@
+A special thanks to Nobiax for making the models used in these examples freely available!
+
+Find him on:
+- DeviantArt        : http://nobiax.deviantart.com/
+- Unity Asset Store : https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=relevance/query=publisher:4986
+- OpenGameArt.org   : yughues
