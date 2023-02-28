@@ -8,7 +8,7 @@ public class BubbleSort : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int[] array = new int[] { 1, 2,3, 4, 5, 6 };
+        int[] array = new int[] { 1,2,3, 4, 5, 6 };
         BubbleSort1(array);
         string s = JsonConvert.SerializeObject(array); ;
         Debug.Log(s);
