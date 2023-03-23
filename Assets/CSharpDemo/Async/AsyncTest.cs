@@ -16,7 +16,7 @@ public class AsyncTest : MonoBehaviour
     private void Awake()
     {
         _cts = new CancellationTokenSource();
-        
+
 
         _DelayLog().Forget();
         _DelayLog2().Forget();

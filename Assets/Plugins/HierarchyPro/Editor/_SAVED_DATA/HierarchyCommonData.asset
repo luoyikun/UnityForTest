@@ -15,6 +15,11 @@ MonoBehaviour:
   ScenesTabs:
   - pin: 0
     path:
+    - Assets/CSharpDemo/Async/AsyncTest.unity
+    guid:
+    - 37f4b7d6f9a5c09408ec95b2a236cb9b
+  - pin: 0
+    path:
     - Assets/CSharpDemo/Async/Scenes/SampleScene.unity
     guid:
     - 2cda990e2423bbf4892e6590ba056729

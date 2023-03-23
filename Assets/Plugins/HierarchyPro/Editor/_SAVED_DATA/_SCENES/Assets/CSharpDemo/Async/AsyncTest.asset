@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d2db98314fc904fa81236a0a67b3cf, type: 3}
   m_Name: AsyncTest
   m_EditorClassIdentifier: 
-  types: []
+  types:
+  - data: []
+  - data: []
+  - data: []
+  - data: []
+  - data: []
+  - data: []
+  - data: []
   BookMarks_InternalGlobal: []
   HierExpands_InternalGlobal: []
