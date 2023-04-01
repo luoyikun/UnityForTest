@@ -78,4 +78,9 @@ public class BindPoseExample : MonoBehaviour
         anim.AddClip(clip, "test");
         anim.Play("test");
     }
+
+    void Update()
+    {
+        Debug.Log("222");
+    }
 }
