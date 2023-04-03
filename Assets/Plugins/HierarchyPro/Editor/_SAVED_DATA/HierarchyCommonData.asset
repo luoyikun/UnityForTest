@@ -15,6 +15,11 @@ MonoBehaviour:
   ScenesTabs:
   - pin: 0
     path:
+    - Assets/Animation/BonesAnimation/BoneAnimation.unity
+    guid:
+    - f3e0ac6d3f16e6e46a53dd127d050db7
+  - pin: 0
+    path:
     - Assets/CSharpDemo/Async/AsyncTest.unity
     guid:
     - 37f4b7d6f9a5c09408ec95b2a236cb9b

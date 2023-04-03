@@ -8,4 +8,424 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/UnityAPIDemo/SceneTest/LoadScene2.unity
     guid: 2f3cf6613f84b514cb85d791058534f8
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/01-  Single Line TextMesh
+      Pro.unity
+    guid: 2ac8cf212df6445e8aebbe3cb832e993
+  - enabled: 1
+    path: Assets/ShaderDemo/ShaderLaboratory/Scene/1_WarpLighting.unity
+    guid: 953dc854a280d134a999efa8c157c2e6
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/02 - Multi-line TextMesh Pro.unity
+    guid: 251716609f634449bfe8ce75c0ed78fe
+  - enabled: 1
+    path: Assets/ShaderDemo/ShaderLaboratory/Scene/2_DepthOfField.unity
+    guid: a2d1403d3cea7bf459d735090d8f0343
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/03 - Line Justification.unity
+    guid: 21a509e1d3cd49978623fa564adb6f02
+  - enabled: 1
+    path: Assets/ShaderDemo/ShaderLaboratory/Scene/3_PixelStyle.unity
+    guid: 026db9878a01a6a4c9297d157172c0fe
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/04 - Word Wrapping.unity
+    guid: 8f7137eacd7042d5b17ef0efe5e744f5
+  - enabled: 1
+    path: Assets/ShaderDemo/ShaderLaboratory/Scene/4_WaterEffect.unity
+    guid: c2c2f0b61bfa5bf4fbf5d642a1dca3b4
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/05 - Style Tags.unity
+    guid: 70615243e2be4a81afaab9bf5d273d65
+  - enabled: 1
+    path: Assets/ShaderDemo/ShaderLaboratory/Scene/5_Laser.unity
+    guid: f441e4b703e007d4bad4d96fd13cae3e
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/06 - Extra Rich Text Examples.unity
+    guid: 39a1fa96ad2a449b908fca29d4297a74
+  - enabled: 1
+    path: Assets/ShaderDemo/ShaderLaboratory/Scene/6_ColorDispersion.unity
+    guid: b6eafb3afe9b323408192be044e831d4
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/07 - Superscript & Subscript
+      Example.unity
+    guid: 03ec435d4b7140e9b2d87f79136d8374
+  - enabled: 1
+    path: Assets/ShaderDemo/ShaderLaboratory/Scene/7_SimpleWater.unity
+    guid: 8ce43ad73d4cd18458c0b5a8a0c63f71
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/08 - Improved Text Alignment.unity
+    guid: 5fe2257128d9401fad0790f581dc8a6f
+  - enabled: 1
+    path: Assets/ShaderDemo/ShaderLaboratory/Scene/8_Bubble.unity
+    guid: 83e728723fe3123469c4f9a2853c70d8
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/09 - Margin Tag Example.unity
+    guid: 349f38d3606449708c7340d26740e1e2
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/10 - Bullets & Numbered List
+      Example.unity
+    guid: c3f814e1d12c45568daf3dd9a86a0e61
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/11 - The Style Tag.unity
+    guid: 84ed36ad77dd4956b2ffe3769f759879
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/12 - Link Example.unity
+    guid: 9747140c28254be2adc582210dfb89b8
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/12a - Text Interactions.unity
+    guid: 08572ab7713642c8a60789750f0bce5c
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/13 - Soft Hyphenation.unity
+    guid: 875684baf40f4d008ce806d03e2a81b2
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/14 - Multi Font & Sprites.unity
+    guid: 22a2fba786ad4c40ac0ba09f0b933100
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/15 - Inline Graphics & Sprites.unity
+    guid: e76e6c0f81964cbda3fe0b7d26ed8060
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/16 - Linked text overflow
+      mode example.unity
+    guid: 9442cda25baa4a0bb544c4d095b00caa
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/17 - Old Computer Terminal.unity
+    guid: 3e2e4d7b0bed4cf9ab827e9f32448f69
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/18 - ScrollRect & Masking
+      & Layout.unity
+    guid: 03f9d74cec8e4b94a29d2dfd177c821b
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/19 - Masking Texture & Soft
+      Mask.unity
+    guid: 9abcd5bd764646568a6ea70d00f9264c
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/20 - Input Field with Scrollbar.unity
+    guid: 337f92480dd24675aae9e79210fb1ad9
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/21 - Script Example.unity
+    guid: 50f52f9274434ecfb34dd87f0836f323
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/22 - Basic Scripting Example.unity
+    guid: 6250f98e58fe4abbaada5d84b7ca846d
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/23 - Animating Vertex Attributes.unity
+    guid: 54e994244b4b467e8583cf2da6dcc716
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/24 - Surface Shader Example.unity
+    guid: 8c4969fd8ba94a68b07cf11f3e7a5137
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/25 - Sunny Days Example.unity
+    guid: f9b4c22e15cff344ba9fc6542a58dd07
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/26 - Dropdown Placeholder
+      Example.unity
+    guid: 0851605490a599b46b6ac5cb681d93ea
+  - enabled: 1
+    path: Assets/AssetbundleDemo/wowo1gt/AbDownScene.unity
+    guid: c376e45a9794b9145a104ae07bb2044f
+  - enabled: 1
+    path: Assets/xasset/Example/Arts/Scenes/About.unity
+    guid: ca4918c1f664c834fbfb765cb10b87f0
+  - enabled: 1
+    path: Assets/xasset/Example/Arts/Scenes/Additive.unity
+    guid: c36900bb8d51d7045a8c0d0efaf6d733
+  - enabled: 1
+    path: Assets/xasset/Example/Arts/Scenes/Additive2.unity
+    guid: cba220c99506b054ba0ba5ad921b0ef0
+  - enabled: 1
+    path: Assets/FindWayDemo/Tarodev Pathfinding/AStarDemo.unity
+    guid: a33bde6adb2c02742818bbbf67d90b87
+  - enabled: 0
+    path: Assets/xasset/Example/Arts/Scenes/Async2Sync.unity
+    guid: 9457f59dd87807145b31b782bf215e9c
+  - enabled: 1
+    path: Assets/TextMesh Pro/Examples & Extras/Scenes/Benchmark (Floating Text).unity
+    guid: 16177da2e3254cee91944756d5f8ddd3
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/BottomToTopDemo.unity
+    guid: 7c22583d215d9ea45a50bc523009aad3
+  - enabled: 1
+    path: Assets/CSharpDemo/Box/BoxTest.unity
+    guid: 879815d6977b28b4d954202b3e2ec6a9
+  - enabled: 1
+    path: Assets/CSharpDemo/BinaryTreeTraversalDemo/BtTraversalScene.unity
+    guid: fa3ccb02669ec6f45aba89b75f8ea3b9
+  - enabled: 1
+    path: Assets/UGUITest/ParticleEffectForUGUI/Samples/Cartoon FX & War FX Demo/CFX
+      Free Demo.unity
+    guid: 064daa6b97d6846ec9334e98d642f081
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/ChangeItemHeightDemo.unity
+    guid: 2e76e5d3148356d4c8f1809766f54370
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/ChangeViewPortHeightDemo.unity
+    guid: f10fd68be241bed4d8c60f5b9f0e7354
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/ChatMsgListViewDemo.unity
+    guid: ab7922930d4d5d54191b5c5364e44dc7
+  - enabled: 0
+    path: Assets/xasset/Example/Arts/Scenes/CheckUpdate.unity
+    guid: 41515a2b3f98a445e88e746ac77f43d1
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/ClickAndLoadMoreDemo.unity
+    guid: b7aa49f5e965c774e9c8006d6c63cc97
+  - enabled: 1
+    path: Assets/TransformDemo/ZhuZhuangDemo/HighlightingSystemDemo/Scenes/Colors.unity
+    guid: 59e908e3c60bc72468e5b708aa4ccf63
+  - enabled: 1
+    path: Assets/TransformDemo/ZhuZhuangDemo/HighlightingSystemDemo/Scenes/Compound.unity
+    guid: 15a9eea124bee7c4b9049ff0d2102b36
+  - enabled: 1
+    path: Assets/Models/AcquireChan/Scenes/control.unity
+    guid: f1027d2def606d644833ff34f7a15b6d
+  - enabled: 1
+    path: Assets/UnityAPIDemo/Coroutine/CoroutineDemo.unity
+    guid: 80a4a76fd83a2bc48b65e63c482b472f
+  - enabled: 1
+    path: Assets/CubeUVDemo/CubeUVSecen.unity
+    guid: ae66b0f9dbf6a7441a9fb0a11690e9ba
+  - enabled: 1
+    path: Assets/xasset/Example/Arts/Scenes/CycleReferences.unity
+    guid: f9122a0ee2ae96342924809c04578d38
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/DeleteItemDemo.unity
+    guid: af2fb8e91b229624d8a85bec9bd3943f
+  - enabled: 1
+    path: Assets/ShaderDemo/FlowLightDownDemo/demo.unity
+    guid: 784d2edd3b6946d4a8405bc6d74a31e6
+  - enabled: 1
+    path: Assets/ShaderDemo/ShaderLaboratory/DCG Shaders/Water Shader/Demo.unity
+    guid: c9fd298c795d8ef46b958aa2411aa9de
+  - enabled: 1
+    path: Assets/ShaderDemo/ShaderLaboratory/DCG Shaders/Water Shader/Demo 2.unity
+    guid: d713e47be1186a54581bed054b6976ce
+  - enabled: 1
+    path: Assets/CSharpDemo/Dictionary/DictionaryEx/DictionaryExScene.unity
+    guid: 1948623553684ff4b86023931643852a
+  - enabled: 1
+    path: Assets/TransformDemo/DotweenDemo/DotweenDemo.unity
+    guid: a8bda06bc338ff044afa1c0abb9b0ade
+  - enabled: 0
+    path: Assets/xasset/Example/Arts/Scenes/Download.unity
+    guid: 3310d9f425fe58a408acbd85f8c44c4e
+  - enabled: 1
+    path: Assets/CSharpDemo/Dictionary/EnumKeyDictionary/EnumKeyDictionary.unity
+    guid: d173a60ccc6e5ed4ebb3a1a36380fa4a
+  - enabled: 1
+    path: Assets/EditorToolTest/FindChild/FindChild.unity
+    guid: 3de52076816df5a4782259d2ab5524ae
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/GridView/GridView_TopLeftToBottomRight.unity
+    guid: b7aa6333dd21cc0489e016233f0746de
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/GridView/GridView_TopRightToBottomLeft.unity
+    guid: d1ad794bf39956843b7f446c33e2d515
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/GridViewDeleteItemDemo.unity
+    guid: b5c59fbe6ce3d8b47913f8402a2e994d
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/GridView/GridViewDeleteItemDemo2.unity
+    guid: cf68aad9d0070994091921ea8ff78534
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/GridViewDemo.unity
+    guid: 76bd584ed1c609a43919fc5daf15942b
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/GridViewSampleDemo.unity
+    guid: 219650a2657dbff428aaa9cb047dde43
+  - enabled: 1
+    path: Assets/CSharpDemo/HashSet/HashSetScene.unity
+    guid: 1c7ef2f4233ceaa4ca8051d8f7071152
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/HorizontalGalleryDemo.unity
+    guid: bc8d1b9aa98e46047964801132e4dbc8
+  - enabled: 1
+    path: Assets/CSharpDemo/InterfaceDemo/InterfaceScene.unity
+    guid: e29e7c65597abd84d96b267b83a99cdc
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/LeftToRightDemo.unity
+    guid: 345e0ab59f2a63f438db9f98697efaab
+  - enabled: 1
+    path: Assets/CSharpDemo/List/ListScene.unity
+    guid: eaf066d227c4f2e40b7046ae7814b42b
+  - enabled: 1
+    path: Assets/UnityAPIDemo/SceneTest/LoadScene1.unity
+    guid: dc340595e1e440145ad0b2b3af1e00cc
+  - enabled: 1
+    path: Assets/LuaTest/Examples/Lua2CSharpTest.unity
+    guid: 7620bab36d7319848af0138658c75da0
+  - enabled: 1
+    path: Assets/TransformDemo/MatrixTest/MatrixTest.unity
+    guid: 732919f841dc58d4baf06a9d993be198
+  - enabled: 0
+    path: Assets/xasset/Example/Arts/Scenes/MenuAsset.unity
+    guid: d9f2c870487b3492a97fe55f70b65202
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/Menu.unity
+    guid: 29634dc35083d4245b01ba83c95f4b0d
+  - enabled: 1
+    path: Assets/Models/AcquireChan/Scenes/motionView.unity
+    guid: dd6288e09125abf44b48db46513a8990
+  - enabled: 1
+    path: Assets/ShaderDemo/ShaderMatrixDemo/MoveUV/MoveUV.unity
+    guid: b756335e66ab00f42ac0d5cdb6e7c1a8
+  - enabled: 1
+    path: Assets/ShaderDemo/ShaderMatrixDemo/MoveVertices/MoveVertices.unity
+    guid: ef3f664f9e2218c47b3e93735d42125a
+  - enabled: 1
+    path: Assets/TransformDemo/ZhuZhuangDemo/HighlightingSystemDemo/Scenes/Occluders.unity
+    guid: aba042a47785cb74ba0ea5598bd016c0
+  - enabled: 1
+    path: Assets/xasset/Example/Arts/Scenes/OpeningDialog.unity
+    guid: 107527034587bdc478c6997e76c7cf2a
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/PageViewDemo.unity
+    guid: a10f1c7e83b5a2c4889e691bb737a3fc
+  - enabled: 1
+    path: Assets/PhysicsTest/PhysicsTest.unity
+    guid: d3bba168f8728384d9d7a77421f1dbbb
+  - enabled: 1
+    path: Assets/ShaderDemo/PlanarShadow/Scenes/PlanarShadow.unity
+    guid: 70b4c1f704c7b9e43a5ae6ae3bb912e3
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/PullAndLoadMoreDemo.unity
+    guid: 53dc44f8dde86f54ab1868eacd11189d
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/PullAndRefreshDemo.unity
+    guid: 05073e3fb1749f94fb1c7901cb2a6a01
+  - enabled: 1
+    path: Assets/ShaderDemo/RenderPath/RendPath.unity
+    guid: 8236fbcc76ad06c40a440f4ad8a54fd0
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/ResponsiveGridViewDemo.unity
+    guid: f694da1ffbb316a4d9a5ceb857cd89c9
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/ResponsiveGridViewDemo2.unity
+    guid: 4887a81c58d3b274794e604709897281
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/RightToLeftDemo.unity
+    guid: fa578aa508c93c147904627c02ff8532
+  - enabled: 1
+    path: Assets/ShaderDemo/ShaderMatrixDemo/RotationUV/RotationUV.unity
+    guid: b64c5595e74c04942a9d6468daa32bfb
+  - enabled: 1
+    path: Assets/ShaderDemo/ShaderMatrixDemo/RotationVertices/RotationVertices.unity
+    guid: a9693ddfa75178048b11f1799f920715
+  - enabled: 1
+    path: Assets/LuaTest/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/ShaderDemo/MeshWaterScenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/ShaderDemo/ShaderMatrixDemo/ScaleUV/ScaleUV.unity
+    guid: 392e089fbaefe924eaccac2cd65f04cd
+  - enabled: 1
+    path: Assets/ShaderDemo/ShaderMatrixDemo/ScaleVertices/ScaleVertices.unity
+    guid: c88900d402463fd46a869366f60b429a
+  - enabled: 1
+    path: Assets/TransformDemo/ZhuZhuangDemo/HighlightingSystemDemo/Scenes/Scripting.unity
+    guid: 57b5feb34ee0c084891bb42b215bc99e
+  - enabled: 1
+    path: Assets/UGUITest/ParticleEffectForUGUI/ScrollParticleTest.unity
+    guid: b39953445d534d944855918ac5fe5851
+  - enabled: 1
+    path: Assets/HaveFun/ShengBi/ShengBi.unity
+    guid: 8c9ee2d79af93aa469b256357c543008
+  - enabled: 1
+    path: Assets/DataStructureDemo/Sort/SortScene.unity
+    guid: 9f73cd1f3f3089c48ac3d4ab0186937a
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/SpinDatePickerDemo.unity
+    guid: 033218d8ab4cc3f4db395621b44aea7a
+  - enabled: 1
+    path: Assets/xasset/Example/Arts/Scenes/Splash.unity
+    guid: d378f07356e960549add8141397b1462
+  - enabled: 1
+    path: Assets/AssetbundleDemo/SpriteAtlasTestAb/SpriteAtlasAbTest.unity
+    guid: 1c3989ea3fc48ec498f2ab3de2f7d040
+  - enabled: 1
+    path: Assets/DataStructureDemo/Stack2Queue/Stack2Queue.unity
+    guid: 1eb84b3b4f3e6fb40b70bce6cd839552
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/StaggeredGridView/StaggeredGridView_BottomToTop.unity
+    guid: 5fc505a26834ce64d85de03cb16b5b5d
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/StaggeredGridView/StaggeredGridView_LeftToRight.unity
+    guid: 0854a32405864ed41b7fbfdaf2dd003f
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/StaggeredGridView/StaggeredGridView_RightToLeft.unity
+    guid: d11dda1c450a75149b1617ed317bbc9f
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/StaggeredGridView/StaggeredGridView_TopToBottom.unity
+    guid: 3b81352ba3a6cb7408ecbcdc899e7231
+  - enabled: 1
+    path: Assets/xasset/Startup.unity
+    guid: 8fc55fb2044ccb94e86b6f02a26e0e1f
+  - enabled: 1
+    path: Assets/CSharpDemo/StringDemo/StringTest.unity
+    guid: 9bdd61580133ee441aebfd3d21e09bc1
+  - enabled: 1
+    path: Assets/CSharpDemo/BinaryHeapDemo/TestBH.unity
+    guid: d7ace7b016fed5540ac0244f330bba1f
+  - enabled: 1
+    path: Assets/KFramework/Singleton/TestSingleton.unity
+    guid: 44ba688838278b64c946c373c0ee9f2d
+  - enabled: 1
+    path: Assets/DataStructureDemo/ForOffer/TestStruct.unity
+    guid: 5525aed0bbb7a6440bcc81519462e7b0
+  - enabled: 1
+    path: Assets/CSharpDemo/TopK/TestTopK.unity
+    guid: 1f1590c3f94eb6b45afe27076afcf836
+  - enabled: 1
+    path: Assets/UnityAPIDemo/ThreadCallUnity/ThreadCallUnity.unity
+    guid: 90132c52c255a9d47866e9dd2b23b4bd
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/TopToBottomDemo.unity
+    guid: f3a60495689fc9d47a9e8c6180587baa
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/TopToBottomFilterSampleDemo.unity
+    guid: 72bbc7fb249b06c4c8587a0f2ec8c3a6
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/TopToBottomSampleDemo.unity
+    guid: 1f5623b06be635a448b9e2e096b9dc56
+  - enabled: 1
+    path: Assets/TransformDemo/ZhuZhuangDemo/HighlightingSystemDemo/Scenes/Transparency.unity
+    guid: 1370a1d0ed9beaf43bfc46836a039fb0
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/TreeViewDemo.unity
+    guid: 1816413322ff311499101779e48ec1bc
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/TreeViewWithChildrenIndentDemo.unity
+    guid: 200cfc88402d5a240847fa1b14b5efca
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/TreeViewWithStickyHeadDemo.unity
+    guid: acb57af279d5d5f40b7665dc2d748a95
+  - enabled: 1
+    path: Assets/UGUITest/ParticleEffectForUGUI/Samples/Demo/UIParticle_Demo.unity
+    guid: 1fc4d0f41c2bd3745b97b439cca95c22
+  - enabled: 1
+    path: Assets/VectorDemo/AoeDemo/VectorScene.unity
+    guid: 2de0f71d172d6bc4eb0f65005c56e47a
+  - enabled: 1
+    path: Assets/SuperScrollView/Demo/Scenes/ListView/VerticalGalleryDemo.unity
+    guid: b59d86672095cde45804cea7e548b2bf
+  - enabled: 1
+    path: Assets/TransformDemo/WangXiangShuo/WangXiangShuo.unity
+    guid: 06583bcaa1bcedc42a3501c5549d16f1
+  - enabled: 1
+    path: Assets/UGUITest/ParticleEffectForUGUI/Samples/Cartoon FX & War FX Demo/WarFX
+      Demo New.unity
+    guid: a81f9cd434f104e1fad7ffa20eb7a3d4
+  - enabled: 1
+    path: Assets/ShaderDemo/WaveDemo/WaveScene.unity
+    guid: 53a64658da647d24f9727e1d493dfdba
+  - enabled: 1
+    path: Assets/TransformDemo/ZhuZhuangDemo/HighlightingSystemDemo/Scenes/Welcome.unity
+    guid: c382f9f3d6926cb4e921a5e7ec61bc2f
+  - enabled: 1
+    path: Assets/TransformDemo/ZhuZhuangDemo/ZhuZhuangDemo.unity
+    guid: 7effd8e9a241483429cbb717be8bdfa6
+  - enabled: 1
+    path: Assets/ShaderDemo/ZTestDemo/ZWrite.unity
+    guid: 2ce67cfdbe0865142840d4184bbcc3e7
   m_configObjects: {}
