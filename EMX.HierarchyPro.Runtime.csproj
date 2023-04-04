@@ -53,12 +53,12 @@
     <UnityVersion>2021.3.10f1c2</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\HierarchyPro\Runtime\DRAW_IN_HIER.cs" />
-    <Compile Include="Assets\Plugins\HierarchyPro\Runtime\TempSceneData\HierarchyExternalSceneData.cs" />
-    <Compile Include="Assets\Plugins\HierarchyPro\Runtime\TempSceneData\HierarchyTempScenePrefabs.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Runtime\TempSceneData\PluginPath.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Runtime\TempSceneData\HierarchyTempSceneData.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Runtime\TempSceneData\Folders.cs" />
+    <Compile Include="Assets\Plugins\HierarchyPro\Runtime\TempSceneData\HierarchyTempScenePrefabs.cs" />
+    <Compile Include="Assets\Plugins\HierarchyPro\Runtime\TempSceneData\HierarchyExternalSceneData.cs" />
+    <Compile Include="Assets\Plugins\HierarchyPro\Runtime\DRAW_IN_HIER.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Runtime\TempSceneData\StringFlush.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -311,9 +311,6 @@
     <Reference Include="UnityEditor.Graphs">
       <HintPath>D:\Program Files\Unity 2021.3.10f1c2\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.Android.Extensions">
-      <HintPath>D:\Program Files\Unity 2021.3.10f1c2\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>D:\Program Files\Unity 2021.3.10f1c2\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
@@ -340,12 +337,6 @@
     </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Android.Types">
-      <HintPath>D:\Program Files\Unity 2021.3.10f1c2\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Android.Gradle">
-      <HintPath>D:\Program Files\Unity 2021.3.10f1c2\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:\Program Files\Unity 2021.3.10f1c2\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

@@ -82,10 +82,10 @@
     <Compile Include="Packages\com.singularitygroup.hotreload\Editor\Window\ShowOnStartupEnum.cs" />
     <Compile Include="Packages\com.singularitygroup.hotreload\Editor\ProjectGeneration\FileIOProvider.cs" />
     <Compile Include="Packages\com.singularitygroup.hotreload\Editor\Window\GUI\Tabs\HotReloadRunTab.cs" />
-    <Compile Include="Packages\com.singularitygroup.hotreload\Editor\Window\GUI\Tabs\HotReloadOnDeviceTab.cs" />
     <Compile Include="Packages\com.singularitygroup.hotreload\Editor\Helpers\BuildInfoHelper.cs" />
-    <Compile Include="Packages\com.singularitygroup.hotreload\Editor\Helpers\EditorWindowHelper.cs" />
+    <Compile Include="Packages\com.singularitygroup.hotreload\Editor\Window\GUI\Tabs\HotReloadOnDeviceTab.cs" />
     <Compile Include="Packages\com.singularitygroup.hotreload\Editor\PlayerBuild\HotReloadBuildHelper.cs" />
+    <Compile Include="Packages\com.singularitygroup.hotreload\Editor\Helpers\EditorWindowHelper.cs" />
     <Compile Include="Packages\com.singularitygroup.hotreload\Editor\ProjectGeneration\Util\FileSystemUtil.cs" />
     <Compile Include="Packages\com.singularitygroup.hotreload\Editor\Window\GUI\Tabs\Base\HotReloadTabBase.cs" />
     <Compile Include="Packages\com.singularitygroup.hotreload\Editor\CompileChecker\ICompileChecker.cs" />
@@ -93,12 +93,12 @@
     <Compile Include="Packages\com.singularitygroup.hotreload\Editor\CLI\StartArgs.cs" />
     <Compile Include="Packages\com.singularitygroup.hotreload\Editor\ProjectGeneration\ProjectGenenerationPostProcessor.cs" />
     <Compile Include="Packages\com.singularitygroup.hotreload\Editor\Window\GUI\Buttons\OpenURLButton.cs" />
-    <Compile Include="Packages\com.singularitygroup.hotreload\Editor\ProjectGeneration\GUIDProvider.cs" />
     <Compile Include="Packages\com.singularitygroup.hotreload\Editor\ProjectGeneration\IGUIDGenerator.cs" />
     <Compile Include="Packages\com.singularitygroup.hotreload\Editor\Versioning\PackageUpdateChecker.cs" />
     <Compile Include="Packages\com.singularitygroup.hotreload\Editor\Helpers\AssemblyOmission.cs" />
     <Compile Include="Packages\com.singularitygroup.hotreload\Editor\Window\GUI\Options\Base\OptionInterfaces.cs" />
     <Compile Include="Packages\com.singularitygroup.hotreload\Editor\RequiredSettings\RequiredSettings.cs" />
+    <Compile Include="Packages\com.singularitygroup.hotreload\Editor\ProjectGeneration\GUIDProvider.cs" />
     <Compile Include="Packages\com.singularitygroup.hotreload\Editor\ProjectGeneration\ProjectGenerationFlag.cs" />
     <Compile Include="Packages\com.singularitygroup.hotreload\Editor\CompileChecker\DefaultCompileChecker.cs" />
     <Compile Include="Packages\com.singularitygroup.hotreload\Editor\Window\GUI\Options\Base\HotReloadOptionBase.cs" />
@@ -378,9 +378,6 @@
     <Reference Include="UnityEditor.Graphs">
       <HintPath>D:\Program Files\Unity 2021.3.10f1c2\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.Android.Extensions">
-      <HintPath>D:\Program Files\Unity 2021.3.10f1c2\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>D:\Program Files\Unity 2021.3.10f1c2\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
@@ -395,12 +392,6 @@
     </Reference>
     <Reference Include="SingularityGroup.HotReload.RuntimeDependencies2020">
       <HintPath>Packages\com.singularitygroup.hotreload\Runtime\SingularityGroup.HotReload.RuntimeDependencies2020.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Android.Types">
-      <HintPath>D:\Program Files\Unity 2021.3.10f1c2\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Android.Gradle">
-      <HintPath>D:\Program Files\Unity 2021.3.10f1c2\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:\Program Files\Unity 2021.3.10f1c2\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\mscorlib.dll</HintPath>
