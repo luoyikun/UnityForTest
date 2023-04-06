@@ -6,7 +6,6 @@ using System.Collections.Generic;
 
 public class PDURunner : MonoBehaviour
 {
-    public float m_delaySendTime = 0.5f;
     // 保存历史所有的发生PDU改变的列表，DEBUG版本激活，release的情况下可以干掉这个数据
     List<PDU> histroyPDUs;
 
@@ -102,7 +101,7 @@ public class PDURunner : MonoBehaviour
     {
         CreateNewPDU(iType);
 #if UseDelaySend
-        StartCoroutine(delayForSendPDU(m_delaySendTime));
+        StartCoroutine(delayForSendPDU(InitPVP_WJY.m_reciveNetTimeDiff));
 #else 
         sender.sendPDU(currentPDU);
 #endif
@@ -125,6 +124,7 @@ public class PDURunner : MonoBehaviour
         currentPDU.anim = behaviorMonitor.getAnimation();
 
         localSimulatedPosition = currentPDU.position;
+
     }
 
 

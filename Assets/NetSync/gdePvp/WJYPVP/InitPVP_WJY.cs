@@ -17,7 +17,7 @@ public class InitPVP_WJY : MonoBehaviour {
     public float m_timeBloodBig = 2.0f;
     public int m_effectID = 1;
 
-    float m_reciveNetTimeDiff = 0.2f; //假设一次传输延迟是m_reciveNetTimeDiff，发占一半，收占一半
+    public const float m_reciveNetTimeDiff = 0.5f; //假设一次传输延迟是m_reciveNetTimeDiff，发占一半，收占一半
     void Start () {
         RemotePlayerMgr.self.Start();
   

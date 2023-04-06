@@ -3,9 +3,10 @@ using System.Collections;
 
 
 public class WJYBehaviorMonitor : BehaviorMonitor {
-   
+
+    public static WJYBehaviorMonitor m_instance = null;
     //玩家速度
-    float speed;
+    public float speed;
 
     //当前播放的动画
     string currentAnimation;
@@ -18,6 +19,7 @@ public class WJYBehaviorMonitor : BehaviorMonitor {
 
 	// Use this for initialization
 	void Start () {
+        m_instance = this;
         animSet = GetComponent<Animation>();
 	}
 
