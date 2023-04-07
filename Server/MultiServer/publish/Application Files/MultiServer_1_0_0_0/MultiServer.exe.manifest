@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="MultiServer.exe" version="1.0.0.0" publicKeyToken="bbe53f6b701b3051" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="MultiServer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="MultiServer.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC 清单选项
+         若想要更改 Windows 用户帐户控制级别，请
+         将 requestedExecutionLevel 节点替换为下述某项。
+
+       <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+       <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+       <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+        若想要使用文件和注册表虚拟化以实现向后
+        兼容，请删除 requestedExecutionLevel 节点。
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MultiServer.exe" size="202216">
+      <assemblyIdentity name="MultiServer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Jy1zMHHaUAp63+PTwtcggA7zBJj5K3/loTHk4+63dMw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="675752">
+      <assemblyIdentity name="Newtonsoft.Json" version="12.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>CDY/4S5CvVu4DvCaf4hHcj9sVzQdRggOuOX2xbazens=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="MultiServer.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rl5/qDc7Jz+tB+BIbOv9iMGPlRe6YJwrjmU09dnlPcs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="protobuf-net\protobuf-net.csproj" size="17190">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rvwzdg3wUlIzanvAfpvMSuDQr1+BPuJUgB0ScW2yrYg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="protobuf-net\Web\TODO.txt" size="196">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GBThPPRjK62RjUHmiXrqqq9eclK0BBlZHVYNWLsBVy0=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=LUOYIKUN\Administrator" issuerKeyHash="589dea837046bae3ddf08aaf0ec49051a10bf1d5" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>MVI4fbYFfiwBcLLaNESJSgMsrPgXzqBjZX/jUXsOgu0=</DigestValue></Reference></SignedInfo><SignatureValue>qwkx3bxH1Kb3puLY8HhnwqRlCIHk3o8jbFIdOtgsGxy6UxTAvP8oNU6OuPRA/IK8PADsbd5Z3rsxvQzijyPZJdGI7S3CxUcG7tXtSUOA348MPA4wYN2gJ6JqHAcT52HBkYJbiMaeI8PwdbWmGuXXEl6BI16GQbCq1R0Dx+24sDA=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>vVS5a4QTmF6jII3ZK8NURVPWnmUMMglJX9evK90pmapFSzB9CPmsbiwmbjTeQ88cYlPrsym9uYKQCjsKPCVhBKEXBxDCgI/kR/aHKuqybRr4Sp8q/eXSQlXIileCtuPv3o/WNwaCSNS7I//aHNCQXAp3A8fiohjBHUJcu5T/TqE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="ed820e7b51e37f6563a0ce17f8ac2c034a894434dab270012c7e05b67d385231" Description="" Url=""><as:assemblyIdentity name="MultiServer.exe" version="1.0.0.0" publicKeyToken="bbe53f6b701b3051" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=LUOYIKUN\Administrator</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>AcOvTg4mJCUjI3s8ItWOnshHA7gFRJ1c+s9RV0aQcWc=</DigestValue></Reference></SignedInfo><SignatureValue>T9i0En/y1c9WOiDd9Q8jj5ygXFuIPLnnVK7I0eUorcwm7LA6oSia79KQdq3VhpXcUvYByAm3fF9J2nhsgTUZLV230AvDUgswLSkhxkL+whwzWkNS1KX1K6o17Jumqw5A4ar8TEWYGJsHlX8p5SGFLFlqor2v6jurJmC8LUjSP4A=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>vVS5a4QTmF6jII3ZK8NURVPWnmUMMglJX9evK90pmapFSzB9CPmsbiwmbjTeQ88cYlPrsym9uYKQCjsKPCVhBKEXBxDCgI/kR/aHKuqybRr4Sp8q/eXSQlXIileCtuPv3o/WNwaCSNS7I//aHNCQXAp3A8fiohjBHUJcu5T/TqE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB8TCCAVqgAwIBAgIQQmf/68luB6VFDvcUM/UZZTANBgkqhkiG9w0BAQsFADA3MTUwMwYDVQQDHiwATABVAE8AWQBJAEsAVQBOAFwAQQBkAG0AaQBuAGkAcwB0AHIAYQB0AG8AcjAeFw0yMDA3MTUwMjUxMTlaFw0yMTA3MTUwODUxMTlaMDcxNTAzBgNVBAMeLABMAFUATwBZAEkASwBVAE4AXABBAGQAbQBpAG4AaQBzAHQAcgBhAHQAbwByMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9VLlrhBOYXqMgjdkrw1RFU9aeZQwyCUlf168r3SmZqkVLMH0I+axuLCZuNN5DzxxiU+uzKb25gpAKOwo8JWEEoRcHEMKAj+RH9ocq6rJtGvhKnyr95dJCVciKV4K24+/ej9Y3BoJI1Lsj/9oc0JBcCncDx+KiGMEdQly7lP9OoQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAHUqb7bJGRERZDjVrcrwRfxX1Na0CUa2fZp+hgocLL5TjbnSa39qzh2/RVvA2pKUyaFgL13a47yyrY6//ZiHsNOv1RVVOXh6jJOhIdNbZilwFoR9jWxCwWmHfF+FZfr2DAV/rJItDRkvELrEnFrgS3sXEuhs/A2Q3rIo+hbdSffQ</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
