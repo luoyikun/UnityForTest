@@ -134,8 +134,8 @@
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\Hierarchy Mods\RightMods\Settings\RM_Window.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\Integrated Mods\SnapMod\Settings\ST_Settings.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\SettingsScripts\MainSettingsEnabler_Fields.cs" />
-    <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\Integrated Mods\AutoSaveMod\Settings\AS_Window.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\Hierarchy Mods\RightMods\Mods\Mod_VerticesHelper.cs" />
+    <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\Integrated Mods\AutoSaveMod\Settings\AS_Window.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\Hierarchy Mods\RightMods\Mods\Mod_Descript.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\Hierarchy Mods\HighLighterModSet\HL_Settings.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\External Windows\TODO\DrawButtonsHelperOld.cs" />

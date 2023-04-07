@@ -21,7 +21,7 @@ namespace MultiServer
         public static int m_portRecvOther = 12307;//控制软件发来的端口号
         static void Main(string[] args)
         {
-            UdpReceiver.Instance.StartUdpClient(m_portRecvOther);
+            //UdpReceiver.Instance.StartUdpClient(m_portRecvOther);
             BroadcastIP.Instance.StartIpServer(m_port);
             //Start();
             Server.Instance.Start(m_port);
