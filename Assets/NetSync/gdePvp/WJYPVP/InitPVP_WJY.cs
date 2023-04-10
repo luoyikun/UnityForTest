@@ -3,6 +3,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using ProtoDefine;
 
 public class InitPVP_WJY : MonoBehaviour {
 
@@ -16,10 +17,10 @@ public class InitPVP_WJY : MonoBehaviour {
 
     public float m_timeBloodBig = 2.0f;
     public int m_effectID = 1;
-
+    public const bool m_isNet = true;
     public const float m_reciveNetTimeDiff = 0.5f; //假设一次传输延迟是m_reciveNetTimeDiff，发占一半，收占一半
     void Start () {
-        RemotePlayerMgr.self.Start();
+        
   
         //注册接收服务器时间函数
         //FUNC pFunc = new FUNC(OnSyncTimeReturn);
@@ -29,16 +30,27 @@ public class InitPVP_WJY : MonoBehaviour {
 
         InvokeRepeating("SendSyncTime",0.0f, 1.0f);//每秒请求一次服务器时间
 
-        InvokeRepeating("OnSyncTimeReturn", m_reciveNetTimeDiff, 1.0f);//得到服务器时间
-
+        if (m_isNet == false)
+        {
+            InvokeRepeating("OnSyncTimeReturn", m_reciveNetTimeDiff, 1.0f);//得到服务器时间
+        }
+        else
+        {
+            NetEventMgr.Instance.AddListener<PtLong>(MsgIdDefine.RspHeartBeat, OnRspHeartBeat);
+        }
     }
 
-    //向服务器发送请求服务器时间
+    void OnRspHeartBeat(PtLong data)
+    {
+        float reciveNetTimeDiff = Time.time - sendSyncTime;
+        float serverTime = (float)data.value + reciveNetTimeDiff * 0.5f;
+        TimeManager.self.currentTime = serverTime;
+    }
+        //向服务器发送请求服务器时间
     void SendSyncTime()
     {
-        //Packet pkt = new Packet();
-        //Server.self.SendMessage(2559, ref pkt);
         sendSyncTime = Time.time;
+        GameSocket.Instance.SendMsgProtoVoid(MsgIdDefine.ReqHeartBeat);
     }
 
 
@@ -51,15 +63,7 @@ public class InitPVP_WJY : MonoBehaviour {
     }
 
 
-    //接收服务器时间
-    //public void OnSyncTimeReturn(Packet pkt)
-    //{
-    //    float receiveSyncTime = Time.time;
-    //    float serverTime = 0;
-    //    pkt.to(ref serverTime);
 
-    //    TimeManager.self.currentTime = serverTime + (receiveSyncTime - sendSyncTime) * 0.5f;
-    //}
 
 	void Update () {
         TimeManager.self.Update(Time.deltaTime);

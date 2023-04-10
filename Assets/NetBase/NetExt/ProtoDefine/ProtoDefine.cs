@@ -12,17 +12,17 @@ namespace ProtoDefine
     }
 
     [ProtoContract]
-    public class PtLong
+    public class PtArrByte
     {
         [ProtoMember(1)]
-        public long value;
+        public byte[] value;
     }
 
     [ProtoContract]
     public class PtPdu
     {
         [ProtoMember(1)]
-        public ushort id;
+        public uint id;
         [ProtoMember(2)]
         public byte type;
         [ProtoMember(3)]
@@ -45,12 +45,11 @@ namespace ProtoDefine
     }
 
     [ProtoContract]
-    public class PtArrByte
+    public class PtLong
     {
         [ProtoMember(1)]
-        public byte[] value;
+        public long value;
     }
-
 
     [ProtoContract]
     public class PtString

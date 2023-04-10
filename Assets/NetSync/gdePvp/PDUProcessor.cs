@@ -7,6 +7,7 @@ using System.Collections;
 **************************************************************/
 public class PDUProcessor : MonoBehaviour {
 
+    public uint m_id;
     //加速播放动画,必须大于1
     public float m_speedUpFactor = 2.0f;
 
@@ -86,21 +87,6 @@ public class PDUProcessor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-        //if ( isInSkill == true)//正在释放技能
-        //{
-        //    string sCurAniName = GetComponent<WJYBehaviorMonitor> ().getAnimation ();
-        //    if (sCurAniName.Contains("run"))
-        //    {
-        //        animSet.Stop("run");
-        //    }
-        //    bool bSkillFinish = GetComponent<Agent>().mPlayer.AnimComponent.FSM.CurrentAnimState.IsStateFinish();
-        //    if (bSkillFinish == false)//技能没有完成不执行下面的接收PDU
-        //    {
-        //        return;
-        //    }
-        //    isInSkill = false;
-        //}
-
 
         //当新PDU传入时改变远程玩家位置，朝向，动画，速度
 	    if(newPDUComing)
@@ -136,14 +122,14 @@ public class PDUProcessor : MonoBehaviour {
             startLerpForward = transform.forward;
             newPDUComing = false;
 
-            GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            obj.transform.position = targetPosition;
-            obj.name = oldTime.ToString();
+            //GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            //obj.transform.position = targetPosition;
+            //obj.name = oldTime.ToString();
 
 
-            GameObject obj1 = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            obj1.transform.position = WJYBehaviorMonitor.m_instance.transform.position;
-            obj1.name = oldTime.ToString() + "player";
+            //GameObject obj1 = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            //obj1.transform.position = WJYBehaviorMonitor.m_instance.transform.position;
+            //obj1.name = oldTime.ToString() + "player";
 
             transform.position = targetPosition;
 
@@ -183,10 +169,10 @@ public class PDUProcessor : MonoBehaviour {
         //当还剩下平滑插值时间，继续插值
         if (smoothTime > 0)
         {
-            
+            smoothTime -= Time.deltaTime;
             transform.position = Vector3.Lerp(targetPosition, startLerpPosition, smoothTime / realSmoothTime);
             transform.forward = Vector3.Slerp(targetForward, startLerpForward, smoothTime / realSmoothTime);
-            smoothTime -= Time.deltaTime;
+            
             //transform.position = targetPosition;
         }
         else

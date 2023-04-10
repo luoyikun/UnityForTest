@@ -49,7 +49,7 @@ public class BoardcastIPClient : SingletonMono<BoardcastIPClient>
 
             while (clientIsRun)
             {
-                Thread.Sleep(10);
+                Thread.Sleep(1000);
                 IPEndPoint endpoint = new IPEndPoint(IPAddress.Any, port);
                 byte[] bufRev = UdpListen.Receive(ref endpoint);//this method will block, Close() can stop it
                 string msg = Encoding.Unicode.GetString(bufRev, 0, bufRev.Length);

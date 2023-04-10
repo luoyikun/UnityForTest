@@ -6,14 +6,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Timers;
 
 namespace MultiServer.Work
 {
     class RoomMgr: Singleton<RoomMgr>
     {
         //房间内所有的客户端 
-        Dictionary<string, Client> m_dicClient = new Dictionary<string, Client>();
+        Dictionary<string, Client> m_dicClient = new Dictionary<string, Client>(); //后续这种初始化都放到init 或者构造中，防止未使用而分配的内存
 
+        Timer m_time = null;
+        long m_serverSec = 0;
         //只转发的消息
         string[] m_listTranspond = new string[] { MsgIdDefine.RspGrab,MsgIdDefine.RspRelease,MsgIdDefine.RspUse,MsgIdDefine.RspGrabHandChange,
             MsgIdDefine.RspRemoteEvent,MsgIdDefine.RspMechanism,MsgIdDefine.RspRotatorChange,MsgIdDefine.RspBelong,MsgIdDefine.RspQianJingDing,
@@ -23,12 +26,14 @@ namespace MultiServer.Work
         };
 
         //发送给全部人的消息
-        string[] m_listSendAll = new string[] { MsgIdDefine.RspReturnRoom};
+        string[] m_listSendAll = new string[] { MsgIdDefine.RspReturnRoom,MsgIdDefine.RspPdu};
 
         //List<string> m_listPlayerHoldPaoDan = new List<string>();
 
+        //构造函数时，就会注册消息
         public override void Init()
         {
+            TimeInit();
             KEvent.EventManager.GetInstance().AddEventListener(KEvenet.EventType.ClientOutline, OnEvClientOutline);
             NetEventMgr.Instance.AddListener<PtString>(MsgIdDefine.ReqID, OnNetReqID);
             NetEventMgr.Instance.AddListener(MsgIdDefine.ReqStart, OnNetStart);
@@ -37,6 +42,7 @@ namespace MultiServer.Work
             NetEventMgr.Instance.AddListener(MsgIdDefine.ReqReturnMain, OnNetReturnMain);
             NetEventMgr.Instance.AddListener(MsgIdDefine.RspPlayerSync, OnNetPlayerSync);
             NetEventMgr.Instance.AddListener<PtString>(MsgIdDefine.RspRestart, OnNetRestart);
+            NetEventMgr.Instance.AddListener(MsgIdDefine.ReqHeartBeat, OnNetReqHeartBeat);
             //NetEventMgr.Instance.AddListener<PtString>(MsgIdDefine.RspPlayerTriggerEnterPaoDan, OnNetPlayerTriggerEnterPaoDan);
             //NetEventMgr.Instance.AddListener<PtString>(MsgIdDefine.RspPlayerTriggerExitPaoDan, OnNetPlayerTriggerExitPaoDan);
             for (int i = 0; i < m_listTranspond.Length; i++)
@@ -50,6 +56,18 @@ namespace MultiServer.Work
             }
         }
 
+        void TimeInit()
+        {
+            m_time = new Timer(1000);
+            m_time.Elapsed += TimeElapsed;
+            m_time.Enabled = true;
+            m_time.Start();
+        }
+
+        void TimeElapsed(Object source, ElapsedEventArgs e)
+        {
+            m_serverSec += 1;
+        }
         //void OnNetPlayerTriggerEnterPaoDan(Client client, byte[] buf, PtString data)
         //{
 
@@ -99,6 +117,18 @@ namespace MultiServer.Work
         {
             //SendAllByteBuf(MsgIdDefine.RspPlayerSync,buf);
             SendAllByteBuf(MsgIdDefine.RspPlayerSync, buf, client.m_player.name);
+        }
+
+        /// <summary>
+        /// 接到客户端请求时间的信息，把当前时间s返回
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="buf"></param>
+        void OnNetReqHeartBeat(Client client, byte[] buf)
+        {
+            PtLong data = new PtLong();
+            data.value = m_serverSec;
+            client.SendMsgProto<PtLong>(MsgIdDefine.RspHeartBeat, data);
         }
 
         //某条消息转发给房间内的其他人

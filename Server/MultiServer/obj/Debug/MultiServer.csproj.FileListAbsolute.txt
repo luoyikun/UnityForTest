@@ -52,3 +52,12 @@ E:\OldProjects\LianChuang\FM059-MultiHuoJianDan\Server\MultiServer\bin\Debug\Mul
 E:\OldProjects\LianChuang\FM059-MultiHuoJianDan\Server\MultiServer\bin\Debug\MultiServer.pdb
 E:\OldProjects\LianChuang\FM059-MultiHuoJianDan\Server\MultiServer\bin\Debug\Newtonsoft.Json.dll
 E:\OldProjects\LianChuang\FM059-MultiHuoJianDan\Server\MultiServer\obj\Debug\MultiServer.csproj.CopyComplete
+E:\GithubProjects\UnityForTest\Server\MultiServer\bin\Debug\MultiServer.exe.config
+E:\GithubProjects\UnityForTest\Server\MultiServer\bin\Debug\MultiServer.exe
+E:\GithubProjects\UnityForTest\Server\MultiServer\bin\Debug\MultiServer.pdb
+E:\GithubProjects\UnityForTest\Server\MultiServer\bin\Debug\Newtonsoft.Json.dll
+E:\GithubProjects\UnityForTest\Server\MultiServer\obj\Debug\MultiServer.csprojAssemblyReference.cache
+E:\GithubProjects\UnityForTest\Server\MultiServer\obj\Debug\MultiServer.csproj.CoreCompileInputs.cache
+E:\GithubProjects\UnityForTest\Server\MultiServer\obj\Debug\MultiServer.csproj.CopyComplete
+E:\GithubProjects\UnityForTest\Server\MultiServer\obj\Debug\MultiServer.exe
+E:\GithubProjects\UnityForTest\Server\MultiServer\obj\Debug\MultiServer.pdb

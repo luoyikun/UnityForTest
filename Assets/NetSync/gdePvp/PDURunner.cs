@@ -1,4 +1,4 @@
-﻿#define UseDelaySend
+﻿//#define UseDelaySend
 
 using UnityEngine;
 using System.Collections;
@@ -100,11 +100,14 @@ public class PDURunner : MonoBehaviour
     void sendPDUtoServer(PDUType iType)
     {
         CreateNewPDU(iType);
-#if UseDelaySend
-        StartCoroutine(delayForSendPDU(InitPVP_WJY.m_reciveNetTimeDiff));
-#else 
-        sender.sendPDU(currentPDU);
-#endif
+
+        if (InitPVP_WJY.m_isNet == false)
+        {
+            StartCoroutine(delayForSendPDU(InitPVP_WJY.m_reciveNetTimeDiff));
+        }
+        else {
+            sender.sendPDU(currentPDU);
+        }
     }
 
     //创建新的PDU
