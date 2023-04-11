@@ -153,13 +153,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_id: 100
-  m_speedUpFactor: 2
   MaxSmoothTime: 0.05
   MinSmoothTime: 0.01
   m_aniSmoothTime: 0.2
-  realSmoothTime: 0.02
+  realSmoothTime: 0.15
   smoothTime: 0
   isInSkill: 0
+  m_minMoveSpeed: 0.1
   state: 0
 --- !u!4 &154470310
 Transform:
@@ -814,7 +814,7 @@ MonoBehaviour:
   orbitWidth: 1
   m_PDUCreater: {fileID: 0}
   DistanceTolerance: 1
-  SpeedTolerance: 1
+  SpeedTolerance: 20
 --- !u!4 &1688356168
 Transform:
   m_ObjectHideFlags: 0
@@ -844,7 +844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  rotateSpeed: 1
+  rotateSpeed: 50
 --- !u!1 &1701076975
 GameObject:
   m_ObjectHideFlags: 0

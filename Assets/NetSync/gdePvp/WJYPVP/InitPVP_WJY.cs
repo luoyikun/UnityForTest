@@ -46,7 +46,8 @@ public class InitPVP_WJY : MonoBehaviour {
         float serverTime = (float)data.value + reciveNetTimeDiff * 0.5f;
         TimeManager.self.currentTime = serverTime;
     }
-        //向服务器发送请求服务器时间
+    
+    //向服务器发送请求服务器时间
     void SendSyncTime()
     {
         sendSyncTime = Time.time;

@@ -31,7 +31,7 @@ public class PDURunner : MonoBehaviour
     // 上一帧的情况，用来判断是否发送PDU
     public Vector3 lastPosition;
     public float lastSpeed;
-    public string lastAnim;
+    public string lastAnim = "";
 
     // 轨道宽度
     public float orbitWidth = 1.0f;
@@ -43,7 +43,7 @@ public class PDURunner : MonoBehaviour
     Vector3 localSimulatedPosition;
 
     // 位置矫正差
-    public float DistanceTolerance = 1.0f;//5.0fs
+    public float DistanceTolerance = 5.0f;//5.0fs
 
     // 速度矫正差
     public float SpeedTolerance = 1.0f;

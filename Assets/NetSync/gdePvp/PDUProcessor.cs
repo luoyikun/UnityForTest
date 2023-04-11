@@ -8,8 +8,7 @@ using System.Collections;
 public class PDUProcessor : MonoBehaviour {
 
     public uint m_id;
-    //加速播放动画,必须大于1
-    public float m_speedUpFactor = 2.0f;
+
 
     //最大平滑转弯时间
     public float MaxSmoothTime = 0.05f;
@@ -44,6 +43,7 @@ public class PDUProcessor : MonoBehaviour {
 	//是否在施放技能
 	public bool isInSkill = false;
 
+    public float m_minMoveSpeed = 0.1f;
     //PDU数据包
     private PDURunner.PDU realPDU = null;
     public PDURunner.PDU currentPDU
@@ -52,10 +52,6 @@ public class PDUProcessor : MonoBehaviour {
         set { 
             newPDUComing = true;
             this.realPDU = value;
-			if((int)realPDU.type == 999)
-			{
-				Debug.LogError("PDU Type shouldn't be 999");
-			}
         }
     }
 
@@ -100,21 +96,11 @@ public class PDUProcessor : MonoBehaviour {
 			float timeDiffer = curTime - oldTime;
 			if(timeDiffer < 0 || timeDiffer > 2)
 				Debug.LogError("server time error : " + timeDiffer);
-			// 此处应该确保传输过来的时间的正确性
-			// fix me later.
+
 			timeDiffer = Mathf.Clamp(timeDiffer, 0, 2);
 
             smoothTime = realSmoothTime;
-            // 根据PDU的角度信息确定插值的时长 = realSmoothTime，这个值是在min和max之间的时间
-            //float deltaAngle = (Vector3.Dot(realPDU.forward.normalized, transform.forward.normalized) + 1) * 0.5f;
-            //smoothTime = realSmoothTime = MinSmoothTime + (MaxSmoothTime - MinSmoothTime) * deltaAngle + timeDiffer;
-
-
-            //Debug.Log(string.Format("时间延迟：{0};需要插值时间{1}", timeDiffer, smoothTime));
-
-
-
-
+            
             // 公式：插值的目标位置 = PDU传输过来的位置 + 朝向 * 速度 * （插值时间 + 消息延迟）
             targetPosition = realPDU.position + realPDU.forward * realPDU.speed * timeDiffer;
 			targetForward = realPDU.forward;
@@ -122,48 +108,13 @@ public class PDUProcessor : MonoBehaviour {
             startLerpForward = transform.forward;
             newPDUComing = false;
 
-            //GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            //obj.transform.position = targetPosition;
-            //obj.name = oldTime.ToString();
-
-
-            //GameObject obj1 = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            //obj1.transform.position = WJYBehaviorMonitor.m_instance.transform.position;
-            //obj1.name = oldTime.ToString() + "player";
-
-            transform.position = targetPosition;
-
-            //if (typeChangeJudge(PDURunner.PDUActChange) == true)
-            //{
-            //    float fAniTotalTime = animSet[realPDU.anim].length;
-            //    float fTimeDelay = (float)(curTime - oldTime);
-            //    float fAniDelayPercent = fTimeDelay / fAniTotalTime;
-            //    if (fAniDelayPercent > m_aniSmoothTime)
-            //    {
-            //        //从某点开始播放
-            //        animSet[realPDU.anim].normalizedTime = fAniDelayPercent;
-            //    }
-            //    else 
-            //    {
-            //        //加速播放延迟帧之前，之后正常速度播放
-            //        aniPlaySpeedUp(fTimeDelay);
-            //    }
-            //}
-
-            //bool bActChange = typeChangeJudge(PDURunner.PDUType.ActChange);
-            //Debug.LogError( "Start + RemovtePlayerCurAni = " + GetComponent<WJYBehaviorMonitor>().getAnimation()+",,,aniNameFormPDU = " + realPDU.anim + ",,,aniChangeFormPDU = " +bActChange.ToString() );
-            //if ((realPDU.anim).Contains("skill") == false && (typeChangeJudge(PDURunner.PDUType.ActChange) || typeChangeJudge(PDURunner.PDUType.SpeedChange)) && realPDU.anim != "")
-            //{
-            //    animSet.Play(realPDU.anim);
-            //}
-            //Debug.LogError("End + RemovtePlayerCurAni = " + GetComponent<WJYBehaviorMonitor>().getAnimation() + ",,,aniNameFormPDU = " + realPDU.anim + ",,,aniChangeFormPDU = " + bActChange.ToString());
-
-
-
-            if (state == PlayerSyncState.MovingOrIdle && isInSkill == false)
+            if (realPDU.speed <= m_minMoveSpeed)
             {
-                //animSet.Play(realPDU.anim);
+                smoothTime = 0;
+                transform.position = realPDU.position;
+                transform.forward = realPDU.forward;
             }
+            //transform.position = targetPosition;
         }
 
         //当还剩下平滑插值时间，继续插值
@@ -172,21 +123,15 @@ public class PDUProcessor : MonoBehaviour {
             smoothTime -= Time.deltaTime;
             transform.position = Vector3.Lerp(targetPosition, startLerpPosition, smoothTime / realSmoothTime);
             transform.forward = Vector3.Slerp(targetForward, startLerpForward, smoothTime / realSmoothTime);
-            
-            //transform.position = targetPosition;
+
         }
         else
         {
-            if (realPDU != null)
+            if (realPDU != null && realPDU.speed > m_minMoveSpeed)
             {
                 transform.position += realPDU.forward * realPDU.speed * Time.deltaTime;
             }
         }
-
-  //      if (realPDU != null && GetComponent<WJYBehaviorMonitor>().getAnimation() != realPDU.anim && state == PlayerSyncState.MovingOrIdle && realPDU.anim != "")
-  //      {
-		//	//animSet.Play(realPDU.anim);
-		//}
 	}
 	void DeterminStateByAnimation(string anim)
 	{

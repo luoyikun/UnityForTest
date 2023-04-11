@@ -9,7 +9,7 @@ public class WJYBehaviorMonitor : BehaviorMonitor {
     public float speed;
 
     //当前播放的动画
-    string currentAnimation;
+    string currentAnimation = "";
 
     //记录玩家上一次位置
     Vector3 lastPosition;

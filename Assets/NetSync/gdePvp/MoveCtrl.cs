@@ -128,8 +128,33 @@ public class MoveCtrl : MonoBehaviour
         m_Transform = this.transform;
     }
 
-    // Update is called once per frame
-    void Update()
+    void ADForRotateMove()
+    {
+        if (Input.GetKey(KeyCode.W))//控制人物的移动
+        {
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(Vector3.back * speed * Time.deltaTime);
+
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Rotate(-1 * Vector3.up * rotateSpeed * Time.deltaTime);
+
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
+
+        }
+    }
+
+    void EightDirMove()
     {
         //上
         if (Input.GetKeyDown(KeyCode.W))
@@ -185,6 +210,11 @@ public class MoveCtrl : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(m_Transform.eulerAngles.x, newAngle, m_Transform.eulerAngles.z);
         //新的方向用插值，这样，即使按住aw，然后松开了w，再立马松开a，这样角度变化也是按照角速度处理，不会出现突变从斜方向变为正方向
         m_Transform.rotation = Quaternion.Slerp(m_Transform.rotation, rotation, rotateSpeed * Time.deltaTime);
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        ADForRotateMove();
     }
 
     //因为世界的z 方向，对应angle.y = 0，再顺时针转动 angle.y增加
