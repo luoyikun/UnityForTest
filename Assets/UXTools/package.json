@@ -1,0 +1,19 @@
+{
+    "name": "com.ux.uxtoolsall",
+    "version": "0.0.1",
+    "displayName": "ThunderFireUXTool",
+    "description": "UXToolPackage",
+    "unity": "2019.1",
+    "keywords": [
+      "uxtool",
+      "uxgui",
+      "ux"
+    ],
+    "dependencies": {
+      "com.unity.inputsystem": "1.3.0",
+      "com.unity.textmeshpro": "2.1.6"
+    },
+    "author": {
+      "name": "ThunderfireUX"
+    }
+  }

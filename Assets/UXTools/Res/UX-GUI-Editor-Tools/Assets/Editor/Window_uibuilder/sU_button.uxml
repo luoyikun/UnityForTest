@@ -1,0 +1,3 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="container" style="left: 0; top: 0; right: 0; bottom: 0; position: absolute; background-color: rgb(255, 255, 255); border-top-left-radius: 10px; align-items: center; justify-content: center;" />
+</ui:UXML>

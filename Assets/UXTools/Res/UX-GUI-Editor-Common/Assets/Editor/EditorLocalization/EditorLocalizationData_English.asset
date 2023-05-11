@@ -1,0 +1,202 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9355dd69cfd023498bd45e1c6b683cb, type: 3}
+  m_Name: EditorLocalizationData_English
+  m_EditorClassIdentifier: 
+  keyList: ea13fa7db3a8d519715f0238254aa7beba609f1ca0f118032f9844a225e284d22fecfde26fb7808603bd917db7029d36d8be127db7b675b5afc966334589e1b298d44c7de57f5ea71d8f44acacc84533ea2463145f065f25721b31abff8c46ab26fbee3e3874c4765f25cbdd136239d78319679478fe1a65027ec90f9db8f717d1ce616cac0e7e78f686f49cc716c1a25696286fbdf2e167d708223bdfde449febe35748679d36ec1756ba0640d2a9df0370a7e57929073203ad2770546f9c99588bad01ad367deb04c0f7d798dc73c213eda18b7ffc11dcfd3b7ed29d33d798099af1cab09c2b6867e80e8210cc93686b9104c5326dc3f9f2cacc6ded5501d9691d4fc2c2e1d9cfe149397f4c6aa3470394801e5c4a32476593764175f26b87c6d1b508b92d495c3dff546153db5e5f6f9cfb02349fd42352aa60e63b64b40dfae43c5498b7b3b643273b3f0481b341695c9f2deed7c09d146ef0e313f465ee51b2d73ec7dc169fd41eaa7ae3e53b381056266be29b996ef7e47c42a21dbc5428dc9efd153b452783d46683d58b98bd601cc811c9e92e0f7cdbf98c17606b911af1f081972e8a81de1bca492509c8765064607518c2aae11b5932bf5de741dd53e8baa9bf93bcaff7eecdc870d49e1af53be4f19bf026a77d0ec8aea44387430d0941548a8c7b8575caba8a37f8a2dbe7b1de6962a32b56047e549e3583d213fa44d28958009b01b29c1251d4503eca9395079bec8704b9b5d469589b48c46607a8f5e85bcb8b9cda1fc1c8cb7b4c8dcce5d10cd5d3d44c5088c27def376e53208591e368daf3bcdaf89cf72dbc86768717b5e4ecf3368754690c3d5dcae64580bb93d138a5141163acd7736b428e07ac794fcd46ccd8426f6cb9bdd5ce69407d9138be41d382e710499078f11c6dd3fad6c9452b0acb85b79e700916927a81efd5cccf8574ca19aa6beae4e71ec2ff0a43579e99ad1ee2ad310f23d249aaedb983eb77c36b176ab0e6800be6a458a40612a1771d22b06e3a1aa1b71c044fdaf060d2e4fa5d51171b0c5f269b7adfce68405a2f5445017166d779b3dca5857cbc98b231f2320567eb4952b9dde12579223405eea371fe21159891d0c8f5ded99f289a3f5836b8a52b842b48ab348643ca842da63d8f399dd7db115294b21953ecad544a0f9dbe384705c741729f492c3b088b4a4a27d9bab6c81834c9f4e29b962c9d16174be65dae17f213897eb375aa5ffb1a6d86a7a177e9a4fbdff78e07fb180143406b8ab9d98bfe67ea43e386eb7381877ee7ad723912797724954308b59ac182d8c83d46f8200bb21572b1b19ec0b647fe4886e0cc105a918a11a715840b9daeffa94ed3fef0bd58c0e519fa169400e4466a20dc27ab4d19b4c15fe8d8a7545996c16663d9bf09ddaca56ba4b875a655d69ab6403a5715ed42ab442ca066366bd775b33cf24f75cb8e88b810ef0df8e0655279ce04bd99d9b94117df929d586714af52c822a4e93266e75776c0f1cdbc555a6eb4d90188e2a317029fde6703e036d3d3476bb33ab5c4be3a240acee3f10ea5c9d867d3f4dc892c2466398a0592a4cee73a17c4733d90d570e8b357d78ac6994d75c921e9e643de3aa8e9d1684535715e6591f3c8fe9e16c63194255d4923338d2016cc6db6094dc5bf0e34eb06f7915cc365bc1f217f8e5701f867bd66b4053b0a6aeac51e06457e840b1ff81df38018688362f1c3d4bda6342de7e8f7e3d709d85d957c66d179d14f351fd2dceec887914b9e6e38623ee0c324d78bdc210c1005f30797fb08ff1b7323f0b5446f2b646868955b4223636769ab0fbc9d7922136bce9f14a60b9119a21e4f9f51e13f3bf884f83c22b0f7a3c677d2a2ce96278211d6397042e36a7d7447be29973b8de929e8d779f806be61e85fe2a32460068b67dbb118242973ba66fbee5ef982ab8466966fe4068c8d0d1ca814a045dfedc393a239dd2b0a6b85525f55d3b92e69430df9eab43d55dd7cdbac9ffb2e8251573b41b51f871a44cb3a23b806bedc5e40753b6cb7c3ed4bbf2f79b61e18a176e640eeaf4f3452cf88232038b821857a4691
+  valueList:
+  - Test
+  - Confirm
+  - Cancel
+  - Align Top
+  - Align Bottom
+  - Align Left
+  - Align Right
+  - Align Horizontal Center
+  - Align Vertical Center
+  - Grid Horizontal
+  - Grid Vertical
+  - Grid Ring
+  - New Image
+  - New Text
+  - New Prefab
+  - Component Repository
+  - Prefab Name
+  - Prefab Type
+  - All
+  - Add New Type
+  - Red
+  - Green
+  - Blue
+  - Normal
+  - Preview
+  - Recent Templates
+  - Please preview after opening Prefab
+  - Do you want to save the scene?
+  - Warning
+  - The object already exists, do you want to overwrite it?
+  - Overwrite
+  - Please select a parent node first
+  - Please select less than two nodes
+  - Repetitive component type
+  - Please enter the component type name
+  - Do you want to save the changes?
+  - Are you sure to delete this component?
+  - Please select a node first
+  - Only nodes under the same level can be combined
+  - More
+  - Setting
+  - Configuration
+  - Language
+  - General
+  - Widget
+  - Prefab Storage Location
+  - Widget Storage Location
+  - Widget generation mode
+  - Select Path
+  - New Template
+  - ColorBlind
+  - AnimationPreview
+  - Delete
+  - Modify
+  - Copy
+  - Paste
+  - Combine
+  - SVN Update
+  - About
+  - User Manual
+  - Close
+  - AuxiliaryLine
+  - Delete record and prefab
+  - Only delete record
+  - Import images in all languages
+  - Localization
+  - Chinese_Simplified  (CN)
+  - Chinese_Traditional  (TC)
+  - English  (EN)
+  - Japanese  (JA)
+  - Korean  (KO)
+  - French  (FR)
+  - German  (DE)
+  - Spanish  (ES)
+  - Russian  (RU)
+  - Turkish  (TR)
+  - Portuguese  (PT)
+  - Vietnamese  (VI)
+  - Thai  (TH)
+  - Arabic  (AR)
+  - Max filename length
+  - Number of localized images
+  - UNFILLED TEXT
+  - Number of localized texts
+  - "Open\_Runtime-Use\_Table"
+  - path
+  - original text
+  - Could not write to table, table is already open
+  - No text mode
+  - In-game language
+  - Please check the naming conventions for the images in the folder!
+  - 'Multiple pictures can be imported at the same time, file name: picture name_language
+    abbreviation, for example: battlemessage_EN'
+  - Function Toggle
+  - Recently opened panel record
+  - Align & Snap
+  - Right click list
+  - Quick copy
+  - Movement shortcuts
+  - Prefab multi-open
+  - Resolution adjustment in scene
+  - Prefab resource check
+  - "Grid\_component"
+  - "Grid\_count"
+  - Save
+  - "Reference\_the\_Canvas\_background"
+  - "Remove\_from\_the\_list"
+  - "Delete\_the\_local\_files"
+  - "Please\_select\_the\_folder\_in\_the\_Assets\_directory"
+  - "Cannot\_find\_Prefab\_storage\_location.\_Please\_set\_the\_Prefab\_storage\_location\_in\_the\_settings."
+  - "Cannot\_group\_these\_controls\_into\_a\_component"
+  - "Don't\_select\_multiple\_files\_at\_the\_same\_time"
+  - "Please\_enter\_the\_component\_name\_correctly"
+  - "The\_file\_is\_invalid,\_please\_select\_the\_Prefab\_files"
+  - "Add\_Prefab"
+  - "How\_to\_add"
+  - "This\_hierarchy\_has\_reached\_its\_maximum\_counts,\_please\_contact\_the\_program\_to\_modify\_the\_hierarchy\_counts\_or\_the\_Channel\_counts\_to\_accommodate"
+  - "Cannot\_delete\_hierarchy\_with\_components"
+  - "Organize\_hierarchy"
+  - "There\_are\_unsaved\_changes.\_Do\_you\_want\_to\_save\_them\_before\_exit?"
+  - "Don't\_Save"
+  - "Edit\_Channel\_name"
+  - "Channel\_name"
+  - "Change\_hierarchy"
+  - "Create\_hierarchy"
+  - "Hierarchy\_index\_value"
+  - "Please\_enter\_the\_number\_correctly"
+  - "The\_hierarchy\_already\_exists.\_Do\_you\_want\_to\_continue\_adding\_or\_modifying\_it,\_which\_will\_result\_in\_changes\_to\_the\_current\_layer\_and\_its\_successive\_layers"
+  - "Edit\_Node"
+  - "Create\_Node"
+  - Hierarchy
+  - "The\_tag\_cannot\_be\_empty"
+  - "Tag\_exsited"
+  - "Delete\_this\_node"
+  - Search
+  - "No\_Results"
+  - "Save\_Changes"
+  - Refresh
+  - "Add\_a\_hierarchy\_foward"
+  - "Add\_a\_hierarchy\_backward"
+  - "You\_can\_only\_make\_changes\_in\_the\_forward\_and\_backward\_nodes.\_To\_make\_more\_changes,\_please\_use\_the\_above\_button\_to\_add\_hierarchy."
+  - "The\_new\_tag\_is\_shown\_in\_black\_by\_default.\_Please\_change\_its\_color\_in\_file\_HierarchyManagementSetting.asset\_and\_restart\_the\_interface\_after\_change."
+  - "Please\_choose\_a\_Prefab"
+  - "This\_Prefab\_has\_already\_been\_pulled\_to\_hierarchy"
+  - "The\_tag\_entered\_is\_not\_added\_to\_the\_tag\_list,\_still\_submit?"
+  - "Choose\_a\_file"
+  - "At\_least\_keep\_1\_hierarchy"
+  - "Grid\_layout"
+  - "Localization\_folder"
+  - "Dynamic\_Table\_Path"
+  - "Localization\_settings"
+  - "Open\_preset\_editor"
+  - "Select\_preset\_color"
+  - "Create\_Empty\_Dynamic\_Table"
+  - "Show\_Key"
+  - "Open\_Dynamic\_Table"
+  - "Automatically\_transform\_Texture\_into\_Sprite"
+  - Show/Hide
+  - "Do\_you\_want\_to\_undo\_Show/Hide"
+  - Undo
+  - "No\_Reset"
+  - "Do\_you\_want\_to\_delete"
+  - Edit
+  - "Self-adaptive\_text\_box"
+  - "Runtime-Use\_Table\_Path"
+  - "Create\_empty\_Runtime-Use\_Table"
+  - "Prefab\_name"
+  - "Background\_picture\_reference"
+  - "Next\_\_Set\_function\_toggles>>"
+  - "Please\_set\_the\_function\_toggles\_according\_to\_your\_needs\_(can\_change\_the\_settings\_at\_any\_time\_in\_ThunderFireUXTool\_-\_Settings\_-\_Function\_Toggles)"
+  - "<<Previous\_\_View\_the\_guide"
+  - Start
+  - "Open\_Recent"
+  - "Edit\_Scene"
+  - Prefab
+  - Import
+  - "Tool\_Description"
+  - Color
+  - Gradient
+  - "Color\_Preset\_Editor"
+  - "Color\_Name"
+  - "Note\_of\_Color"
+  - "Select\_the\_Preset\_Gradient"
+  - "Tips\_for\_Using\_Table"
+  - "Tip:\_After\_updating\_the\_table\_and\_saving\_it,\_click\_the\_menu-ThunderFireUXTool-Localization-convert\_the\_text\_table\_into\_JSON.\_Then\_it\_can\_be\_previewed\_and\_switched\_between\_different\_languages."
+  - Tag
