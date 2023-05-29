@@ -15,6 +15,41 @@ MonoBehaviour:
   ScenesTabs:
   - pin: 0
     path:
+    - Assets/FPS/Chicken/CircleOfPoison/Circle.unity
+    guid:
+    - 98559807f7a2d114f9fc0f8fea5e4d88
+  - pin: 0
+    path:
+    - Assets/UX_Samples/UXGUIComponentSample/UXGUIComponentSample.unity
+    guid:
+    - c5dbe9c21756d0e478bb5bca7102db67
+  - pin: 0
+    path:
+    - Assets/UX_Samples/UIBeginnerGuideSample/UIBeginnerGuideSampleScene1.unity
+    guid:
+    - b18f8b7185384eb428ccc020fdda2128
+  - pin: 0
+    path:
+    - Assets/UX_Samples/ReddotSample/ReddotSampleScene.unity
+    guid:
+    - 8a114eff8b72b714eb32953c1d9f6386
+  - pin: 0
+    path:
+    - Assets/UX_Samples/LocalizationSample/LocalizationSampleScene.unity
+    guid:
+    - be4e044721d7c2f4690b47d519ba4849
+  - pin: 0
+    path:
+    - Assets/UX_Samples/HierarchyManageSample/HierarchyManage.unity
+    guid:
+    - e8c0a3f98c6ff60499c96533a15c6d3f
+  - pin: 0
+    path:
+    - Assets/UGUITest/UxTest/TestUxScene.unity
+    guid:
+    - e77b3523655061045b9873e2289be593
+  - pin: 0
+    path:
     - Assets/NetSync/gdePvp/GdeNetSync.unity
     guid:
     - c2291e11d24f87c409030839782bc1c0

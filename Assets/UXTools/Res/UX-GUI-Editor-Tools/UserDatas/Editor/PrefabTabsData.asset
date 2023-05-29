@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49270096fe2c0c948bdb5ce513fb1e30, type: 3}
   m_Name: PrefabTabsData
   m_EditorClassIdentifier: 
-  m_tabs: []
+  m_tabs:
+  - 6309af5d0056e78468c482c332896f45

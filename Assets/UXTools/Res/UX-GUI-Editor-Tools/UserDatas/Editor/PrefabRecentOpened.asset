@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec74f7354da646740ba73026ec8b0c09, type: 3}
   m_Name: PrefabRecentOpened
   m_EditorClassIdentifier: 
-  List: []
+  List:
+  - 6309af5d0056e78468c482c332896f45
