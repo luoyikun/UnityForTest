@@ -15,6 +15,47 @@ MonoBehaviour:
   ScenesTabs:
   - pin: 0
     path:
+    - Assets/FPS/Chicken/UVMiniMap/MiniMap.unity
+    guid:
+    - cb77caf305c8cf3448a760971e8e4eea
+  - pin: 0
+    path:
+    - Assets/FPS/Chicken/UVMiniMap/MiniMap.unity
+    - Assets/NetSync/gdePvp/WjyNetSync.unity
+    guid:
+    - cb77caf305c8cf3448a760971e8e4eea
+    - c2291e11d24f87c409030839782bc1c0
+  - pin: 0
+    path:
+    - Assets/AssetbundleDemo/wowo1gt/AbDownScene.unity
+    guid:
+    - c376e45a9794b9145a104ae07bb2044f
+  - pin: 0
+    path:
+    - Assets/AssetbundleDemo/wowo1gt/AbDownScene.unity
+    - Assets/FPS/Chicken/UVMiniMap/UVMiniMap.unity
+    guid:
+    - c376e45a9794b9145a104ae07bb2044f
+    - 5d171decfb7e56b498fb4dfd9af8ab93
+  - pin: 0
+    path:
+    - Assets/FPS/Chicken/UVMiniMap/UVMiniMap.unity
+    guid:
+    - 5d171decfb7e56b498fb4dfd9af8ab93
+  - pin: 0
+    path:
+    - Assets/DataStructureDemo/ForOffer/TestStruct.unity
+    guid:
+    - 5525aed0bbb7a6440bcc81519462e7b0
+  - pin: 0
+    path:
+    - Assets/FPS/Chicken/UVMiniMap/UVMiniMap.unity
+    - Assets/NetSync/gdePvp/WjyNetSync.unity
+    guid:
+    - 5d171decfb7e56b498fb4dfd9af8ab93
+    - c2291e11d24f87c409030839782bc1c0
+  - pin: 0
+    path:
     - Assets/FPS/Chicken/CircleOfPoison/Circle.unity
     guid:
     - 98559807f7a2d114f9fc0f8fea5e4d88
@@ -50,7 +91,7 @@ MonoBehaviour:
     - e77b3523655061045b9873e2289be593
   - pin: 0
     path:
-    - Assets/NetSync/gdePvp/GdeNetSync.unity
+    - Assets/NetSync/gdePvp/WjyNetSync.unity
     guid:
     - c2291e11d24f87c409030839782bc1c0
   - pin: 0

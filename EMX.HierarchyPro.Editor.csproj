@@ -70,8 +70,8 @@
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\SavedDataScripts\HierarchyExternalSceneDataEditor.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\SettingsScripts\MainSettingsParams_Window.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\Integrated Mods\ToolBarModification\Settings\TB_Settings.cs" />
-    <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\Hierarchy Mods\RightMods\Mods\Mod_PrefabApply.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\External Windows\ExternalDrawContainer.cs" />
+    <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\Hierarchy Mods\RightMods\Mods\Mod_PrefabApply.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\SavedDataScripts\HierarchyCommonData\ComponentsIconsData_CustomIcons.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\Integrated Mods\BackgroundDecorations\BackgroundDecorations.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\Hierarchy Mods\HighLighterMod\old\str.cs" />
@@ -142,8 +142,8 @@
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\External Windows\TODO\OldMemClass.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\Hierarchy Mods\ComponentsIconsMod\CompIconsMod_Main.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\SavedDataScripts\HighLighterCommonData.cs" />
-    <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\External Windows\HyperGraph\HyperGraphData.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\WindowsScripts\WindowsManager.cs" />
+    <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\External Windows\HyperGraph\HyperGraphData.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\Integrated Mods\SnapMod\Settings\ST_Window.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\ModsScripts\External Windows\BottomBarExtension\BottomBarWindowInstance.cs" />
     <Compile Include="Assets\Plugins\HierarchyPro\Editor\Scripts\WindowsScripts\MousePos.cs" />
@@ -538,9 +538,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="EPPlus">
-      <HintPath>Assets\UXTools\Editor\UXGUI\3rdParty\Excel\EPPlus.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>

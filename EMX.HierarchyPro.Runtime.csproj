@@ -335,9 +335,6 @@
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="EPPlus">
-      <HintPath>Assets\UXTools\Editor\UXGUI\3rdParty\Excel\EPPlus.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>

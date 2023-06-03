@@ -1,3 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
-    <ui:VisualElement name="container" class="button" style="border-top-left-radius: 6.85px; border-bottom-left-radius: 6.85px; border-top-right-radius: 6.85px; border-bottom-right-radius: 6.85px; border-left-width: 1.4px; border-right-width: 1.4px; border-top-width: 1.4px; border-bottom-width: 1.4px; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-color: rgb(255, 255, 255); align-items: center; justify-content: center; border-left-color: rgba(121, 121, 121, 255); border-right-color: rgba(121, 121, 121, 255); border-top-color: rgba(121, 121, 121, 255); border-bottom-color: rgba(121, 121, 121, 255);" />
-</ui:UXML>

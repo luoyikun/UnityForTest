@@ -215,6 +215,7 @@ public class MoveCtrl : MonoBehaviour
     void Update()
     {
         ADForRotateMove();
+        //EightDirMove();
     }
 
     //因为世界的z 方向，对应angle.y = 0，再顺时针转动 angle.y增加
