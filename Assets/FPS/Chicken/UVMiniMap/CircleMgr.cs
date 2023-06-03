@@ -7,6 +7,7 @@ public class CircleMgr : MonoSingleton<CircleMgr>
 {
     public Transform m_player;
     public GameObject m_bigMap;
+    public Transform m_circle;
     // Start is called before the first frame update
     void Start()
     {

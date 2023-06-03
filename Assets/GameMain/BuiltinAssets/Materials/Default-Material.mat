@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Default-Material
+  m_Shader: {fileID: 4800000, guid: 6d0c7fb3c9aa48142af6872a18500036, type: 3}
+  m_ShaderKeywords: _LIGHTMAPPING_DYNAMIC_LIGHTMAPS _UVSEC_UV1
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AOAdd: 0.5
+    - _AOIntensity: 1
+    - _BendingFactor: 0
+    - _BendingRange: 1
+    - _BranchFactor: 1
+    - _BranchRange: 0
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DistanceRange: 1.5
+    - _DstBlend: 0
+    - _EdgeFlutterFactor: 1
+    - _EdgeFlutterFreqScale: 1
+    - _LEAF: 0
+    - _LIGHTATTEN: 0
+    - _MinBendingHeight: 0.5
+    - _Mode: 0
+    - _ShadowIntensity: 0.5
+    - _SrcBlend: 1
+    - _StencilID: 2
+    - _StepForce: 1
+    - _ZWrite: 1
+    - _lightIntensity: 1
+    - diffwrap: 1
+    m_Colors:
+    - _Color: {r: 0.1509434, g: 0.14239943, b: 0.14026344, a: 0}
+    - _WhereHasSnow: {r: 1, g: 1, b: 1, a: 1}
+    - transmittanceColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1002 &2100001
+EditorExtensionImpl:
+  serializedVersion: 6
