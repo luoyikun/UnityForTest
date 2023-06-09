@@ -21,6 +21,29 @@ MonoBehaviour:
   - pin: 0
     path:
     - Assets/FPS/Chicken/UVMiniMap/MiniMap.unity
+    - Assets/UGUITest/UIEffect/Samples/Demo/UIEffect_Demo.unity
+    guid:
+    - cb77caf305c8cf3448a760971e8e4eea
+    - a96de44a548454578a545a818eb14344
+  - pin: 0
+    path:
+    - Assets/FPS/Chicken/UVMiniMap/MiniMap.unity
+    - Assets/FPS/Chicken/UVMiniMap/NewGuide/Scenes/main.unity
+    guid:
+    - cb77caf305c8cf3448a760971e8e4eea
+    - c8e0018bfcc464c7abb571cb049af879
+  - pin: 0
+    path:
+    - Assets/FPS/Chicken/UVMiniMap/MiniMap.unity
+    - Assets/FPS/Chicken/UVMiniMap/NewGuide/Scenes/main.unity
+    - Assets/com.arikan.minimap/Demo/MiniMapDemo.unity
+    guid:
+    - cb77caf305c8cf3448a760971e8e4eea
+    - c8e0018bfcc464c7abb571cb049af879
+    - fe7402c95a604be46a8364ec7b2490a5
+  - pin: 0
+    path:
+    - Assets/FPS/Chicken/UVMiniMap/MiniMap.unity
     - Assets/NetSync/gdePvp/WjyNetSync.unity
     guid:
     - cb77caf305c8cf3448a760971e8e4eea
@@ -33,7 +56,7 @@ MonoBehaviour:
   - pin: 0
     path:
     - Assets/AssetbundleDemo/wowo1gt/AbDownScene.unity
-    - Assets/FPS/Chicken/UVMiniMap/UVMiniMap.unity
+    - 
     guid:
     - c376e45a9794b9145a104ae07bb2044f
     - 5d171decfb7e56b498fb4dfd9af8ab93
@@ -104,11 +127,6 @@ MonoBehaviour:
     - Assets/Animation/BonesAnimation/BoneAnimation.unity
     guid:
     - f3e0ac6d3f16e6e46a53dd127d050db7
-  - pin: 0
-    path:
-    - Assets/CSharpDemo/Async/Scenes/SampleScene.unity
-    guid:
-    - 2cda990e2423bbf4892e6590ba056729
   HasCustomIconKeys: []
   HidedComponentsIconsValues: []
   HidedComponentsIconsKeys: []

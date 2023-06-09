@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d2db98314fc904fa81236a0a67b3cf, type: 3}
+  m_Name: MiniMapDemo
+  m_EditorClassIdentifier: 
+  types:
+  - data: []
+  - data: []
+  - data: []
+  - data: []
+  - data: []
+  - data: []
+  - data:
+    - saverType: 6
+      id_in_external_heap: 1554141501
+      indentifierVersion: GlobalObjectId_V1
+      identifierTypetargetObjectIdtargetPrefabId: -2-fe7402c95a604be46a8364ec7b2490a5-5590916164273151143-5590916164625649957
+      namesPathBackup: MapBounds
+      siblingsPathBackup: 1
+      boolValue: 0
+      stringValue: 
+      highLighterData: []
+      iconData:
+      - icon_guid: Library/sv_icon_dot12_pix16_gizmo
+        icon_path: 
+        has_icon_color: 0
+        icon_color: {r: 0, g: 0, b: 0, a: 0}
+  BookMarks_InternalGlobal: []
+  HierExpands_InternalGlobal: []

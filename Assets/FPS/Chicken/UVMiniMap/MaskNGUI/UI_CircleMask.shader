@@ -1,8 +1,7 @@
-﻿Shader "TLStudio/UI_CircleMask"
+﻿Shader "Custom/UI_CircleMask"
 {
 	Properties
 	{
-
 	}
 	
 	SubShader
@@ -30,7 +29,6 @@
 			#pragma vertex vert
 			#pragma fragment frag			
 			#include "UnityCG.cginc"
-
 
 
 			float2 _Center;
@@ -63,7 +61,7 @@
 				UNITY_SETUP_INSTANCE_ID(v);
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 				o.vertex = UnityObjectToClipPos(v.vertex);
-				o.pos = mul(unity_ObjectToWorld, v.vertex);
+				o.pos = mul(unity_ObjectToWorld, v.vertex); //片元的世界坐标
 				o.texcoord = v.texcoord;
 				o.color = v.color;
 				return o;
@@ -71,10 +69,14 @@
 				
 			fixed4 frag (v2f IN) : SV_Target
 			{
+
 				float dis2 = distance(IN.pos,float3(_Center2, 0));//白圈优先级高先计算
-				if (dis2 < _Radius2 && dis2 > (_Radius2 -0.006))
+				float smallWidth = 2;
+				if (abs(dis2 - _Radius2)< smallWidth)
 				{
-					return float4(1,1,1,1);
+					float a = lerp(0,1,1- abs(dis2 - _Radius2)/ smallWidth);//基于一个点,做边缘柔滑
+					return float4(1, 1, 1, a);
+
 				}
 
 				float dis = distance(IN.pos,float3(_Center, 0));
@@ -88,33 +90,5 @@
 		}
 	}
 
-		SubShader
-			{
-				LOD 100
 
-				Tags
-				{
-					"Queue" = "Transparent"
-					"IgnoreProjector" = "True"
-					"RenderType" = "Transparent"
-					"DisableBatching" = "True"
-				}
-
-				Pass
-				{
-					Cull Off
-					Lighting Off
-					ZWrite Off
-					Fog { Mode Off }
-					Offset -1, -1
-				//ColorMask RGB
-				Blend SrcAlpha OneMinusSrcAlpha
-				ColorMaterial AmbientAndDiffuse
-
-				SetTexture[_MainTex]
-				{
-					Combine Texture * Primary
-				}
-			}
-			}
 }
