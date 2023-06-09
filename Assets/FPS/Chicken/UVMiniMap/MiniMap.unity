@@ -824,7 +824,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 792591c8d34915f47b83e578b59b343a, type: 2}
+  - {fileID: 2100000, guid: 94ae16ffaf3466b45a32b54a0b3305a0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1168,7 +1168,6 @@ MonoBehaviour:
   m_totalMeter: 0
   m_meter2Pixel: 0
   m_btnOpenBigMap: {fileID: 350584115}
-  m_mask: {fileID: 0}
   m_circleClip: {fileID: 508682600}
   m_bigPos: {fileID: 1440529323}
   m_smallPos: {fileID: 294403895}

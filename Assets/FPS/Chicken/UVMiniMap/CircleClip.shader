@@ -99,28 +99,11 @@ Shader "Custom/CircleClip"
 					o.vertex = UnityObjectToClipPos(v.vertex);
 					o.worldPosition = mul(unity_ObjectToWorld, v.vertex);
 					o.texcoord = TRANSFORM_TEX(v.texcoord, _MainTex);
-					//o.texcoord = v.texcoord;
 					o.color = v.color;
 					return o;
 				}
 
-				//直接传入半径
-			//	fixed4 frag(v2f i) : SV_Target
-			//	{
-			//	   float2 center = float2(i.worldPosition.x,i.worldPosition.y) - float2(_Center.x, _Center.y);
-			//	   float dis = sqrt(center.x * center.x + center.y * center.y);
-			//	   clip(dis - _Silder);
-			///*	   if (dis < _Silder)
-			//		{
-			//			i.color.a = 0;
-			//		}*/
-
-			//	   //clip(i.color.a - 0.001);
-			//	   fixed4 col = tex2D(_MainTex, i.texcoord) * i.color;
-			//	   return col;
-			//	}
-				
-				//传入半径上一点
+			
 				fixed4 frag(v2f i) : SV_Target
 				{
 					//显示白圈
@@ -128,97 +111,21 @@ Shader "Custom/CircleClip"
 					float disCurWithSmallCenter = sqrt(diffCurWithSmallllCenter.x * diffCurWithSmallllCenter.x + diffCurWithSmallllCenter.y * diffCurWithSmallllCenter.y);
 					if (abs(disCurWithSmallCenter - _SmallRSquare) < _SmallWidth )
 					{
-						//float a = lerp(0, 1, 1 - abs(disCurWithSmallCenter - _SmallRSquare) / _SmallWidth);//基于一个点,做边缘柔滑
-	
+						
 						return float4(1, 1, 1, 1);
 					}
 
 
-					//float dis2 = distance(i.worldPosition,float3(_CenterSmall, 0));//白圈优先级高先计算
-					//float smallWidth = 2;
-					//if (abs(dis2 - _Radius2) < smallWidth)
-					//{
-					//	float a = lerp(0,1,1 - abs(dis2 - _Radius2) / smallWidth);//基于一个点,做边缘柔滑
-					//	return float4(1, 1, 1, a);
-
-					//}
-
 				   float2 center = float2(i.worldPosition.x, i.worldPosition.y) - float2(_Center.x, _Center.y);
 				   float disSquare = (center.x * center.x + center.y * center.y);
 
-				   //float radius = distance(_Center, _PointInCicle);
-				   //_BigRSquare = radius;
+				   //比较距离大小，可以不用开平方
 				   clip(disSquare - _BigRSquare);
 
 				   fixed4 col = tex2D(_MainTex, i.texcoord) * i.color;
 				   return col;
 				}
-					
 
-				//surface基于自身坐标
-	//			fixed4 frag(v2f i) : SV_Target
-	//			{
-	//				float4 selfPos = mul(unity_ObjectToWorld, i.worldPosition);
-
-	//				// 计算当前像素到圆心的距离
-	//				float dist = length(selfPos.xy - _Center.xy);
-
-	//				// 如果距离大于半径，则裁剪掉该像素
-	//				//clip(dist - _Silder);
-	//				if (dist < _Silder)
-	//				{
-	//					i.color.a = 0;
-	//				}
-
-	///*				float2 center = float2(i.worldPosition.x,i.worldPosition.y) - float2(_Center.x, _Center.y);
-	//				float dis = sqrt(center.x * center.x + center.y * center.y);
-	//				clip(dis - _Silder);*/
-	//				fixed4 col = tex2D(_MainTex, i.texcoord) * i.color;
-	//				return col;
-	//			}
-
-				//v2f vert(appdata_t IN)
-				//{
-				//	v2f OUT;
-				//	UNITY_SETUP_INSTANCE_ID(IN);
-				//	UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(OUT);
-				//	OUT.worldPosition = IN.vertex;
-				//	OUT.vertex = UnityObjectToClipPos(OUT.worldPosition);
-				//	OUT.texcoord = IN.texcoord;
-
-				//	OUT.color = IN.color * _Color;
-				//	return OUT;
-				//}
-
-				//
-
-				//fixed4 frag(v2f IN) : SV_Target
-				//{
-				//	half4 color = (tex2D(_MainTex, IN.texcoord) + _TextureSampleAdd) * IN.color;
-
-				//	color.a *= UnityGet2DClipping(IN.worldPosition.xy, _ClipRect);
-
-				//	#ifdef UNITY_UI_ALPHACLIP
-				//	clip(color.a - 0.001);
-				//	#endif
-
-				//	//-------------------add----------------------
-				//	//扣洞
-				//	color.a *= (distance(IN.worldPosition.xy,_Center.xy) > _Silder);
-				//	//1像素渐变透明 以免洞边缘尖锐
-				//	float d = distance(IN.worldPosition.xy,_Center.xy);
-				//	if (d > _Silder && d < (_Silder + 1)) {
-				//		color.a *= (d - _Silder);
-				//	}
-
-				//	color.rgb *= color.a;
-				//	//-------------------add----------------------
-
-
-				//	return color;
-				//}
-
-					
 			ENDCG
 			}
 		}

@@ -19,7 +19,6 @@ public class MiniMap : MonoBehaviour
     public float m_totalMeter = 0; //小地图，总像素长代表的米
     public float m_meter2Pixel = 0; //世界坐标的米转为小地图像素，单位 像素/米
     public Button m_btnOpenBigMap;
-    public UICircleMask m_mask;
     public UICircleClip m_circleClip;
     public RectTransform m_bigPos;
     public RectTransform m_smallPos;
