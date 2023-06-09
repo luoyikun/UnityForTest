@@ -7,10 +7,10 @@ public class BigMap : MonoBehaviour
 {
     public Button m_btnClose;
     public RectTransform m_playerArrow;
-    public float m_widthPixel = 1280;
-    public float m_heightPixel = 720;
+    float m_widthPixel = 1680; //大地图顶视图这张图的尺寸，单位像素
+    float m_heightPixel = 960;
 
-    public float m_widthScene = 1680; //场景中真实的最大宽
+    public float m_widthScene = 1680; //场景中真实的最大宽，单位米
     public float m_heightScene = 960;
     public float m_scale = 0; //1米可对应多少像素。单位为  像素/米
     public float m_xOffset = 0; //x 方向偏移像素
@@ -20,10 +20,8 @@ public class BigMap : MonoBehaviour
     void Start()
     {
         m_btnClose.onClick.AddListener(OnBtnClose);
-        //m_scale = m_widthPixel / m_widthScene;
-        m_scale = 1;
-        m_xOffset = m_widthScene - m_widthPixel;
-        m_yOffset = m_heightScene - m_heightPixel;
+        m_scale = m_widthPixel / m_widthScene;
+
     }
 
     void OnBtnClose()
@@ -57,10 +55,10 @@ public class BigMap : MonoBehaviour
     {
         Vector2 ret = Vector2.zero;
         float x = pos.x * m_scale;
-        x -= m_widthScene / 2;
+        x -= m_widthPixel / 2;
 
         float y = pos.y * m_scale;
-        y -= m_heightScene / 2;
+        y -= m_heightPixel / 2;
 
         ret = new Vector2(x, y);
         return ret;

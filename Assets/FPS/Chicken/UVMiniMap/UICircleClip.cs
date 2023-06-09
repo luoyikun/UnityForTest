@@ -15,25 +15,6 @@ public class UICircleClip : MonoBehaviour
         m_mat = GetComponent<RawImage>().material;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-        //if (m_isOriUseWorld == false)
-        //{
-        //    Vector2 vec = transform.TransformPoint(m_vec);
-        //    m_mat.SetVector("_Center", vec);
-        //    Vector2 pointInCircle = new Vector3(m_vec.x + m_raduis, m_vec.y, m_vec.z);
-        //    Vector2 pointInCircleWorld = transform.TransformPoint(pointInCircle);
-        //    m_mat.SetVector("_PointInCicle", pointInCircleWorld);
-        //}
-        //else
-        //{
-        //    m_mat.SetVector("_Center", m_vec);
-        //    m_mat.SetFloat("_Silder", m_raduis);
-        //}
-        
-    }
 
     public void SetClip(Vector2 vec, float radius, Vector2 smallPos,float smallR)
     {
@@ -52,6 +33,6 @@ public class UICircleClip : MonoBehaviour
         Vector2 diffVecWorldSmall = smallPosWorld - pointInCircleWorldSamll;
         float smallRSquare = diffVecWorldSmall.x * diffVecWorldSmall.x + diffVecWorldSmall.y * diffVecWorldSmall.y;
         float smallRWorld = Vector2.Distance(smallPosWorld, pointInCircleWorldSamll);
-        m_mat.SetFloat("_SmallRSquare", smallRWorld);
+        m_mat.SetFloat("_SmallR", smallRWorld);
     }
 }

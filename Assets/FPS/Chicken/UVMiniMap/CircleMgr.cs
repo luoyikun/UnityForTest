@@ -107,17 +107,17 @@ public class CircleMgr : MonoSingleton<CircleMgr>
 
 public class CircleData
 {
-    public float bigR;
+    public float bigR; //大圆半径
     public Vector2 bigPos; //世界坐标，大圆圆心
 
-    public float smallR;
+    public float smallR; //小圆半径
     public Vector2 smallPos;//世界坐标，小圆圆心
 
-    public float time = 10;
-    public float speed;
-    public float dis;
-    public float cos;
-    public float sin;
+    public float time = 10; //总共运动时间
+    public float speed; //速度
+    public float dis; //两圆心初始距离
+    public float cos;  //大圆移动x上投影分量
+    public float sin; //大圆移动y上投影分量
     public void SetDataReady(Vector2 pbigPos,float pbigR, Vector2 psmallPos, float psmallR)
     {
         bigPos = pbigPos;

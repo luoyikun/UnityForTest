@@ -53,7 +53,6 @@ public class MiniMap : MonoBehaviour
         m_targetPoint.localPosition = pos;
         Debug.Log(string.Format("m_targetPoint.localPosition ({0},{1},{2})", m_targetPoint.localPosition.x,
             m_targetPoint.localPosition.y, m_targetPoint.localPosition.z));
-
         //m_targetPoint.transform.localPosition = GetVec3ByVec2(pos);
         {
             Vector3 bigV3 = new Vector3(CircleMgr.instance.m_circleData.bigPos.x, 0, CircleMgr.instance.m_circleData.bigPos.y);

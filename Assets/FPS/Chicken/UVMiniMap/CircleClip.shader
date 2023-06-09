@@ -18,7 +18,7 @@ Shader "Custom/CircleClip"
 			_Silder("_Silder", float) = 1000 // sliders
 			_BigRSquare("_BigRSquare",float) = 1000
 			_SmallWidth("_SmallWidth",float) = 1
-			_SmallRSquare("_SmallRSquare",float) = 1000
+			_SmallR("_SmallR",float) = 1000
 			//add
 			_PointInCicle("_PointInCicle", vector) = (0, 0, 0, 0)
 
@@ -90,7 +90,7 @@ Shader "Custom/CircleClip"
 				sampler2D _MainTex;
 				float4 _MainTex_ST;
 				float _BigRSquare;
-				float _SmallRSquare;
+				float _SmallR;
 				float2 _CenterSmall;
 				float _SmallWidth;
 				v2f vert(appdata_t v)
@@ -109,9 +109,8 @@ Shader "Custom/CircleClip"
 					//ÏÔÊ¾°×È¦
 					float2 diffCurWithSmallllCenter = float2(i.worldPosition.x, i.worldPosition.y) - float2(_CenterSmall.x, _CenterSmall.y);
 					float disCurWithSmallCenter = sqrt(diffCurWithSmallllCenter.x * diffCurWithSmallllCenter.x + diffCurWithSmallllCenter.y * diffCurWithSmallllCenter.y);
-					if (abs(disCurWithSmallCenter - _SmallRSquare) < _SmallWidth )
+					if (abs(disCurWithSmallCenter - _SmallR) < _SmallWidth )
 					{
-						
 						return float4(1, 1, 1, 1);
 					}
 
