@@ -59,7 +59,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _BigR: 1844.4047
-    - _BigRSquare: 1844.9081
+    - _BigRSquare: 1845.2645
     - _BumpScale: 1
     - _ColorMask: 15
     - _Cutoff: 0.5
@@ -73,7 +73,8 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Silder: 100
-    - _SmallRSquare: 42.95752
+    - _SmallR: 42.95764
+    - _SmallRSquare: 42.95764
     - _SmallRSuqare: 263.7
     - _SmallWidth: 0.5
     - _SmoothnessTextureChannel: 0
@@ -88,7 +89,7 @@ Material:
     - _UseUIAlphaClip: 0
     - _ZWrite: 1
     m_Colors:
-    - _Center: {r: 1214.8552, g: 90.96605, b: -239.7691, a: 0}
+    - _Center: {r: 1171.1392, g: 79.1788, b: -239.7691, a: 0}
     - _Color: {r: 0.20754719, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _PointInCicle: {r: 1361.195, g: 87.28967, b: -239.7691, a: 0}

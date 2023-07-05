@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MatCircleClipBig
-  m_Shader: {fileID: 4800000, guid: 3fcb368c49990a1469fca1ed2fee954d, type: 3}
+  m_Name: MatWorldUIOverlay
+  m_Shader: {fileID: 4800000, guid: 86227ae2db3b2cb469965c53f758cf17, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -58,7 +58,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BigRSquare: 578.675
     - _BumpScale: 1
     - _ColorMask: 15
     - _Cutoff: 0.5
@@ -71,10 +70,6 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Silder: 1000
-    - _SmallR: 24.056274
-    - _SmallRSquare: 24.056274
-    - _SmallWidth: 0.25
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -84,11 +79,8 @@ Material:
     - _StencilReadMask: 255
     - _StencilWriteMask: 255
     - _UVSec: 0
-    - _UseUIAlphaClip: 0
     - _ZWrite: 1
     m_Colors:
-    - _Center: {r: 1101.7197, g: 62.465546, b: -239.7691, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _PointInCicle: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

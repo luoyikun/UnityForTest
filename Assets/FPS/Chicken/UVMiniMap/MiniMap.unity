@@ -658,7 +658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 698c985ba25b34146a192be3b0373354, type: 2}
   m_Color: {r: 1, g: 0.39215687, b: 1, a: 0.39215687}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2151,8 +2151,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_btnClose: {fileID: 1314055778}
   m_playerArrow: {fileID: 1480123154}
-  m_widthPixel: 1280
-  m_heightPixel: 720
   m_widthScene: 1680
   m_heightScene: 960
   m_scale: 0

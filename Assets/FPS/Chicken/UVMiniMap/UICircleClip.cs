@@ -30,8 +30,6 @@ public class UICircleClip : MonoBehaviour
         m_mat.SetVector("_CenterSmall", smallPosWorld);
         Vector3 pointInCircleSmall = new Vector3(smallPos.x + smallR, smallPos.y, 0);
         Vector3 pointInCircleWorldSamll = transform.TransformPoint(pointInCircleSmall);
-        Vector2 diffVecWorldSmall = smallPosWorld - pointInCircleWorldSamll;
-        float smallRSquare = diffVecWorldSmall.x * diffVecWorldSmall.x + diffVecWorldSmall.y * diffVecWorldSmall.y;
         float smallRWorld = Vector2.Distance(smallPosWorld, pointInCircleWorldSamll);
         m_mat.SetFloat("_SmallR", smallRWorld);
     }

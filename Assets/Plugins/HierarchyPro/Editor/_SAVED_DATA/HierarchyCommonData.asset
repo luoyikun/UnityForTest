@@ -15,6 +15,11 @@ MonoBehaviour:
   ScenesTabs:
   - pin: 0
     path:
+    - Assets/ShaderDemo/WorldUITest/WorldUITest.unity
+    guid:
+    - d1d543a44a64ee440b7a20013c154cd6
+  - pin: 0
+    path:
     - Assets/FPS/Chicken/UVMiniMap/MiniMap.unity
     guid:
     - cb77caf305c8cf3448a760971e8e4eea
@@ -36,7 +41,7 @@ MonoBehaviour:
     path:
     - Assets/FPS/Chicken/UVMiniMap/MiniMap.unity
     - Assets/FPS/Chicken/UVMiniMap/NewGuide/Scenes/main.unity
-    - Assets/com.arikan.minimap/Demo/MiniMapDemo.unity
+    - 
     guid:
     - cb77caf305c8cf3448a760971e8e4eea
     - c8e0018bfcc464c7abb571cb049af879
@@ -122,11 +127,6 @@ MonoBehaviour:
     - Assets/CSharpDemo/Async/AsyncTest.unity
     guid:
     - 37f4b7d6f9a5c09408ec95b2a236cb9b
-  - pin: 0
-    path:
-    - Assets/Animation/BonesAnimation/BoneAnimation.unity
-    guid:
-    - f3e0ac6d3f16e6e46a53dd127d050db7
   HasCustomIconKeys: []
   HidedComponentsIconsValues: []
   HidedComponentsIconsKeys: []

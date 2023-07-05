@@ -63,21 +63,12 @@ public class MiniMap : MonoBehaviour
             Vector3 smallPos = GetTarget2MiniMapPoint(smallV3, m_player.position);
             float smallR = CircleMgr.instance.m_circleData.smallR * m_meter2Pixel;
 
-            
+            m_circleClip.SetClip(bigPos, bigR, smallPos, smallR);
 
-            //这两个点能保证在minimap是正确
+            //测试用，显示大圆，小圆圆心在mask中位置
             m_bigPos.localPosition = bigPos;
             m_smallPos.localPosition = smallPos;
-            //bigPos = AnchoredPosition2WorldPos(bigPos);
-            //smallPos = AnchoredPosition2WorldPos(smallPos);
 
-            //m_pointTrans.
-            //m_maskUGUI.SetClip(bigV3, CircleMgr.instance.m_circleData.bigR);
-            //m_mask.SetClipByAnchoredPosition(bigPos, bigR, smallPos, smallR);
-
-            //圆上一点
-            
-            m_circleClip.SetClip(bigPos, bigR,smallPos,smallR);
         }
     }
 
