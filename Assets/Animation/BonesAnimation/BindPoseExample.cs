@@ -79,8 +79,4 @@ public class BindPoseExample : MonoBehaviour
         anim.Play("test");
     }
 
-    void Update()
-    {
-        Debug.Log("222");
-    }
 }
