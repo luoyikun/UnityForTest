@@ -35,7 +35,7 @@ namespace MultiServer
         public PlayerInfo m_player = new PlayerInfo();
 
         public bool m_isLogin = false;
-
+        public string m_id = "";
         public Client()
         {
             readBuff = new byte[BUFFER_SIZE];
@@ -55,6 +55,7 @@ namespace MultiServer
             //开始接收数据
             Start();
         }
+
         public void Start()
         {
             if (clientSocket == null || clientSocket.Connected == false) return;

@@ -30,8 +30,6 @@ public class BoardcastIPClient : SingletonMono<BoardcastIPClient>
 
     public UnityAction<string,int> m_onGetBoardcastIP;
 
-    public string m_ipServer1 = "192.168.51.91";
-    public string m_ipServer2 = "192.168.51.140";
     const bool m_isRelease = true;
     private void Start()
     {
@@ -58,10 +56,10 @@ public class BoardcastIPClient : SingletonMono<BoardcastIPClient>
                     if (m_isRelease == true)
                     {
                         string[] bufMsg = msg.Split('&');
+                        m_serverIP = bufMsg[1];
+                        int port = int.Parse(bufMsg[2]);
 
-                        int port = int.Parse(bufMsg[1]);
-
-                        m_serverIP = endpoint.Address.ToString();
+                        //m_serverIP = endpoint.Address.ToString();
 
                         UdpListen.Close();
                         Loom.QueueOnMainThread((param) =>

@@ -10,7 +10,6 @@ namespace Net
     {
         string m_serverIp;
         int m_serverPort;
-        public string m_id;
         // Start is called before the first frame update
         void Start()
         {
@@ -38,7 +37,8 @@ namespace Net
         void ConnectOk2S()
         {
             PtString data = new PtString();
-            data.value = m_id;
+            string sID = PublicFunc.GetJsonString(Application.streamingAssetsPath + "/ID.txt");
+            data.value = sID;
             GameSocket.Instance.SendMsgProto(MsgIdDefine.ReqID, data);
             //Heart heart = new Heart();
             //heart.accountId = "123";

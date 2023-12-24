@@ -6,25 +6,18 @@ using ProtoDefine;
 /// <summary>
 /// 远程玩家管理器，管理所有远程镜像
 /// </summary>
-public class RemotePlayerMgr : MonoBehaviour {
+public class RemotePlayerMgr : MonoBehaviour
+{
 
 
     //存放远程玩家的信息，key为PlayerID号
-    Dictionary<uint, GameObject> remotePlayer = new Dictionary<uint, GameObject>();
+    Dictionary<string, PDUProcessor> m_dicRemote = new Dictionary<string, PDUProcessor>();
 
-    public GameObject m_oneRemote;
+    public GameObject m_remoteTmp;
     public static RemotePlayerMgr m_remotePlayerMgr = null;
 
-    public List<GameObject> m_listRemote = new List<GameObject>();
-
-    void ListRemote2Dic()
-    {
-        for (int i = 0; i < m_listRemote.Count; i++)
-        {
-            uint id = m_listRemote[i].GetComponent<PDUProcessor>().m_id;
-            remotePlayer[id] = m_listRemote[i];
-        }
-    }
+    public bool m_isRecvMe = false;
+    string m_myID = "";
     public static RemotePlayerMgr self
     {
         get
@@ -38,14 +31,77 @@ public class RemotePlayerMgr : MonoBehaviour {
         }
     }
 
-    
-	// Use this for initialization
-	public void Start () {
-        
-        ListRemote2Dic();
+
+    // Use this for initialization
+    public void Start()
+    {
+        m_remoteTmp.SetActive(false);
+        m_myID = PublicFunc.GetJsonString(Application.streamingAssetsPath + "/ID.txt");
         NetEventMgr.Instance.AddListener<PtPdu>(MsgIdDefine.RspPdu, OnRspPdu);
+        NetEventMgr.Instance.AddListener<PtString>(MsgIdDefine.RspRoomAddOne, OnRspRoomAddOne);
+        NetEventMgr.Instance.AddListener<RspRoomInfo>(MsgIdDefine.RspRoomInfo, OnRspRoomInfo);
+        NetEventMgr.Instance.AddListener<PtString>(MsgIdDefine.RspRoomDeleOne, OnRspRoomDeleOne);
     }
 
+    void OnRspRoomAddOne(PtString data)
+    {
+        if (m_isRecvMe == true)
+        {
+            AddOne(data.value);
+        }
+        else
+        {
+            if (data.value != m_myID)
+            {
+                AddOne(data.value);
+            }
+        }
+    }
+
+    void OnRspRoomDeleOne(PtString data)
+    {
+        if (m_dicRemote.ContainsKey(data.value))
+        {
+            GameObject.Destroy(m_dicRemote[data.value].gameObject);
+            m_dicRemote.Remove(data.value);
+        }
+    }
+
+    void OnRspRoomInfo(RspRoomInfo data)
+    {
+        for (int i = 0; i < data.listPlayer.Count; i++)
+        {
+            PlayerInfo player = data.listPlayer[i];
+            if (m_isRecvMe == true)
+            {
+                AddOne(player.name);
+            }
+            else
+            {
+                if (player.name != m_myID)
+                {
+                    AddOne(player.name);
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// 上线玩家，创建remote
+    /// </summary>
+    /// <param name="data"></param>
+    public void AddOne(string data)
+    {
+        if (m_dicRemote.ContainsKey(data) == false)
+        {
+            GameObject remoteObj = Instantiate(m_remoteTmp);
+            remoteObj.SetActive(true);
+            remoteObj.name = "Remote" + data;
+            PDUProcessor pro = remoteObj.GetComponent<PDUProcessor>();
+            m_dicRemote[data] = pro;
+        }
+
+    }
     void OnRspPdu(PtPdu data)
     {
         PDURunner.PDU curPdu = new PDURunner.PDU();
@@ -61,7 +117,7 @@ public class RemotePlayerMgr : MonoBehaviour {
 
         curPdu.time = data.sendTime;
         curPdu.speed = data.speed;
-        remotePlayer[curPdu.UID].GetComponent<PDUProcessor>().currentPDU = curPdu;
+        m_dicRemote[(curPdu.UID).ToString()].currentPDU = curPdu;
     }
 
 
@@ -75,7 +131,7 @@ public class RemotePlayerMgr : MonoBehaviour {
         pkt.to(ref type);
         currentPDU.type = (PDURunner.PDUType)type;
 
-       
+
         {
             pkt.to(ref currentPDU.position.x);
             pkt.to(ref currentPDU.position.y);
@@ -87,23 +143,7 @@ public class RemotePlayerMgr : MonoBehaviour {
             pkt.to(ref currentPDU.time);
             pkt.to(ref currentPDU.anim);
 
-
-            if (InitPVP_WJY.m_isNet == false)
-            {
-                m_oneRemote.GetComponent<PDUProcessor>().currentPDU = currentPDU;
-            }
-            else
-            {
-
-            }
-
         }
-    }
-    IEnumerator delayForReceivePDU(float fTime, PDURunner.PDU curPDU)
-    {
-        yield return new WaitForSeconds(fTime);
-        //remotePlayer[curPDU.UID].GetComponent<PDUProcessor>().currentPDU = curPDU;
-        m_oneRemote.GetComponent<PDUProcessor>().currentPDU = curPDU;
     }
 
 }

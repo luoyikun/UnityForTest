@@ -158,16 +158,18 @@ namespace MultiServer.Work
         void OnNetReqID(Client client,byte[] buf,PtString data)
         {
             client.m_player.name = data.value;
-
+            client.m_id = data.value;
             //向房间内其他人发送新增加一人
             PlayerInfo addOne = client.m_player;
-            foreach (var item in m_dicClient)
-            {
-                item.Value.SendMsgProto(MsgIdDefine.RspRoomAddOne, addOne);
-            }
+            
 
             //加入到房间列表中
             m_dicClient[data.value] = client;
+
+            foreach (var item in m_dicClient)
+            {
+                item.Value.SendMsgProto(MsgIdDefine.RspRoomAddOne, data);
+            }
 
 
             //向新来的发送全部人

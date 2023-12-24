@@ -32,11 +32,11 @@ namespace MultiServer
                 while (serverIsRun)
                 {
                     Thread.Sleep(5000);
-                    byte[] buf = Encoding.Unicode.GetBytes(specialText + port);
+                    
 
-                    //string sIp = PublicFunc.GetHostAddress();
+                    string sIp = PublicFunc.GetHostAddress();
                     //IPAddress ip = IPAddress.Parse(sIp);
-
+                    byte[] buf = Encoding.Unicode.GetBytes(specialText + sIp + "&"+  port);
                     UdpSend.Send(buf, buf.Length, new IPEndPoint(IPAddress.Broadcast, m_port));
                     //UdpSend.Send(buf, buf.Length, new IPEndPoint(ip, Program.port));
                 }
