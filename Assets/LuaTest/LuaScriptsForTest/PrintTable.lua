@@ -72,9 +72,9 @@ function PrintTable(node, noPrint,simple)
     return output_str;
 end
 
-tabA = { instances = { y = 2} ,x = 1}
+-- tabA = { instances = { y = 2} ,x = 1}
 
-for k,v in pairs(tabA)  do
-    print(k,v)
-end
-PrintTable(tabA)
+-- for k,v in pairs(tabA)  do
+--     print(k,v)
+-- end
+-- PrintTable(tabA)

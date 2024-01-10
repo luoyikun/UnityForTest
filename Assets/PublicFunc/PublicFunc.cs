@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-
+using Newtonsoft.Json;
 public class PublicFunc 
 {
     public static string GetIP()
@@ -59,6 +59,21 @@ public class PublicFunc
         //string abPath = info.m_prefabName.Replace("/" + abName, "");
         //string[] bufAbName = abName.Split('.');
         return onlyPath;
+    }
+
+    public static string GetObjet2Str<T>(T obj)
+    {
+        string str = "";
+        str = JsonConvert.SerializeObject(obj);
+        return str;
+    }
+
+    public static string DebugObjet2Str<T>(T obj)
+    {
+        string str = "";
+        str = JsonConvert.SerializeObject(obj);
+        Debug.Log(str);
+        return str;
     }
 
 }
