@@ -114,7 +114,6 @@ public class PDUProcessor : MonoBehaviour {
                 transform.position = realPDU.position;
                 transform.forward = realPDU.forward;
             }
-            //transform.position = targetPosition;
         }
 
         //当还剩下平滑插值时间，继续插值
@@ -127,6 +126,7 @@ public class PDUProcessor : MonoBehaviour {
         }
         else
         {
+            //remote自己预测行走，A停下来，remoteA会走更快，拉扯回来
             if (realPDU != null && realPDU.speed > m_minMoveSpeed)
             {
                 transform.position += realPDU.forward * realPDU.speed * Time.deltaTime;

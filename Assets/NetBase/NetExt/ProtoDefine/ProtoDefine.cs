@@ -59,6 +59,13 @@ namespace ProtoDefine
     }
 
     [ProtoContract]
+    public class PtUint
+    {
+        [ProtoMember(1)]
+        public uint value;
+    }
+
+    [ProtoContract]
     public class PtMechanism
     {
         [ProtoMember(1)]

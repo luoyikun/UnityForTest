@@ -8,8 +8,10 @@ public class WJYPDUSender : PDUSender {
     PtPdu m_netPdu = new PtPdu();
    // Use this for initialization
    void Start () {
-	
-	}
+        string sID = PublicFunc.GetJsonString(Application.streamingAssetsPath + "/ID.txt");
+        m_uid = uint.Parse(sID);
+
+    }
 
     public override bool syncSkill(uint myID, int skillID)
 	{

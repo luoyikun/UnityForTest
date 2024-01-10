@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 154470310}
   - component: {fileID: 154470309}
   m_Layer: 0
-  m_Name: Remote100
+  m_Name: RemoteTmp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
   MaxSmoothTime: 0.05
   MinSmoothTime: 0.01
   m_aniSmoothTime: 0.2
-  realSmoothTime: 0.15
+  realSmoothTime: 0.05
   smoothTime: 0
   isInSkill: 0
   m_minMoveSpeed: 0.1
@@ -274,6 +274,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 552328225}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!134 &764516123
+PhysicMaterial:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ' (Instance) (Instance)'
+  dynamicFriction: 0.6
+  staticFriction: 0.6
+  bounciness: 0
+  frictionCombine: 0
+  bounceCombine: 0
 --- !u!1 &764533733
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,7 +399,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 046941364f4f9464a912b3dddc7ec342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_id: 123
+--- !u!134 &1006061732
+PhysicMaterial:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ' (Instance) (Instance) (Instance)'
+  dynamicFriction: 0.6
+  staticFriction: 0.6
+  bounciness: 0
+  frictionCombine: 0
+  bounceCombine: 0
 --- !u!1 &1006606392
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,7 +453,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006606392}
-  m_Material: {fileID: 2045096097}
+  m_Material: {fileID: 764516123}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
@@ -487,18 +510,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006606392}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!134 &1139426649
-PhysicMaterial:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: ' (Instance) (Instance)'
-  dynamicFriction: 0.6
-  staticFriction: 0.6
-  bounciness: 0
-  frictionCombine: 0
-  bounceCombine: 0
 --- !u!1 &1158368876
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,9 +730,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d8a91c4ae76f7f4786ecc0546a2ff85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_oneRemote: {fileID: 154470307}
-  m_listRemote:
-  - {fileID: 154470307}
+  m_remoteTmp: {fileID: 154470307}
+  m_isRecvMe: 1
 --- !u!4 &1313468872
 Transform:
   m_ObjectHideFlags: 0
@@ -887,7 +897,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701076975}
-  m_Material: {fileID: 1139426649}
+  m_Material: {fileID: 1006061732}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
@@ -951,18 +961,6 @@ PhysicMaterial:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ' (Instance) (Instance)'
-  dynamicFriction: 0.6
-  staticFriction: 0.6
-  bounciness: 0
-  frictionCombine: 0
-  bounceCombine: 0
---- !u!134 &2045096097
-PhysicMaterial:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: ' (Instance)'
   dynamicFriction: 0.6
   staticFriction: 0.6
   bounciness: 0
