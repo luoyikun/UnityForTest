@@ -17,7 +17,7 @@ public class AsyncTest : MonoBehaviour
     {
         _cts = new CancellationTokenSource();
 
-
+        Debug.Log("Start");
         _DelayLog().Forget();
         _DelayLog2().Forget();
         _DelayLog3().Forget();
@@ -28,7 +28,7 @@ public class AsyncTest : MonoBehaviour
         _cts.Cancel();
     }
 
-    private async UniTask _DelayLog()
+    private async UniTaskVoid _DelayLog()
     {
         await UniTask.Delay(10000, cancellationToken: _cts.Token);
         Debug.Log("Finished");
