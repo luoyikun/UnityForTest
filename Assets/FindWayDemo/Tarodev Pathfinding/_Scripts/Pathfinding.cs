@@ -24,7 +24,7 @@ namespace Tarodev_Pathfinding._Scripts {
 
             while (listOpen.Any()) {
 
-                //找到最小F todo：优化，每次节点多
+                //找到最小F todo：优化，每次节点多，需要全部遍历一遍，找最小。使用最小堆优化，插入会进行2分排序，堆顶就是最小点
                 var current = listOpen[0];
 
                 //找出OpenSet当中fCost最小的点,这个点就是被选中的将要行走的下一个点，如果F总和相同，找H最小，即到达终点最快（H是乐观估计，不算障碍物估计）
@@ -70,7 +70,7 @@ namespace Tarodev_Pathfinding._Scripts {
                     //路径发生改变，g会变化，例如找到一条更好的路
                     if (!inSearch || costToNeighbor < neighbor.G) {
                         neighbor.SetG(costToNeighbor);
-                        neighbor.SetConnection(current);
+                        neighbor.SetConnection(current);//设置父节点，一个节点可以有多个子节点
                         
                         //h是乐观估计，只需要算一遍
                         if (!inSearch) {

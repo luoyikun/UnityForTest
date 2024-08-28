@@ -8,6 +8,7 @@ public class CircularDependency : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //构建资源对
         Stamp[] stamps = new Stamp[] { new Stamp("a","b"), new Stamp("b", "c"), new Stamp("c", "a"),new Stamp("d","e") };
         CircularDependencyChecker checker = new CircularDependencyChecker(stamps);
         string[][] arrStr = checker.Check();
@@ -56,10 +57,12 @@ public sealed class CircularDependencyChecker
         List<string[]> results = new List<string[]>();
         foreach (string host in hosts)
         {
+            //每次遍历主资源，都是重新设置路径表，已访问表
             LinkedList<string> route = new LinkedList<string>();
             HashSet<string> visited = new HashSet<string>();
             if (Check(host, route, visited))
             {
+                //有一条循环输出后，即加入到结果列表中
                 results.Add(route.ToArray());
             }
         }
@@ -79,32 +82,38 @@ public sealed class CircularDependencyChecker
         visited.Add(host);
         route.AddLast(host);
         Debug.Log(string.Format("{0}加入到已访问，和路径表最后一个", host));
+        Debug.Log($"加入host后，route：{PublicFunc.GetObjet2Str(route)},visited:{PublicFunc.GetObjet2Str(route)}");
         foreach (Stamp stamp in m_Stamps)
         {
+            //遍历资源对
             if (host != stamp.HostAssetName)
             {
                 continue;
             }
 
+            
             if (visited.Contains(stamp.DependencyAssetName))
             {
-                Debug.Log("访问表已包含" +  stamp.DependencyAssetName);
                 //已经访问节点已经包含了依赖，说明成循环了
+                Debug.Log($"访问表已包含host:{stamp.HostAssetName}的依赖{stamp.DependencyAssetName}");
                 route.AddLast(stamp.DependencyAssetName);
                 PublicFunc.DebugObjet2Str(route);
                 return true;
             }
 
+            //接着检查其余a为host的其余资源对
             if (Check(stamp.DependencyAssetName, route, visited))
             {
                 return true;
             }
         }
-
+        //删不删除无所谓，因为只有循环的才会输出
         string lastRoute = route.Last.Value;
         route.RemoveLast();
         visited.Remove(host);
         Debug.Log(string.Format("删除路径表的最后一个{0}，已访问表{1}", lastRoute, host));
+        Debug.Log($"结束一次host后，route：{PublicFunc.GetObjet2Str(route)},visited:{PublicFunc.GetObjet2Str(route)}");
+        
         return false;
     }
 }
